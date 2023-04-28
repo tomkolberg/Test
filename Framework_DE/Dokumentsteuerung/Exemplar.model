@@ -1,0 +1,21 @@
+<DocumentPart xmlns="urn:kwsoft:mtext:tonic:dom" title="Exemplar" title-en_US="Instance" logicalDocument="true">
+ <DataDefinition>
+  <ParamDef name="Exemplar" ref="\\Framework_DE\Data\Exemplar.datamodel">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <ParamDef name="ExemplarAusgabesteuerung" ref="\\Framework_DE\Data\Exemplar.datamodel">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <ParamDef name="ExemplarOriginal" ref="\\Framework_DE\Data\Exemplar.datamodel">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <ParamDef name="Korrespondenz" ref="\\Framework_DE\Data\Korrespondenz.datamodel">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <DocumentExtensionDef id="Exemplar Inhalt"></DocumentExtensionDef>
+</DocumentPart>

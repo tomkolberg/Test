@@ -1,0 +1,146 @@
+<TestCases xmlns="urn:kwsoft:mtext:tonic:dom" activeTestCase="&lt;Standard&gt;">
+ <TestCase name="&lt;Standard&gt;">
+  <Root base="Framework">
+   <RootPartInstance partIndex="0">
+    <Data>
+     <DataNode name="Metadata">
+      <Value><![CDATA[string:]]></Value>
+      <DataNode name="Vorlage">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="Korrespondenz">
+        <Value><![CDATA[string:]]></Value>
+        <DataNode name="ErstExemplar">
+         <Value><![CDATA[string:]]></Value>
+         <DataNode name="Empfaengerrolle">
+          <Value><![CDATA[string:]]></Value>
+         </DataNode>
+         <DataNode name="StandardZustellMedium">
+          <Value><![CDATA[string:ZENTRALDRUCK]]></Value>
+         </DataNode>
+         <DataNode name="ErlaubteZustellMedien">
+          <Value><![CDATA[string:ZENTRALDRUCK]]></Value>
+         </DataNode>
+         <DataNode name="ErlaubteInfoMedien">
+          <Value><![CDATA[string:]]></Value>
+         </DataNode>
+        </DataNode>
+        <DataNode name="WeitereExemplare">
+         <Value><![CDATA[string:]]></Value>
+         <DataNode name="Empfaengerrolle">
+          <Value><![CDATA[string:]]></Value>
+         </DataNode>
+         <DataNode name="StandardZustellMedium">
+          <Value><![CDATA[string:ZENTRALDRUCK]]></Value>
+         </DataNode>
+         <DataNode name="ErlaubteZustellMedien">
+          <Value><![CDATA[string:ZENTRALDRUCK]]></Value>
+         </DataNode>
+         <DataNode name="ErlaubteInfoMedien">
+          <Value><![CDATA[string:]]></Value>
+         </DataNode>
+        </DataNode>
+       </DataNode>
+      </DataNode>
+      <DataNode name="Ausgabesteuerung">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="Formatiermodus">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="State">
+       <Value><![CDATA[string:Created]]></Value>
+      </DataNode>
+      <DataNode name="ValidationState" valueChanged="true">
+       <Value><![CDATA[string:ERROR]]></Value>
+      </DataNode>
+      <DataNode name="Editor">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="DefaultDocumentName">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+       <DataNode name="DefaultDocumentDescription">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="DocumentLanguage">
+       <Value><![CDATA[string:]]></Value>
+      </DataNode>
+      <DataNode name="InitialDataBinding">
+       <Value><![CDATA[string:\library\Framework\Dokumentsteuerung\OMS.model.template]]></Value>
+      </DataNode>
+     </DataNode>
+    </Data>
+    <DocumentPartInstance partIndex="0">
+     <Data>
+      <DataNode name="Exemplar">
+       <DataNode name="Empfaenger">
+        <DataNode name="NameVorname">
+         <Value><![CDATA[string:]]></Value>
+        </DataNode>
+       </DataNode>
+       <DataNode name="AlternativEmpfaenger">
+        <DataNode name="NameVorname">
+         <Value><![CDATA[string:]]></Value>
+        </DataNode>
+       </DataNode>
+       <DataNode name="Absender">
+        <DataNode name="Ruecksendeanschrift">
+         <DataNode name="Partner">
+          <Value><![CDATA[string:]]></Value>
+          <DataNode name="firmenname1">
+           <Value><![CDATA[string:]]></Value>
+          </DataNode>
+          <DataNode name="vorname">
+           <Value><![CDATA[string:]]></Value>
+          </DataNode>
+          <DataNode name="strasse">
+           <Value><![CDATA[string:]]></Value>
+          </DataNode>
+          <DataNode name="plz">
+           <Value><![CDATA[string:]]></Value>
+          </DataNode>
+          <DataNode name="ort">
+           <Value><![CDATA[string:]]></Value>
+          </DataNode>
+          <DataNode name="adresse">
+           <Value><![CDATA[string:]]></Value>
+           <DataNode name="zeile">
+            <Value><![CDATA[string:]]></Value>
+           </DataNode>
+           <DataNode name="zeile">
+            <Value><![CDATA[string:]]></Value>
+           </DataNode>
+           <DataNode name="zeile">
+            <Value><![CDATA[string: ]]></Value>
+           </DataNode>
+          </DataNode>
+         </DataNode>
+        </DataNode>
+       </DataNode>
+      </DataNode>
+     </Data>
+     <DocumentPartInstance partIndex="0">
+      <DocumentPartInstance partIndex="0" visible="false"></DocumentPartInstance>
+     </DocumentPartInstance>
+    </DocumentPartInstance>
+   </RootPartInstance>
+  </Root>
+  <ForceVisibilities>
+   <ForceVisibility visible="false" designMode="false">
+    <Position length="5" positions="0,0,0,0,0"></Position>
+   </ForceVisibility>
+   <ForceVisibility visible="false" designMode="false">
+    <Position length="5" positions="0,0,0,0,0"></Position>
+   </ForceVisibility>
+   <ForceVisibility visible="false" designMode="false">
+    <Position length="5" positions="0,0,0,0,0"></Position>
+   </ForceVisibility>
+   <ForceVisibility visible="false" designMode="false">
+    <Position length="5" positions="0,0,0,0,0"></Position>
+   </ForceVisibility>
+   <ForceVisibility visible="false" designMode="false">
+    <Position length="5" positions="0,0,0,0,0"></Position>
+   </ForceVisibility>
+  </ForceVisibilities>
+ </TestCase>
+</TestCases>

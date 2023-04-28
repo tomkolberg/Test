@@ -1,0 +1,193 @@
+<TestCases xmlns="urn:kwsoft:mtext:tonic:dom" activeTestCase="testcase">
+ <TestCase name="testcase" includeInRegressionTool="false">
+  <Root base="Framework_TONIC_Demo">
+   <RootPartInstance partIndex="0">
+    <Data>
+     <DataNode name="Metadata">
+      <Value><![CDATA[string:]]></Value>
+      <DataNode name="State" valueChanged="fromDataSource">
+       <Value><![CDATA[string:Created]]></Value>
+      </DataNode>
+      <DataNode name="TestMode" valueChanged="fromDataSource">
+       <Value><![CDATA[string:]]></Value>
+      </DataNode>
+      <DataNode name="ValidationState" valueChanged="manually">
+       <Value><![CDATA[string:OK]]></Value>
+      </DataNode>
+      <DataNode name="Editor">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="DefaultDocumentName" valueChanged="fromDataSource">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+       <DataNode name="DefaultDocumentDescription" valueChanged="fromDataSource">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="DocumentLanguage" valueChanged="fromDataSource">
+       <Value><![CDATA[string:]]></Value>
+      </DataNode>
+      <DataNode name="InitialDataBinding" valueChanged="fromDataSource">
+       <Value><![CDATA[string:\library\Framework_Demo_DE\Vorlagen\FormIO\Forms1_2_3.template]]></Value>
+      </DataNode>
+      <DataNode name="Language">
+       <Value><![CDATA[string:de]]></Value>
+      </DataNode>
+     </DataNode>
+     <DataNode name="Auftragssteuerung">
+      <DataNode name="Defaults">
+       <DataNode name="FormIO">
+        <DataNode name="win_height">
+         <Value><![CDATA[string:550]]></Value>
+        </DataNode>
+        <DataNode name="win_width">
+         <Value><![CDATA[string:900]]></Value>
+        </DataNode>
+        <DataNode name="customCSS">
+         <Value><![CDATA[string:.btn-primary { background-color: #e30018; border-color: #e30018; } .btn-primary:hover { background-color: #ff3030; border-color: #e30018; } .btn-primary.disabled, .btn-primary:disabled { background-color: #D3D3D3; border-color: #D3D3D3; } .page-item.active .page-link { background-color: #e30018; border-color: #e30018; } .page-link { color: #e30018; border-color: #e30018; } .page-link:hover { color: #ffffff; background-color: #ff3030; border-color: #e30018; } .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{ color: #ffffff; background-color: #ff3030; border-color: #e30018;  } .nav-link{ color: #e30018; border-color: #e30018; } .bg-primary { background-color: #e30018!important; } .formio-component-number { text-align-last: end; } ]]></Value>
+        </DataNode>
+        <DataNode name="actionColor">
+         <Value><![CDATA[string:#e30018]]></Value>
+        </DataNode>
+        <DataNode name="hoverColor">
+         <Value><![CDATA[string:#ff3030]]></Value>
+        </DataNode>
+       </DataNode>
+      </DataNode>
+      <DataNode name="Korrespondenz">
+       <DataNode name="ErstExemplar">
+        <DataNode name="Exemplar">
+         <DataNode name="Nr">
+          <Value><![CDATA[number:1]]></Value>
+         </DataNode>
+         <DataNode name="Typ">
+          <Value><![CDATA[string:ORIGINAL]]></Value>
+         </DataNode>
+         <DataNode name="Absender">
+          <DataNode name="Absenderzeile">
+           <Value><![CDATA[string: ·  ·  ]]></Value>
+          </DataNode>
+          <DataNode name="Ruecksendeanschrift">
+           <DataNode name="Partner">
+            <DataNode name="Unterschrift">
+             <Value><![CDATA[string:]]></Value>
+            </DataNode>
+           </DataNode>
+           <DataNode name="istGueltig">
+            <Value><![CDATA[bool:false]]></Value>
+           </DataNode>
+           <DataNode name="Briefanrede" alreadyComputed="true"></DataNode>
+           <DataNode name="NameVorname">
+            <Value><![CDATA[string:]]></Value>
+           </DataNode>
+          </DataNode>
+          <DataNode name="Sachbearbeiter">
+           <DataNode name="Unterschrift">
+            <Value><![CDATA[string:]]></Value>
+           </DataNode>
+          </DataNode>
+         </DataNode>
+         <DataNode name="Empfaenger">
+          <DataNode name="istGueltig">
+           <Value><![CDATA[bool:false]]></Value>
+          </DataNode>
+          <DataNode name="Partner">
+           <DataNode name="Unterschrift">
+            <Value><![CDATA[string:]]></Value>
+           </DataNode>
+          </DataNode>
+          <DataNode name="Briefanrede" alreadyComputed="true"></DataNode>
+          <DataNode name="NameVorname">
+           <Value><![CDATA[string:]]></Value>
+          </DataNode>
+         </DataNode>
+         <DataNode name="Alternativempfaenger">
+          <DataNode name="istGueltig">
+           <Value><![CDATA[bool:false]]></Value>
+          </DataNode>
+          <DataNode name="Partner">
+           <DataNode name="Unterschrift">
+            <Value><![CDATA[string:]]></Value>
+           </DataNode>
+          </DataNode>
+          <DataNode name="Briefanrede" alreadyComputed="true"></DataNode>
+          <DataNode name="NameVorname">
+           <Value><![CDATA[string:]]></Value>
+          </DataNode>
+         </DataNode>
+        </DataNode>
+       </DataNode>
+       <DataNode name="Exemplare">
+        <DataNode name="Exemplar">
+         <DataNode name="Nr">
+          <Value><![CDATA[number:1]]></Value>
+         </DataNode>
+         <DataNode name="Typ">
+          <Value><![CDATA[string:ORIGINAL]]></Value>
+         </DataNode>
+         <DataNode name="Absender">
+          <DataNode name="Absenderzeile">
+           <Value><![CDATA[string: ·  ·  ]]></Value>
+          </DataNode>
+          <DataNode name="Ruecksendeanschrift">
+           <DataNode name="Partner">
+            <DataNode name="Unterschrift">
+             <Value><![CDATA[string:]]></Value>
+            </DataNode>
+           </DataNode>
+           <DataNode name="istGueltig">
+            <Value><![CDATA[bool:false]]></Value>
+           </DataNode>
+           <DataNode name="Briefanrede" alreadyComputed="true"></DataNode>
+           <DataNode name="NameVorname">
+            <Value><![CDATA[string:]]></Value>
+           </DataNode>
+          </DataNode>
+          <DataNode name="Sachbearbeiter">
+           <DataNode name="Unterschrift">
+            <Value><![CDATA[string:]]></Value>
+           </DataNode>
+          </DataNode>
+         </DataNode>
+         <DataNode name="Empfaenger">
+          <DataNode name="istGueltig">
+           <Value><![CDATA[bool:false]]></Value>
+          </DataNode>
+          <DataNode name="Partner">
+           <DataNode name="Unterschrift">
+            <Value><![CDATA[string:]]></Value>
+           </DataNode>
+          </DataNode>
+          <DataNode name="Briefanrede" alreadyComputed="true"></DataNode>
+          <DataNode name="NameVorname">
+           <Value><![CDATA[string:]]></Value>
+          </DataNode>
+         </DataNode>
+         <DataNode name="Alternativempfaenger">
+          <DataNode name="istGueltig">
+           <Value><![CDATA[bool:false]]></Value>
+          </DataNode>
+          <DataNode name="Partner">
+           <DataNode name="Unterschrift">
+            <Value><![CDATA[string:]]></Value>
+           </DataNode>
+          </DataNode>
+          <DataNode name="Briefanrede" alreadyComputed="true"></DataNode>
+          <DataNode name="NameVorname">
+           <Value><![CDATA[string:]]></Value>
+          </DataNode>
+         </DataNode>
+        </DataNode>
+       </DataNode>
+       <DataNode name="Nr">
+        <Value><![CDATA[number:1]]></Value>
+       </DataNode>
+      </DataNode>
+     </DataNode>
+    </Data>
+    <ContainerPartInstance partIndex="0">
+     <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+    </ContainerPartInstance>
+   </RootPartInstance>
+  </Root>
+ </TestCase>
+</TestCases>

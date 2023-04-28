@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel>
+   <Node data-type="DATETIME"
+         hierarchical="FLAT"
+         multiple="false"
+         name="returndate"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="DATE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input date-format="yyyy-MM-dd"/>
+            <Output date-format="MMM d, yyyy h:mm:ss a"
+                    date-style="2"
+                    date-type="DATE"
+                    use-current-locale="true"/>
+         </Format>
+         <Script/>
+      </Settings>
+   </Node>
+</DataModel>

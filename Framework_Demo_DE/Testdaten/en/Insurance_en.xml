@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<insurance>
+ <gender>
+  <Text>male</Text>
+ </gender>
+ <gender>
+  <Text>female</Text>
+ </gender>
+ <gender>
+  <Text>diverse</Text>
+ </gender>
+ <person>
+  <Vorname>Jack</Vorname>
+  <name>Jones</name>
+  <gender>male</gender>
+  <dateofbirth>1988-01-22</dateofbirth>
+  <Adresse>
+   <Strasse>High Strasse</Strasse>
+   <Ort>Grefrath</Ort>
+  </Adresse>
+ </person>
+ <person>
+  <Vorname>Mary</Vorname>
+  <name>Kelly</name>
+  <gender>female</gender>
+  <dateofbirth>1999-02-23</dateofbirth>
+  <Adresse>
+   <Strasse>Lower Ave.</Strasse>
+   <Ort>New Town</Ort>
+  </Adresse>
+ </person>
+</insurance>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<insurance>
+ <gender>
+  <Text>männlich</Text>
+ </gender>
+ <gender>
+  <Text>weiblich</Text>
+ </gender>
+ <gender>
+  <Text>divers</Text>
+ </gender>
+ <person>
+  <firstname>Frank</firstname>
+  <name>Fritzsche</name>
+  <gender>männlich</gender>
+  <dateofbirth>1988-01-22</dateofbirth>
+  <Adresse>
+   <Strasse>Hohe Strasse</Strasse>
+   <Ort>Grefrath</Ort>
+  </Adresse>
+ </person>
+ <person>
+  <firstname>Maria</firstname>
+  <name>Janssen</name>
+  <gender>weiblich</gender>
+  <dateofbirth>1999-02-23</dateofbirth>
+  <Adresse>
+   <Strasse>Nebenstrasse</Strasse>
+   <Ort>Hinterfelde</Ort>
+  </Adresse>
+ </person>
+</insurance>

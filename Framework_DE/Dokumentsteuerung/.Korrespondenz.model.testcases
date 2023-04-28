@@ -1,0 +1,74 @@
+<TestCases xmlns="urn:kwsoft:mtext:tonic:dom" activeTestCase="&lt;Standard&gt;">
+ <TestCase name="&lt;Standard&gt;" includeInRegressionTool="false">
+  <Root base="Framework">
+   <DocumentDescription></DocumentDescription>
+   <RootPartInstance partIndex="0" systemDestination="preview">
+    <Data>
+     <DataNode name="Metadata">
+      <Value><![CDATA[string:]]></Value>
+      <DataNode name="State" valueChanged="fromDataSource">
+       <Value><![CDATA[string:Created]]></Value>
+      </DataNode>
+      <DataNode name="TestMode" valueChanged="fromDataSource">
+       <Value><![CDATA[string:]]></Value>
+      </DataNode>
+      <DataNode name="ValidationState" valueChanged="manually">
+       <Value><![CDATA[string:OK]]></Value>
+      </DataNode>
+      <DataNode name="Editor">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="DefaultDocumentName" valueChanged="fromDataSource">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+       <DataNode name="DefaultDocumentDescription" valueChanged="fromDataSource">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="DocumentLanguage" valueChanged="fromDataSource">
+       <Value><![CDATA[string:]]></Value>
+      </DataNode>
+      <DataNode name="InitialDataBinding" valueChanged="fromDataSource">
+       <Value><![CDATA[string:\library\Framework_DE\Dokumentsteuerung\Korrespondenz.model.template]]></Value>
+      </DataNode>
+      <DataNode name="Language">
+       <Value><![CDATA[string:de]]></Value>
+      </DataNode>
+     </DataNode>
+    </Data>
+    <DocumentPartInstance partIndex="0">
+     <Data>
+      <DataNode name="Korrespondenz"></DataNode>
+     </Data>
+     <DocumentPartInstance partIndex="0">
+      <DocumentPartInstance partIndex="0">
+       <DocumentPartInstance partIndex="0">
+        <Data>
+         <DataNodeRef ref="$Korrespondenz.Exemplare.Exemplar.instance(0)" name="Exemplar"></DataNodeRef>
+         <DataNodeRef ref="$Korrespondenz.Exemplare.Exemplar.instance(0)" name="ExemplarAusgabesteuerung"></DataNodeRef>
+         <DataNodeRef ref="$Korrespondenz.Exemplare.Exemplar.instance(0)" name="ExemplarOriginal"></DataNodeRef>
+         <DataNodeRef ref="$Korrespondenz" name="Korrespondenz"></DataNodeRef>
+        </Data>
+        <DocumentPartInstance partIndex="0"></DocumentPartInstance>
+       </DocumentPartInstance>
+      </DocumentPartInstance>
+      <DocumentPartInstance partIndex="1" visible="false">
+       <DocumentPartInstance partIndex="0" visible="false"></DocumentPartInstance>
+      </DocumentPartInstance>
+      <DocumentPartInstance partIndex="2"></DocumentPartInstance>
+     </DocumentPartInstance>
+    </DocumentPartInstance>
+   </RootPartInstance>
+  </Root>
+  <ForceVisibilities>
+   <ForceVisibility visible="true" designMode="false">
+    <Position length="5" positions="0,0,0,0,0"></Position>
+   </ForceVisibility>
+   <ForceVisibility visible="false" designMode="false">
+    <Position length="4" positions="0,0,0,0"></Position>
+   </ForceVisibility>
+   <ForceVisibility visible="true" designMode="false">
+    <Position length="6" positions="0,0,0,0,0,0"></Position>
+   </ForceVisibility>
+  </ForceVisibilities>
+ </TestCase>
+</TestCases>

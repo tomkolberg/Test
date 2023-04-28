@@ -1,0 +1,139 @@
+<OutputSettings xmlns="urn:kwsoft:mtext:tonic:dom" staple="false">
+ <Parameters></Parameters>
+ <DataDefinition>
+  <ParamDef name="ExemplarAusgabesteuerung" ref="\\Framework_DE\Data\Exemplar.datamodel" provided="true"></ParamDef>
+  <ParamDef name="Betreff1" provided="true"></ParamDef>
+  <ParamDef name="NichtArchivieren" data-type="boolean" provided="true">
+   <Description></Description>
+   <Input true-value="true" false-value="false"></Input>
+   <Output true-value="true" false-value="false"></Output>
+   <Script><![CDATA[false]]></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="AlsAttachment" data-type="boolean" provided="true">
+   <Description></Description>
+   <Input true-value="true" false-value="false"></Input>
+   <Output true-value="true" false-value="false"></Output>
+   <Script><![CDATA[false]]></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="AttachmentName" provided="true">
+   <Description></Description>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+ </DataDefinition>
+ <RendererMetadata></RendererMetadata>
+ <UserData></UserData>
+ <Target instanceIdExpression="$MOMS_ID" medium="ARCHIV">
+  <VisibleIf><![CDATA[$Ausgabesteuerung.Ausgabekanal.valueOf() == 'ARCHIV' && !$NichtArchivieren.valueOf()]]></VisibleIf>
+  <ForEach alias="$Ausgabesteuerung"><![CDATA[$ExemplarAusgabesteuerung.Ausgabesteuerung]]></ForEach>
+  <Replacements>
+   <Replace from="%%%OMSKV%%%" type="overwrite" scope="all">
+    <To><![CDATA["Archivkopie"]]></To>
+   </Replace>
+   <Replace from="%%%OMSID%%%" type="overwrite" scope="all">
+    <To><![CDATA["par(KW_SPLIT_ID)"]]></To>
+   </Replace>
+  </Replacements>
+  <Parameter name="ARCHIV_EMPFAENGER_ID"><![CDATA[$Ausgabesteuerung.ARCHIV.PartnerID]]></Parameter>
+  <Parameter name="PDF_CREATOR"><![CDATA[$Ausgabesteuerung.PDF.Ersteller]]></Parameter>
+  <Parameter name="PDF_TITLE"><![CDATA[$Ausgabesteuerung.PDF.Titel]]></Parameter>
+ </Target>
+ <Target instanceIdExpression="$Ausgabesteuerung.InstanzID" medium="LOKALDRUCK">
+  <VisibleIf><![CDATA[$Ausgabesteuerung.Ausgabekanal.valueOf() == 'LOKALDRUCK']]></VisibleIf>
+  <ForEach alias="$Ausgabesteuerung"><![CDATA[$ExemplarAusgabesteuerung.Ausgabesteuerung]]></ForEach>
+  <Replacements>
+   <Replace from="%%%OMSKV%%%" type="insert" scope="all">
+    <To><![CDATA[""]]></To>
+   </Replace>
+   <Replace from="%%%OMSID%%%" type="overwrite" scope="all">
+    <To><![CDATA["par(KW_SPLIT_ID)"]]></To>
+   </Replace>
+  </Replacements>
+  <Parameter name="LOKALDRUCK_DRUCKER"><![CDATA[$Ausgabesteuerung.LOKALDRUCK.Druckername]]></Parameter>
+  <Parameter name="LOKALDRUCK_USER_ID"><![CDATA[$Ausgabesteuerung.LOKALDRUCK.UserID]]></Parameter>
+ </Target>
+ <Target instanceIdExpression="$Ausgabesteuerung.InstanzID" medium="ZENTRALDRUCK">
+  <VisibleIf><![CDATA[$Ausgabesteuerung.Ausgabekanal.valueOf() == 'ZENTRALDRUCK']]></VisibleIf>
+  <ForEach alias="$Ausgabesteuerung"><![CDATA[$ExemplarAusgabesteuerung.Ausgabesteuerung]]></ForEach>
+  <Replacements>
+   <Replace from="%%%OMSKV%%%" type="insert" scope="all">
+    <To><![CDATA[""]]></To>
+   </Replace>
+   <Replace from="%%%OMSID%%%" type="overwrite" scope="all">
+    <To><![CDATA["par(KW_SPLIT_ID)"]]></To>
+   </Replace>
+  </Replacements>
+  <Parameter name="ZENTRALDRUCK_BATCH"><![CDATA[$Ausgabesteuerung.ZENTRALDRUCK.Batch]]></Parameter>
+  <Parameter name="EMPFAENGER_PLZ"><![CDATA[$Ausgabesteuerung.ZENTRALDRUCK.PLZ]]></Parameter>
+  <Parameter name="EMPFAENGER_LKZ"><![CDATA[$Ausgabesteuerung.ZENTRALDRUCK.LKZ]]></Parameter>
+  <Parameter name="EMPFAENGER_ID"><![CDATA[$Ausgabesteuerung.ZENTRALDRUCK.PartnerID]]></Parameter>
+ </Target>
+ <Target instanceIdExpression="$Ausgabesteuerung.InstanzID" medium="FAX">
+  <VisibleIf><![CDATA[$Ausgabesteuerung.Ausgabekanal.valueOf() == 'FAX']]></VisibleIf>
+  <ForEach alias="$Ausgabesteuerung"><![CDATA[$ExemplarAusgabesteuerung.Ausgabesteuerung]]></ForEach>
+  <Replacements>
+   <Replace from="%%%OMSKV%%%" type="insert" scope="all">
+    <To><![CDATA[""]]></To>
+   </Replace>
+   <Replace from="%%%OMSID%%%" type="overwrite" scope="all">
+    <To><![CDATA["par(KW_SPLIT_ID)"]]></To>
+   </Replace>
+  </Replacements>
+  <Parameter name="FAX_ABSENDER"><![CDATA[$Ausgabesteuerung.FAX.Absender]]></Parameter>
+  <Parameter name="FAX_EMPFAENGER"><![CDATA[$Ausgabesteuerung.FAX.Empfaenger]]></Parameter>
+ </Target>
+ <Target instanceIdExpression="$Ausgabesteuerung.InstanzID" medium="EMAIL">
+  <VisibleIf><![CDATA[$Ausgabesteuerung.Ausgabekanal.valueOf() == 'EMAIL' && ! $AlsAttachment.valueOf() && $MAIL ]]></VisibleIf>
+  <ForEach alias="$Ausgabesteuerung"><![CDATA[$ExemplarAusgabesteuerung.Ausgabesteuerung]]></ForEach>
+  <Replacements>
+   <Replace from="%%%OMSKV%%%" type="insert" scope="all">
+    <To><![CDATA[""]]></To>
+   </Replace>
+   <Replace from="%%%OMSID%%%" type="overwrite" scope="all">
+    <To><![CDATA["par(KW_SPLIT_ID)"]]></To>
+   </Replace>
+  </Replacements>
+  <Parameter name="MAIL_FROM"><![CDATA[$Ausgabesteuerung.EMAIL.Absender]]></Parameter>
+  <Parameter name="MAIL_TO"><![CDATA[$Ausgabesteuerung.EMAIL.Empfaenger]]></Parameter>
+  <Parameter name="MAIL_SUBJECT"><![CDATA[$Ausgabesteuerung.EMAIL.Betreff.isEmpty() ? $Betreff1.valueOf() : $Ausgabesteuerung.EMAIL.Betreff.valueOf()]]></Parameter>
+ </Target>
+ <Target instanceIdExpression="" medium="EMAIL_ARCHIV">
+  <VisibleIf><![CDATA[$Ausgabesteuerung.Ausgabekanal.valueOf() == 'EMAIL_ARCHIV']]></VisibleIf>
+  <ForEach><![CDATA[$ExemplarAusgabesteuerung.Ausgabesteuerung]]></ForEach>
+  <Replacements></Replacements>
+  <Parameter name="MAIL_FROM"><![CDATA[$Ausgabesteuerung.EMAIL.Absender]]></Parameter>
+  <Parameter name="MAIL_TO"><![CDATA[$Ausgabesteuerung.EMAIL.Empfaenger]]></Parameter>
+  <Parameter name="MAIL_SUBJECT"><![CDATA[$Ausgabesteuerung.EMAIL.Betreff.isEmpty()? $Betreff1.valueOf(): $Ausgabesteuerung.EMAIL.Betreff.valueOf()]]></Parameter>
+ </Target>
+ <Target medium="EMAIL_FEHLER">
+  <VisibleIf><![CDATA[$Ausgabesteuerung.Ausgabekanal.valueOf() == "EMAIL_FEHLER"]]></VisibleIf>
+  <ForEach><![CDATA[$ExemplarAusgabesteuerung.Ausgabesteuerung]]></ForEach>
+  <Replacements></Replacements>
+  <Parameter name="MAIL_FROM"><![CDATA[$Ausgabesteuerung.EMAIL.Absender]]></Parameter>
+  <Parameter name="MAIL_TO"><![CDATA[$Ausgabesteuerung.EMAIL.Empfaenger]]></Parameter>
+  <Parameter name="MAIL_SUBJECT"><![CDATA[$Ausgabesteuerung.EMAIL.Betreff]]></Parameter>
+ </Target>
+ <Target instanceIdExpression="$Ausgabesteuerung.InstanzID + $AttachmentName" medium="EMAILATTACHMENT">
+  <VisibleIf><![CDATA[$Ausgabesteuerung.Ausgabekanal.valueOf() == 'EMAIL' && $AlsAttachment.valueOf()]]></VisibleIf>
+  <ForEach alias="$Ausgabesteuerung"><![CDATA[$ExemplarAusgabesteuerung.Ausgabesteuerung]]></ForEach>
+  <Replacements>
+   <Replace from="%%%OMSKV%%%" type="insert" scope="all">
+    <To><![CDATA[""]]></To>
+   </Replace>
+   <Replace from="%%%OMSID%%%" type="overwrite" scope="all">
+    <To><![CDATA["par(KW_SPLIT_ID)"]]></To>
+   </Replace>
+  </Replacements>
+  <Parameter name="MAIL_FROM"><![CDATA[$Ausgabesteuerung.EMAIL.Absender]]></Parameter>
+  <Parameter name="MAIL_TO"><![CDATA[$Ausgabesteuerung.EMAIL.Empfaenger]]></Parameter>
+  <Parameter name="MAIL_SUBJECT"><![CDATA[$Ausgabesteuerung.EMAIL.Betreff]]></Parameter>
+  <Parameter name="MAIL_ATTACHMENTNAME"><![CDATA[$AttachmentName]]></Parameter>
+ </Target>
+</OutputSettings>

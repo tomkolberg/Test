@@ -1,0 +1,40 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition></DataDefinition>
+ <Table>
+  <Columns>
+   <Column>
+    <Style>
+     <ColumnWidth>201371.0mpt</ColumnWidth>
+    </Style>
+   </Column>
+   <Column>
+    <Style>
+     <ColumnWidth>180070.0mpt</ColumnWidth>
+    </Style>
+   </Column>
+   <Column>
+    <Style>
+     <ColumnWidth>auto</ColumnWidth>
+    </Style>
+   </Column>
+  </Columns>
+  <Style parentName="Simple"></Style>
+  <Row>
+   <Cell>
+    <Container>
+     <ContainerPartRef uri="\\Framework_DE\Framework\Teildokumente\Brief\FW_FirmenleisteInfo1.model"></ContainerPartRef>
+    </Container>
+   </Cell>
+   <Cell>
+    <Container>
+     <ContainerPartRef uri="\\Framework_DE\Framework\Teildokumente\Brief\FW_FirmenleisteInfo2.model"></ContainerPartRef>
+    </Container>
+   </Cell>
+   <Cell>
+    <Container>
+     <ContainerPartRef uri="\\Framework_DE\Framework\Teildokumente\Brief\FW_FirmenleisteInfo3.model"></ContainerPartRef>
+    </Container>
+   </Cell>
+  </Row>
+ </Table>
+</ContainerPart>

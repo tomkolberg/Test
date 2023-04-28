@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Angebot Zahnzusatzversicherung -->
+<angebot>
+	<ersteller></ersteller>
+	<!-- Partner (Anschrift etc) -->
+	<vermerkzone>
+		<zusatz1>Nicht nachsenden!</zusatz1>
+		<zusatz2>Einschreiben</zusatz2>
+	</vermerkzone>
+	<Rollen>
+		<Rolle name="kunde" PartnerID="4711">
+			<Anrede>Frau</Anrede>
+			<Titel></Titel>
+			<Vorname>Maria</Vorname>
+			<Nachname>Werner</Nachname>
+			<Strasse>Entenweg 5</Strasse>
+			<PLZ>75203</PLZ>
+			<Ort>Königsbach</Ort>
+			<Land />
+			<Adresse>
+			<line1>Frau</line1>
+			<line2>Maria Werner</line2>
+			<line3>Entenweg 5</line3>	
+			<line4>75203 Königsbach</line4>					
+			</Adresse>
+			<Briefanrede>Frau Werner</Briefanrede>
+			<email>m.musterfrau@web.de</email>		
+		</Rolle>
+		<Rolle name="Vermittler" PartnerID="8534">
+			<Firmenname1>Gute Beratungsagentur</Firmenname1>
+			<Strasse>Große Gasse 1</Strasse>
+			<PLZ>12345</PLZ>
+			<Ort>Porschdorf</Ort>
+			<Land />
+			<Adresse>
+			<line1>Gute Beratungsagentur</line1>
+			<line2>Große Gasse 1</line2>
+			<line3>12345 Porschdorf</line3>	
+			</Adresse>
+			<email>info@gutberaten.de</email>
+			<vermittlerkennungen>
+				<policealsoriginal>true</policealsoriginal>
+				<sonstigekopie>true</sonstigekopie>
+			</vermittlerkennungen>
+		</Rolle>	
+	</Rollen>	
+	<steuerung>
+		<Briefdatum>11.04.2018</Briefdatum>
+		<versandart>Zentral</versandart>
+		<versandhinweis></versandhinweis>
+	</steuerung>	
+	<unterzeichner>Erich Hofmeier</unterzeichner>
+	<Absender>
+		<name>sam bank Aktiengesellschaft</name>
+		<Strasse>HauptStrasse 1</Strasse>
+		<PLZ>09990</PLZ>
+		<Ort>MeinOrt</Ort>		
+	</Absender>
+	<betreff>Angebot für Zusatzzahnversicherung</betreff>
+	<!-- A L L G E M E I N E V E R S I C H E R U N G S D A T E N K U N D E -->
+	<versicherungsdaten>
+		<versicherungsnummer>987-654-D1</versicherungsnummer>
+		<versicherungsart>Lebensversicherung</versicherungsart>
+	</versicherungsdaten>
+	<!-- S a c h b e a r b e i t e r -->
+	<Sachbearbeiter>
+		<Anrede>Herr</Anrede>
+		<name>Erich Hofmeier</name>
+		<abteilung>Kundenservice</abteilung>
+		<Telefon>07766 (99 66 44)</Telefon>
+		<telefax>07766 (99 66 66)</telefax>
+	</Sachbearbeiter>
+	<!-- V E R S I C H E R U N G S D A T E N L E B E N S V E R S I C H E R U 
+		N G -->
+	<versicherungsdatenLV>
+		<reserven>669.26</reserven>
+		<rückkaufwert>11,087.32</rückkaufwert>
+		<überschuss>3,690.51</überschuss>
+		<VersPerson>Dr. Kurt Graf</VersPerson>
+		<WertDatum>01.06.2012</WertDatum>
+	</versicherungsdatenLV>
+</angebot>

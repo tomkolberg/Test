@@ -1,0 +1,218 @@
+<TestCases xmlns="urn:kwsoft:mtext:tonic:dom" activeTestCase="&lt;Standard&gt;">
+ <TestCase name="&lt;Standard&gt;">
+  <Root base="Framework">
+   <RootPartInstance partIndex="0">
+    <Data>
+     <DataNode name="Metadata">
+      <Value><![CDATA[string:]]></Value>
+      <DataNode name="Vorlage">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="Korrespondenz">
+        <Value><![CDATA[string:]]></Value>
+        <DataNode name="ErstExemplar">
+         <Value><![CDATA[string:]]></Value>
+         <DataNode name="Empfaengerrolle">
+          <Value><![CDATA[string:]]></Value>
+         </DataNode>
+         <DataNode name="StandardZustellMedium">
+          <Value><![CDATA[string:ZENTRALDRUCK]]></Value>
+         </DataNode>
+         <DataNode name="ErlaubteZustellMedien">
+          <Value><![CDATA[string:ZENTRALDRUCK]]></Value>
+         </DataNode>
+         <DataNode name="ErlaubteInfoMedien">
+          <Value><![CDATA[string:]]></Value>
+         </DataNode>
+        </DataNode>
+        <DataNode name="WeitereExemplare">
+         <Value><![CDATA[string:]]></Value>
+         <DataNode name="Empfaengerrolle">
+          <Value><![CDATA[string:]]></Value>
+         </DataNode>
+         <DataNode name="StandardZustellMedium">
+          <Value><![CDATA[string:ZENTRALDRUCK]]></Value>
+         </DataNode>
+         <DataNode name="ErlaubteZustellMedien">
+          <Value><![CDATA[string:ZENTRALDRUCK]]></Value>
+         </DataNode>
+         <DataNode name="ErlaubteInfoMedien">
+          <Value><![CDATA[string:]]></Value>
+         </DataNode>
+        </DataNode>
+       </DataNode>
+      </DataNode>
+      <DataNode name="Ausgabesteuerung">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="Formatiermodus">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="State">
+       <Value><![CDATA[string:Created]]></Value>
+      </DataNode>
+      <DataNode name="ValidationState" valueChanged="true">
+       <Value><![CDATA[string:ERROR]]></Value>
+      </DataNode>
+      <DataNode name="Editor">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="DefaultDocumentName">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+       <DataNode name="DefaultDocumentDescription">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="DocumentLanguage">
+       <Value><![CDATA[string:]]></Value>
+      </DataNode>
+      <DataNode name="InitialDataBinding">
+       <Value><![CDATA[string:\library\Framework\Dokumentsteuerung\Anschreiben.model.template]]></Value>
+      </DataNode>
+     </DataNode>
+    </Data>
+    <DocumentPartInstance partIndex="0">
+     <DocumentPartInstance partIndex="0">
+      <DocumentPartInstance partIndex="0">
+       <DocumentPartInstance partIndex="0">
+        <Data>
+         <DataNodeRef ref="$Exemplar" name="Exemplar"></DataNodeRef>
+         <DataNodeRef ref="$Exemplar.AlternativEmpfaenger" name="Empfaenger"></DataNodeRef>
+         <DataNodeRef ref="$Exemplar.Absender" name="Absender"></DataNodeRef>
+         <DataNodeRef ref="$Betreff1" name="Betreff1"></DataNodeRef>
+         <DataNodeRef ref="$Betreff2" name="Betreff2"></DataNodeRef>
+         <DataNodeRef ref="$Betreff3" name="Betreff3"></DataNodeRef>
+        </Data>
+        <DocumentPartInstance partIndex="0">
+         <ContainerPartInstance partIndex="0">
+          <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+         </ContainerPartInstance>
+         <ContainerPartInstance partIndex="1">
+          <Data>
+           <DataNodeRef ref="$Absender" name="Absender"></DataNodeRef>
+          </Data>
+          <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+         </ContainerPartInstance>
+         <ContainerPartInstance partIndex="2">
+          <Data>
+           <DataNodeRef ref="$Absender" name="Absender"></DataNodeRef>
+          </Data>
+          <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+         </ContainerPartInstance>
+         <ContainerPartInstance partIndex="3">
+          <Data>
+           <DataNodeRef ref="$Empfaenger" name="Empfaenger"></DataNodeRef>
+          </Data>
+          <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+         </ContainerPartInstance>
+         <ContainerPartInstance partIndex="4">
+          <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+         </ContainerPartInstance>
+         <ContainerPartInstance partIndex="6">
+          <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+         </ContainerPartInstance>
+         <SectionPartInstance partIndex="7">
+          <Data>
+           <DataNode name="Grussformel">
+            <Value><![CDATA[string:Mit freundlichen Grüßen]]></Value>
+           </DataNode>
+           <DataNode name="Unterschrift">
+            <Value><![CDATA[string:mtx://Framework/Grafiken/unterschrift_KR.gif]]></Value>
+           </DataNode>
+           <DataNodeRef ref="$Exemplar.Absender" name="Absender"></DataNodeRef>
+          </Data>
+          <SectionPartInstance partIndex="0"></SectionPartInstance>
+         </SectionPartInstance>
+         <ContainerPartInstance partIndex="5">
+          <Data>
+           <DataNode name="Empfaenger" valueChanged="true">
+            <Value><![CDATA[string:$Exemplar.AlternativEmpfaenger]]></Value>
+            <DataNode name="istGueltig">
+             <Value><![CDATA[bool:false]]></Value>
+            </DataNode>
+            <DataNode name="BriefAnrede">
+             <Value><![CDATA[string:Sehr geehrte Damen und Herren]]></Value>
+            </DataNode>
+            <DataNode name="NameVorname">
+             <Value><![CDATA[string:]]></Value>
+            </DataNode>
+           </DataNode>
+           <DataNode name="OriginalEmpfaenger" valueChanged="true">
+            <Value><![CDATA[string:$Exemplar.Empfaenger]]></Value>
+            <DataNode name="NameVorname">
+             <Value><![CDATA[string:]]></Value>
+            </DataNode>
+            <DataNode name="istGueltig">
+             <Value><![CDATA[bool:false]]></Value>
+            </DataNode>
+            <DataNode name="BriefAnrede">
+             <Value><![CDATA[string:Sehr geehrte Damen und Herren]]></Value>
+            </DataNode>
+           </DataNode>
+          </Data>
+          <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+         </ContainerPartInstance>
+        </DocumentPartInstance>
+       </DocumentPartInstance>
+      </DocumentPartInstance>
+      <DocumentPartInstance partIndex="1">
+       <Data>
+        <DataNodeRef ref="$Exemplar" name="Exemplar"></DataNodeRef>
+        <DataNodeRef ref="$Exemplar.Empfaenger" name="Empfaenger"></DataNodeRef>
+        <DataNodeRef ref="$Exemplar.Absender" name="Absender"></DataNodeRef>
+        <DataNodeRef ref="$Betreff1" name="Betreff1"></DataNodeRef>
+        <DataNodeRef ref="$Betreff2" name="Betreff2"></DataNodeRef>
+        <DataNodeRef ref="$Betreff3" name="Betreff3"></DataNodeRef>
+       </Data>
+       <DocumentPartInstance partIndex="0">
+        <ContainerPartInstance partIndex="0">
+         <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+        </ContainerPartInstance>
+        <ContainerPartInstance partIndex="1">
+         <Data>
+          <DataNodeRef ref="$Absender" name="Absender"></DataNodeRef>
+         </Data>
+         <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+        </ContainerPartInstance>
+        <ContainerPartInstance partIndex="2">
+         <Data>
+          <DataNodeRef ref="$Absender" name="Absender"></DataNodeRef>
+         </Data>
+         <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+        </ContainerPartInstance>
+        <ContainerPartInstance partIndex="3">
+         <Data>
+          <DataNodeRef ref="$Empfaenger" name="Empfaenger"></DataNodeRef>
+         </Data>
+         <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+        </ContainerPartInstance>
+        <ContainerPartInstance partIndex="4">
+         <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+        </ContainerPartInstance>
+        <ContainerPartInstance partIndex="5">
+         <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+        </ContainerPartInstance>
+        <SectionPartInstance partIndex="6">
+         <Data>
+          <DataNode name="Grussformel">
+           <Value><![CDATA[string:Mit freundlichen Grüßen]]></Value>
+          </DataNode>
+          <DataNode name="Unterschrift">
+           <Value><![CDATA[string:mtx://Framework/Grafiken/unterschrift_KR.gif]]></Value>
+          </DataNode>
+          <DataNodeRef ref="$Exemplar.Absender" name="Absender"></DataNodeRef>
+         </Data>
+         <SectionPartInstance partIndex="0"></SectionPartInstance>
+        </SectionPartInstance>
+       </DocumentPartInstance>
+      </DocumentPartInstance>
+     </DocumentPartInstance>
+    </DocumentPartInstance>
+   </RootPartInstance>
+  </Root>
+  <ForceVisibilities>
+   <ForceVisibility visible="true" designMode="false">
+    <Position length="5" positions="0,0,0,0,0"></Position>
+   </ForceVisibility>
+  </ForceVisibilities>
+ </TestCase>
+</TestCases>

@@ -1,0 +1,8 @@
+<configuration xmlns="http://www.kwsoft.de/controlcenter/projectRuntimeConfiguration"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <type>APPLICATION</type>
+   <description/>
+   <icon/>
+   <testDocument/>
+   <languages>en_US;it_IT</languages>
+</configuration>

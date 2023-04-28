@@ -1,0 +1,115 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Empfaenger" ref="\\Framework_DE\Data\Empfaenger.datamodel">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <ContainerPart>
+  <VisibleIf><![CDATA[$Empfaenger.Partner.Adresse.Zeile.notEmpty()]]></VisibleIf>
+  <DataDefinition></DataDefinition>
+  <ContainerPart>
+   <ForEach alias="$Zeile"><![CDATA[$Empfaenger.Partner.Adresse.Zeile]]></ForEach>
+   <DataDefinition></DataDefinition>
+   <ContainerPart>
+    <VisibleIf><![CDATA[$Zeile.notEmpty()]]></VisibleIf>
+    <DataDefinition></DataDefinition>
+    <Par>
+     <Style parentName="FW_RecipientAddress"></Style>
+     <Span>
+      <Data>$Zeile</Data>
+      <Text></Text>
+     </Span>
+    </Par>
+   </ContainerPart>
+  </ContainerPart>
+ </ContainerPart>
+ <ContainerPart>
+  <VisibleIf><![CDATA[ELSE]]></VisibleIf>
+  <DataDefinition></DataDefinition>
+  <ContainerPart>
+   <VisibleIf><![CDATA[$Empfaenger.Partner.Firmenname1.notEmpty()]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <Par>
+    <Style parentName="FW_RecipientAddress"></Style>
+    <Span>
+     <Data>$Empfaenger.Partner.Firmenname1</Data>
+    </Span>
+   </Par>
+  </ContainerPart>
+  <ContainerPart>
+   <VisibleIf><![CDATA[$Empfaenger.Partner.Firmenname2.notEmpty()]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <Par>
+    <Style parentName="FW_RecipientAddress"></Style>
+    <Span>
+     <Data>$Empfaenger.Partner.Firmenname2</Data>
+    </Span>
+   </Par>
+  </ContainerPart>
+  <ContainerPart>
+   <VisibleIf><![CDATA[$Empfaenger.Partner.Nachname && !$Empfaenger.Partner.Nachname.isEmpty()]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <Par>
+    <Style parentName="FW_RecipientAddress"></Style>
+    <ParPart>
+     <VisibleIf><![CDATA[$Empfaenger.Partner.Titel.notEmpty()]]></VisibleIf>
+     <DataDefinition></DataDefinition>
+     <Span>
+      <Data>$Empfaenger.Partner.Titel</Data>
+      <Text> </Text>
+     </Span>
+    </ParPart>
+    <ParPart>
+     <VisibleIf><![CDATA[$Empfaenger.Partner.Vorname.notEmpty()]]></VisibleIf>
+     <DataDefinition></DataDefinition>
+     <Span>
+      <Data>$Empfaenger.Partner.Vorname</Data>
+      <Text> </Text>
+     </Span>
+    </ParPart>
+    <Span>
+     <Data>$Empfaenger.Partner.Nachname</Data>
+    </Span>
+   </Par>
+  </ContainerPart>
+  <ContainerPart>
+   <VisibleIf><![CDATA[$Empfaenger.Partner.Strasse.notEmpty()]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <Par>
+    <Span>
+     <Data>$Empfaenger.Partner.Strasse</Data>
+     <Text> </Text>
+     <Data>$Empfaenger.Partner.Hausnummer</Data>
+    </Span>
+   </Par>
+  </ContainerPart>
+  <ContainerPart>
+   <VisibleIf><![CDATA[$Empfaenger.Partner.Adresszusatz.notEmpty()]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <Par>
+    <Span>
+     <Data>$Empfaenger.Partner.Adresszusatz</Data>
+    </Span>
+   </Par>
+  </ContainerPart>
+  <Par>
+   <Span>
+    <Data>$Empfaenger.Partner.PLZ</Data>
+    <Text> </Text>
+    <Data>$Empfaenger.Partner.Ort</Data>
+    <Text></Text>
+   </Span>
+  </Par>
+  <ContainerPart>
+   <VisibleIf><![CDATA[$Empfaenger.Partner.Land.notEmpty()]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <Par>
+    <Style parentName="FW_RecipientAddress"></Style>
+    <Span>
+     <Data>$Empfaenger.Partner.Land</Data>
+    </Span>
+   </Par>
+  </ContainerPart>
+ </ContainerPart>
+</ContainerPart>

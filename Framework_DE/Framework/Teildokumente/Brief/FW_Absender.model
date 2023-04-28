@@ -1,0 +1,14 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Absender" ref="\\Framework_DE\Data\Absender.datamodel">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <Par>
+  <Style parentName="FW_SenderAddressLine"></Style>
+  <Span>
+   <Data>$Absender.Absenderzeile</Data>
+  </Span>
+ </Par>
+</ContainerPart>

@@ -1,0 +1,10 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition></DataDefinition>
+ <ContainerPartRef uri="Bausteine\NurEineInhaltserweiterung_2.model">
+  <Extensions>
+   <ContainerExtension id="Inhalt Demobaustein2">
+    <ContainerExtensionDef id="Inhalt Demobaustein1"></ContainerExtensionDef>
+   </ContainerExtension>
+  </Extensions>
+ </ContainerPartRef>
+</ContainerPart>

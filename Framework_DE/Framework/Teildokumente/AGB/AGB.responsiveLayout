@@ -1,0 +1,41 @@
+<ResponsiveLayouts xmlns="urn:kwsoft:mtext:tonic:dom">
+ <ResponsiveLayout>
+  <Grid>
+   <Columns>
+    <Column>1.0fr</Column>
+    <Column>1.0fr</Column>
+    <Column>1.0fr</Column>
+   </Columns>
+   <Rows>
+    <Row>auto</Row>
+    <Row>auto</Row>
+   </Rows>
+   <ColumnGap>5.0px</ColumnGap>
+   <RowGap>5.0px</RowGap>
+   <Regions>
+    <Row>
+     <Cell>
+      <Region name="heading"></Region>
+     </Cell>
+     <Cell>
+      <Region name="heading"></Region>
+     </Cell>
+     <Cell>
+      <Region name="logo"></Region>
+     </Cell>
+    </Row>
+    <Row>
+     <Cell>
+      <Region name="Body"></Region>
+     </Cell>
+     <Cell>
+      <Region name="Body"></Region>
+     </Cell>
+     <Cell>
+      <Region name="Body"></Region>
+     </Cell>
+    </Row>
+   </Regions>
+  </Grid>
+ </ResponsiveLayout>
+</ResponsiveLayouts>

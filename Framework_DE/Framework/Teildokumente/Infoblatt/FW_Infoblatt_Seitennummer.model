@@ -1,0 +1,12 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition></DataDefinition>
+ <Par>
+  <Style parentName="FW_Default"></Style>
+  <Span>
+   <Text>Informationsblatt Seite </Text>
+   <PageNumber scope="logicaldocument"></PageNumber>
+   <Text> von </Text>
+   <PageCount scope="logicaldocument"></PageCount>
+  </Span>
+ </Par>
+</ContainerPart>

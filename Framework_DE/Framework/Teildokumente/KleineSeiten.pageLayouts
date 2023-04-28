@@ -1,0 +1,11 @@
+<PageLayouts xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DefaultPageLayout>
+  <PageSize name="Custom" width="210.0mm" height="5.0cm"></PageSize>
+  <Region name="Body">
+   <Left distance="56692.0mpt" anchorSide="same"></Left>
+   <Top distance="4772.0mpt" anchorSide="same"></Top>
+   <Right distance="28346.0mpt" anchorSide="same"></Right>
+   <Bottom distance="4772.0mpt" anchorSide="same"></Bottom>
+  </Region>
+ </DefaultPageLayout>
+</PageLayouts>

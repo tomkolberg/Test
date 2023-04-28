@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vp>
+ <Person>
+  <Vorname>Manni</Vorname>
+  <Nachname>Müller</Nachname>
+  <Adresse>
+   <Strasse>Mühlenheuweg 12</Strasse>
+   <PLZ>47999</PLZ>
+   <Ort>Mühlberg</Ort>
+  </Adresse>
+ </Person>
+</vp>

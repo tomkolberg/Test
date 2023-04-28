@@ -1,0 +1,77 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Absender" ref="\\Framework_DE\Data\Absender.datamodel">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <Par>
+  <Style parentName="FW_InfoBold">
+   <Align>left</Align>
+  </Style>
+  <Span>
+   <Data>$Absender.Sachbearbeiter.Firmenname1</Data>
+   <Text></Text>
+  </Span>
+ </Par>
+ <Par>
+  <Translations>
+   <Translation>
+    <Language language="it" country="IT" variant=""></Language>
+    <Span>
+     <Text>TRANSLATE: Ansprechpartner:</Text>
+    </Span>
+   </Translation>
+   <Translation>
+    <Language language="en" country="US" variant=""></Language>
+    <Span>
+     <Text>TRANSLATE: Ansprechpartner:</Text>
+    </Span>
+   </Translation>
+  </Translations>
+  <Style parentName="FW_Info"></Style>
+  <Span>
+   <Text>Ansprechpartner:</Text>
+  </Span>
+ </Par>
+ <Par>
+  <Style parentName="FW_Info"></Style>
+  <Span>
+   <Data>$Absender.Sachbearbeiter.Vorname</Data>
+   <Text> </Text>
+   <Data>$Absender.Sachbearbeiter.Nachname</Data>
+  </Span>
+ </Par>
+ <Par>
+  <Translations>
+   <Translation>
+    <Language language="en" country="US" variant=""></Language>
+    <Span>
+     <Text>Phone: </Text>
+     <Data>$Absender.Sachbearbeiter.Telefon</Data>
+    </Span>
+   </Translation>
+  </Translations>
+  <Style parentName="FW_Info"></Style>
+  <Span>
+   <Text>Telefon: </Text>
+   <Data>$Absender.Sachbearbeiter.Telefon</Data>
+  </Span>
+ </Par>
+ <Par>
+  <Translations>
+   <Translation>
+    <Language language="en" country="US" variant=""></Language>
+    <Span>
+     <Text>Fax: </Text>
+     <Data>$Absender.Sachbearbeiter.Fax</Data>
+    </Span>
+   </Translation>
+  </Translations>
+  <Style parentName="FW_Info"></Style>
+  <Span>
+   <Text>Fax: </Text>
+   <Data>$Absender.Sachbearbeiter.Fax</Data>
+  </Span>
+ </Par>
+</ContainerPart>

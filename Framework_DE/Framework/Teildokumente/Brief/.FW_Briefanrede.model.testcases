@@ -1,0 +1,86 @@
+<TestCases xmlns="urn:kwsoft:mtext:tonic:dom" activeTestCase="&lt;default&gt;">
+ <TestCase name="&lt;default&gt;">
+  <Root base="Framework">
+   <RootPartInstance partIndex="0">
+    <Data>
+     <DataNode name="Metadata">
+      <Value><![CDATA[string:]]></Value>
+      <DataNode name="Vorlage">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="Korrespondenz">
+        <Value><![CDATA[string:]]></Value>
+        <DataNode name="ErstExemplar">
+         <Value><![CDATA[string:]]></Value>
+         <DataNode name="Ausgabekanaele">
+          <Value><![CDATA[string:]]></Value>
+          <DataNode name="ARCHIV">
+           <Value><![CDATA[bool:true]]></Value>
+          </DataNode>
+          <DataNode name="LOKALDRUCK">
+           <Value><![CDATA[bool:true]]></Value>
+          </DataNode>
+          <DataNode name="ZENTRALDRUCK">
+           <Value><![CDATA[bool:true]]></Value>
+          </DataNode>
+          <DataNode name="FAX">
+           <Value><![CDATA[bool:false]]></Value>
+          </DataNode>
+          <DataNode name="EMAIL">
+           <Value><![CDATA[bool:false]]></Value>
+          </DataNode>
+         </DataNode>
+        </DataNode>
+       </DataNode>
+       <DataNode name="auswaehlbar">
+        <Value><![CDATA[bool:true]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="OutputControl">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="FormattingMode">
+        <Value><![CDATA[string:Editor]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="State">
+       <Value><![CDATA[string:Created]]></Value>
+      </DataNode>
+      <DataNode name="ValidationState" valueChanged="true">
+       <Value><![CDATA[string:OK]]></Value>
+      </DataNode>
+      <DataNode name="Editor">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="DefaultDocumentName">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+       <DataNode name="DefaultDocumentDescription">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="DocumentLanguage">
+       <Value><![CDATA[string:]]></Value>
+      </DataNode>
+      <DataNode name="InitialDataBinding">
+       <Value><![CDATA[string:\library\Framework\Framework\DocumentParts\Letter\FW_SalutatoryAddress.model.template]]></Value>
+      </DataNode>
+     </DataNode>
+    </Data>
+    <ContainerPartInstance partIndex="0">
+     <Data>
+      <DataNode name="Recipient">
+       <DataNode name="SalutatoryAddress" valueChanged="true">
+        <Value><![CDATA[string:Dear Ladies and Gentlemen]]></Value>
+       </DataNode>
+       <DataNode name="isValid">
+        <Value><![CDATA[bool:false]]></Value>
+       </DataNode>
+       <DataNode name="NameFirstname">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+      </DataNode>
+     </Data>
+     <ContainerPartInstance partIndex="0"></ContainerPartInstance>
+    </ContainerPartInstance>
+   </RootPartInstance>
+  </Root>
+ </TestCase>
+</TestCases>

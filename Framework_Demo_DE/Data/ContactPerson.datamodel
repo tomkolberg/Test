@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="name"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE"/>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node data-type="NUMBER"
+         hierarchical="FLAT"
+         multiple="false"
+         name="phone"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="WHOLE_NUMBER">
+            <Values>
+               <Value/>
+               <Value/>
+            </Values>
+         </Validation>
+         <Format>
+            <Input decimal-separator="46" thousand-separator="44"/>
+            <Output currency-format="BEFORE_WITH_SPACE"
+                    currency-symbol="EUR"
+                    decimal-separator="46"
+                    formatting-type="NUMBER"
+                    fractional-digits="-1"
+                    leading-zeros="1"
+                    text-prefix=""
+                    text-suffix=""
+                    thousand-separator="44"
+                    use-current-locale="true"/>
+         </Format>
+         <Script/>
+      </Settings>
+   </Node>
+</DataModel>

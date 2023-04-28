@@ -1,0 +1,84 @@
+{
+  "angebot": {
+    "vermerkzone": {
+      "zusatz1": "Nicht nachsenden!",
+      "zusatz2": "Einschreiben"
+    },
+    "Rollen": {
+      "Rolle": [
+        {
+          "-name": "kunde",
+          "-PartnerID": "4711",
+          "Anrede": "Herr",
+          "Titel": "Dr.",
+          "Vorname": "Kurt",
+          "Nachname": "Graf",
+          "Strasse": "Rosenweg 4",
+          "PLZ": "07740",
+          "Ort": "Jena",
+          "Adresse": {
+            "line1": "Herr",
+            "line2": "Dr. Kurt Graf",
+            "line3": "Rosenweg 4",
+            "line4": "07740 Jena"
+          },
+          "Briefanrede": "Herr Graf",
+          "email": "kurt.graf@gmx.de",
+          "bankdaten": {
+            "iban": "DE67100700000012345678",
+            "bic": "DEUTDEBBXXX",
+            "bank": "Deutsche Bank Fil Berlin"
+          }
+        },
+        {
+          "-name": "bevollmaechtigter",
+          "-PartnerID": "4720",
+          "Anrede": "Frau",
+          "Vorname": "Eva",
+          "Nachname": "Vollmacht",
+          "Strasse": "HauptStrasse 1",
+          "PLZ": "08880",
+          "Ort": "Meinestadt",
+          "Adresse": {
+            "line1": "Frau",
+            "line2": "Eva Vollmacht",
+            "line3": "HauptStrasse 1",
+            "line4": "08880 Meinestadt"
+          },
+          "Briefanrede": "Frau Vollmacht",
+          "email": "eva.vollmacht@gmx.de"
+        }
+      ]
+    },
+    "steuerung": {
+      "Briefdatum": "11.04.2018",
+      "versandart": "Zentral"
+    },
+    "unterzeichner": "Erich Hofmeier",
+    "Absender": {
+      "name": "sam bank Aktiengesellschaft",
+      "Strasse": "Alfred-Döblin-Platz 59",
+      "PLZ": "79100",
+      "Ort": "Freiburg"
+    },
+    "betreff": "Angebot für Zusatzzahnversicherung",
+    "versicherungsdaten": {
+      "versicherungsnummer": "987-654-D1",
+      "versicherungsart": "Lebensversicherung"
+    },
+    "Sachbearbeiter": {
+      "Anrede": "Herr",
+      "name": "Erich Hofmeier",
+      "abteilung": "Kundenservice",
+      "Telefon": "07766 (99 66 44)",
+      "telefax": "07766 (99 66 66)"
+    },
+    "versicherungsdatenLV": {
+      "reserven": "669.26",
+      "rückkaufwert": "11,087.32",
+      "überschuss": "3,690.51",
+      "VersPerson": "Dr. Kurt Graf",
+      "WertDatum": "01.06.2012"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel>
+   <Node multiple="false" name="Grund">
+      <Settings>
+         <Script/>
+      </Settings>
+      <Node data-type="BOOLEAN"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Schwangerschaft"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE"/>
+            <Format>
+               <Output false-value="false" true-value="true"/>
+            </Format>
+            <Script/>
+         </Settings>
+      </Node>
+      <Node data-type="BOOLEAN"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Erkrankung"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE"/>
+            <Format>
+               <Output false-value="false" true-value="true"/>
+            </Format>
+            <Script/>
+         </Settings>
+      </Node>
+   </Node>
+   <Node multiple="false" name="Folge">
+      <Settings>
+         <Script/>
+      </Settings>
+      <Node data-type="BOOLEAN"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Arbeitsunfall"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE"/>
+            <Format>
+               <Output false-value="false" true-value="true"/>
+            </Format>
+            <Script/>
+         </Settings>
+      </Node>
+      <Node data-type="BOOLEAN"
+            hierarchical="FLAT"
+            multiple="false"
+            name="privaterUnfall"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE"/>
+            <Format>
+               <Output false-value="false" true-value="true"/>
+            </Format>
+            <Script/>
+         </Settings>
+      </Node>
+   </Node>
+   <Node data-type="DATETIME"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Unfalltag"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE"/>
+         <Format>
+            <Input date-format="dd.MM.yyyy"/>
+            <Output date-format="dd.MM.yyyy HH:mm:ss"
+                    date-style="2"
+                    date-type="DATE"
+                    use-current-locale="true"/>
+         </Format>
+         <Script/>
+      </Settings>
+   </Node>
+</DataModel>

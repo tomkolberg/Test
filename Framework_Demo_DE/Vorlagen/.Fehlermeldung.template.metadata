@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content>
+   <entry name="/dataProviders/Metadata">
+      <SerializedDataProvider providerClass="de.kwsoft.mtext.format.dataprovider.MetadataNodeInstance">
+         <DataModelResourceName name=""/>
+         <NodeInst name="Metadata" value="">
+            <Children>
+               <NodeInst name="Editor" value="">
+                  <Children>
+                     <NodeInst name="DefaultDocumentName" value="Fehlermeldung"/>
+                     <NodeInst name="DefaultDocumentDescription" value="Fehlermeldung"/>
+                  </Children>
+               </NodeInst>
+            </Children>
+         </NodeInst>
+      </SerializedDataProvider>
+   </entry>
+</content>

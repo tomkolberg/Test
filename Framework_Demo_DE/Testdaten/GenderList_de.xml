@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<genderlist>
+ <gender>
+  <Text>männlich</Text>
+ </gender>
+ <gender>
+  <Text>weiblich</Text>
+ </gender>
+ <gender>
+  <Text>divers</Text>
+ </gender>
+ <selectedGender></selectedGender>
+</genderlist>

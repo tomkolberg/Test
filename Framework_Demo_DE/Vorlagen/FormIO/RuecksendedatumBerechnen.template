@@ -1,0 +1,48 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom" id="\library\Framework_Demo_DE\Vorlagen\FormIO\RuecksendedatumBerechnen.template" description="Rücksendedatum in FormIO mit moment( ) berechnen">
+ <DataDefinition>
+  <ParamDef name="CalculateDates" ref="\\Framework_Demo_DE\Data\CalculateDates.datamodel" dataMappingRef="">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <UIContribution>
+  <GuideArea>
+   <ActionLink title="Rücksendedatum setzen" inputAreaGroupID="">
+    <Script><![CDATA[var formFunc = $context.FormIO.createForm(
+					"\\\\Framework_Demo_DE\\FormIO\\de\\CalculateDates.formio");
+var layout = {
+	"height": "700",
+	"width" : "700",
+	"title" : "Rücksendedatum setzen"
+};
+$context.showForm(formFunc, $CalculateDates, layout);]]></Script>
+   </ActionLink>
+  </GuideArea>
+  <InputArea></InputArea>
+ </UIContribution>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Document>
+  <Section>
+   <Container>
+    <Par>
+     <Style parentName="TextSpaceAfter"></Style>
+     <Span>
+      <Text>Dieses Beispiel fügt über den FormIO-Dialog automatisch dem aktuellen Datum 14 Tage hinzu.</Text>
+     </Span>
+    </Par>
+    <Par>
+     <Span>
+      <Text>Bitte schicken Sie dieses Schreiben bis zum </Text>
+      <Data>$CalculateDates.returndate</Data>
+      <Text> zurück.</Text>
+     </Span>
+    </Par>
+   </Container>
+  </Section>
+ </Document>
+</RootPart>

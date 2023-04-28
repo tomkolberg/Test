@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Angebot Zahnzusatzversicherung -->
+<angebot>
+	<ersteller></ersteller>
+	<!-- K u n d e (Anschrift) -->
+	<vermerkzone>
+		<zusatz1>Nicht nachsenden!</zusatz1>
+		<zusatz2>Einschreiben</zusatz2>
+	</vermerkzone>
+	<kunde>
+		<PartnerID>4711</PartnerID>
+		<Anrede>Herr</Anrede>
+		<Titel>Dr.</Titel>
+		<Vorname>Kurt</Vorname>
+		<Nachname>Graf</Nachname>
+		<Firmenname1></Firmenname1>
+		<Firmenname2></Firmenname2>
+		<Strasse>Rosenweg 4</Strasse>
+		<PLZ>07740</PLZ>
+		<Ort>Jena</Ort>
+		<Land />
+		<Adresse>
+		<line1>Herr</line1>
+		<line2>Dr. Kurt Graf</line2>
+		<line3>Rosenweg 4</line3>	
+		<line4>07740 Jena</line4>					
+		</Adresse>
+		<Briefanrede>Herr Graf</Briefanrede>
+		<email>kurt.graf@gmx.de</email>	
+		<bankdaten>
+				<iban>DE67100700000012345678</iban>
+				<bic>DEUTDEBBXXX</bic>
+				<bank>Deutsche Bank Fil Berlin</bank>
+		</bankdaten>				
+	</kunde>
+	<bevollmaechtigter>
+	    <PartnerID>4720</PartnerID>
+	    <UserID>JG</UserID>
+		<Anrede>Frau</Anrede>
+		<Titel></Titel>
+		<Vorname>Jana</Vorname>
+		<Nachname>Groß-Vollmacht</Nachname>
+		<Firmenname1></Firmenname1>
+		<Firmenname2></Firmenname2>
+		<Adresszusatz />
+		<Strasse>HauptStrasse 1</Strasse>
+		<PLZ>08880</PLZ>
+		<Ort>Meinestadt</Ort>
+		<Land />
+		<Adresse>
+		<Zeile>Frau</Zeile>
+		<Zeile>Jana Groß-Vollmacht</Zeile>
+		<Zeile>HauptStrasse 1</Zeile>	
+		<Zeile>08880 Meinestadt</Zeile>					
+		</Adresse>		
+		<Briefanrede>Frau Groß-Vollmacht</Briefanrede>
+		<email>jana.gross-vollmacht@gmx.de</email>
+		<Telefon>0815-47111337</Telefon>
+					<fax>0815-47114242</fax>
+					<Rolle>X123</Rolle>
+	</bevollmaechtigter>	
+	<steuerung>
+		<Briefdatum>11.04.2018</Briefdatum>
+		<versandart>Zentral</versandart>
+		<versandhinweis></versandhinweis>
+	</steuerung>	
+	<unterzeichner>Erich Hofmeier</unterzeichner>
+	<Absender>
+		<name>sam bank Aktiengesellschaft</name>
+		<Strasse>Alfred-Döblin-Platz 59</Strasse>
+		<PLZ>79100</PLZ>
+		<Ort>Freiburg</Ort>		
+	</Absender>
+	<betreff>Angebot für Zusatzzahnversicherung</betreff>
+	<!-- A L L G E M E I N E V E R S I C H E R U N G S D A T E N K U N D E -->
+	<versicherungsdaten>
+		<versicherungsnummer>987-654-D1</versicherungsnummer>
+		<versicherungsart>Lebensversicherung</versicherungsart>
+	</versicherungsdaten>
+	<!-- S a c h b e a r b e i t e r -->
+	<Sachbearbeiter>
+		<Anrede>Herr</Anrede>
+		<name>Erich Hofmeier</name>
+		<abteilung>Kundenservice</abteilung>
+		<Telefon>07766 (99 66 44)</Telefon>
+		<telefax>07766 (99 66 66)</telefax>
+	</Sachbearbeiter>
+	<!-- V E R S I C H E R U N G S D A T E N L E B E N S V E R S I C H E R U 
+		N G -->
+	<versicherungsdatenLV>
+		<reserven>669.26</reserven>
+		<rückkaufwert>11,087.32</rückkaufwert>
+		<überschuss>3,690.51</überschuss>
+		<VersPerson>Dr. Kurt Graf</VersPerson>
+		<WertDatum>01.06.2012</WertDatum>
+	</versicherungsdatenLV>
+</angebot>

@@ -1,0 +1,64 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom" id="\library\Framework_Demo_DE\Vorlagen\FormIO\GenderList.template" title="" description="Auswahlliste in FormIO-Dialog">
+ <DataDefinition>
+  <ParamDef name="GenderList" ref="\\Framework_Demo_DE\Data\GenderList.datamodel" dataMappingRef="Data\GenderList.mapping">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <UIContribution>
+  <GuideArea>
+   <ActionLink title="Geschlecht auswählen" inputAreaGroupID="">
+    <Script><![CDATA[var formFunc = $context.FormIO.createForm("\\\\Framework_Demo_DE\\FormIO\\de\\GenderList.formio");
+var layout = {
+	"height": "700",
+	"width" : "700",
+	"title" : "Geschlecht auswählen"
+};
+$context.showForm(formFunc, $GenderList, layout);]]></Script>
+   </ActionLink>
+  </GuideArea>
+  <InputArea></InputArea>
+ </UIContribution>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Document>
+  <Language><![CDATA[$Metadata.DocumentLanguage]]></Language>
+  <Section>
+   <Container>
+    <Par>
+     <Style parentName="TextSpaceAfter"></Style>
+     <Span>
+      <Text>Aus den übergebenen XML-Daten wird hier im FormIO-Dialog eine Auswahlliste generiert. </Text>
+     </Span>
+    </Par>
+    <Par>
+     <Style parentName="TextSpaceAfter"></Style>
+     <Span>
+      <Text>Wählen Sie vor dem Aufruf der Vorlage die Testdaten GenderList_de.xml aus.</Text>
+     </Span>
+    </Par>
+    <Par>
+     <Translations>
+      <Translation>
+       <Language language="en" country="US" variant=""></Language>
+       <Span>
+        <Text>Selected gender: </Text>
+        <Data>$GenderList.selectedGender</Data>
+       </Span>
+      </Translation>
+     </Translations>
+     <Span>
+      <Text>Ausgewähltes Geschlecht: </Text>
+      <Data>$GenderList.selectedGender</Data>
+     </Span>
+    </Par>
+   </Container>
+  </Section>
+ </Document>
+</RootPart>

@@ -1,0 +1,48 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition></DataDefinition>
+ <Container>
+  <Style parentName="FW_CompanyInfo"></Style>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>Board: Dr. Michaela Brandner (Chairman)</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="FW_CompanyInfo"></Style>
+   <Span>
+    <Text>Vorstand: Dr. Michaela Brandner (Vorsitzender)</Text>
+   </Span>
+  </Par>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>George Freeth (deputy Chairman)</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="FW_CompanyInfo"></Style>
+   <Span>
+    <Text>George Freeth (stv. Vorsitzender)</Text>
+   </Span>
+  </Par>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>Franziska Becker, Dr. Thomas Sarbacher</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="FW_CompanyInfo"></Style>
+   <Span>
+    <Text>Franziska Becker, Dr. Thomas Sarbacher</Text>
+   </Span>
+  </Par>
+ </Container>
+</ContainerPart>

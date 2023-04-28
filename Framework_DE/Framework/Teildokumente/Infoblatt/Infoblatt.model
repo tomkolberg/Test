@@ -1,0 +1,94 @@
+<DocumentPart xmlns="urn:kwsoft:mtext:tonic:dom" logicalDocument="true">
+ <DataDefinition>
+  <ParamDef name="Titel" provided="true">
+   <Description></Description>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="DoNotArchive" data-type="boolean" provided="true">
+   <Description></Description>
+   <Input true-value="true" false-value="false"></Input>
+   <Output true-value="true" false-value="false"></Output>
+   <Script><![CDATA[false]]></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="SendAsAttachment" data-type="boolean" provided="true">
+   <Description></Description>
+   <Input true-value="true" false-value="false"></Input>
+   <Output true-value="true" false-value="false"></Output>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="AttachmentName" provided="true">
+   <Description></Description>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="ExemplarAusgabesteuerung" ref="\\Framework_DE\Data\Exemplar.datamodel" provided="true">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <Section>
+  <OutputSettingsRef uri="Framework\FW_Ausgabesteuerung.outputSettings"></OutputSettingsRef>
+  <Style parentName="Infoblatt"></Style>
+  <StaticContainer>
+   <Style>
+    <RegionRef>logo</RegionRef>
+   </Style>
+   <Image uri="mtx:Grafiken/SAM.jpg">
+    <Style>
+     <FillContainerWidth>true</FillContainerWidth>
+     <HorizontalAlignment>last</HorizontalAlignment>
+    </Style>
+   </Image>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>heading</RegionRef>
+   </Style>
+   <Par>
+    <Style parentName="FW_Default"></Style>
+    <Span>
+     <Data>$Titel</Data>
+    </Span>
+   </Par>
+  </StaticContainer>
+  <SectionPartRef uri="Framework\Layoutelemente\FW_Randvermerk.model"></SectionPartRef>
+  <Container>
+   <ContainerExtensionDef id="Infoblatt Inhalt"></ContainerExtensionDef>
+  </Container>
+  <StaticContainer>
+   <Style>
+    <RegionRef>last_page</RegionRef>
+   </Style>
+   <Par>
+    <Style parentName="TextSpaceAfter"></Style>
+    <Span>
+     <Text>Container auf letzter Seite des logischen Dokuments</Text>
+    </Span>
+   </Par>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>footerbackpage</RegionRef>
+   </Style>
+   <ContainerPartRef uri="\\Framework_DE\Framework\Teildokumente\Infoblatt\FW_Infoblatt_Seitennummer.model"></ContainerPartRef>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>footer</RegionRef>
+   </Style>
+   <ContainerPartRef uri="\\Framework_DE\Framework\Teildokumente\Infoblatt\FW_Infoblatt_Seitennummer.model"></ContainerPartRef>
+  </StaticContainer>
+ </Section>
+</DocumentPart>

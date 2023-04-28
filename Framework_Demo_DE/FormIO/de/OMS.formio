@@ -1,0 +1,522 @@
+{
+    "components": [
+        {
+            "label": "Korrespondenz",
+            "disableAddingRemovingRows": true,
+            "reorder": false,
+            "addAnotherPosition": "bottom",
+            "defaultOpen": false,
+            "layoutFixed": false,
+            "enableRowGroups": false,
+            "noFirstRow": false,
+            "tableView": true,
+            "defaultValue": [
+                {
+                    "Exemplare": {
+                        "Exemplar": [
+                            {
+                                "Nr": "",
+                                "Typ": "",
+                                "Ausgabesteuerung": [
+                                    {
+                                        "Ausgabekanal": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "key": "Korrespondenz",
+            "type": "datagrid",
+            "mask": false,
+            "alwaysEnabled": false,
+            "input": true,
+            "components": [
+                {
+                    "label": "Exemplare",
+                    "tableView": true,
+                    "key": "Exemplare",
+                    "type": "container",
+                    "mask": false,
+                    "alwaysEnabled": false,
+                    "input": true,
+                    "components": [
+                        {
+                            "label": "Exemplar",
+                            "disableAddingRemovingRows": true,
+                            "reorder": false,
+                            "addAnotherPosition": "bottom",
+                            "defaultOpen": false,
+                            "layoutFixed": false,
+                            "enableRowGroups": false,
+                            "noFirstRow": false,
+                            "hideLabel": true,
+                            "tableView": true,
+                            "defaultValue": [
+                                {
+                                    "Nr": "",
+                                    "Typ": "",
+                                    "Ausgabesteuerung": [
+                                        {
+                                            "Ausgabekanal": ""
+                                        }
+                                    ]
+                                }
+                            ],
+                            "key": "Exemplar",
+                            "type": "datagrid",
+                            "mask": false,
+                            "alwaysEnabled": false,
+                            "input": true,
+                            "components": [
+                                {
+                                    "label": "Exemplar",
+                                    "columns": [
+                                        {
+                                            "components": [
+                                                {
+                                                    "label": "Nr",
+                                                    "disabled": true,
+                                                    "tableView": true,
+                                                    "key": "Nr",
+                                                    "type": "textfield",
+                                                    "alwaysEnabled": false,
+                                                    "input": true,
+                                                    "reorder": false,
+                                                    "hideOnChildrenHidden": true,
+                                                    "width": 6
+                                                },
+                                                {
+                                                    "label": "Typ",
+                                                    "disabled": true,
+                                                    "tableView": true,
+                                                    "key": "Typ",
+                                                    "type": "textfield",
+                                                    "alwaysEnabled": false,
+                                                    "input": true,
+                                                    "reorder": false,
+                                                    "hideOnChildrenHidden": true,
+                                                    "width": 6
+                                                }
+                                            ],
+                                            "width": 12,
+                                            "offset": 0,
+                                            "push": 0,
+                                            "pull": 0,
+                                            "type": "column",
+                                            "input": false,
+                                            "hideOnChildrenHidden": true,
+                                            "key": "column",
+                                            "tableView": true,
+                                            "label": "Column",
+                                            "size": "md"
+                                        },
+                                        {
+                                            "components": [],
+                                            "width": 12,
+                                            "offset": 0,
+                                            "push": 0,
+                                            "pull": 0,
+                                            "type": "column",
+                                            "input": false,
+                                            "hideOnChildrenHidden": true,
+                                            "key": "column",
+                                            "tableView": true,
+                                            "label": "Column",
+                                            "size": "md"
+                                        }
+                                    ],
+                                    "autoAdjust": true,
+                                    "hideOnChildrenHidden": true,
+                                    "tableView": false,
+                                    "key": "xxx",
+                                    "type": "columns",
+                                    "mask": false,
+                                    "alwaysEnabled": false,
+                                    "input": false,
+                                    "row": "0-0",
+                                    "reorder": false
+                                },
+                                {
+                                    "label": "Ausgabesteuerung",
+                                    "reorder": false,
+                                    "addAnother": "Ausgabekanal hinzufügen",
+                                    "addAnotherPosition": "bottom",
+                                    "defaultOpen": false,
+                                    "layoutFixed": false,
+                                    "enableRowGroups": false,
+                                    "noFirstRow": false,
+                                    "hideLabel": true,
+                                    "tableView": true,
+                                    "defaultValue": [
+                                        {
+                                            "Ausgabekanal": ""
+                                        }
+                                    ],
+                                    "key": "Ausgabesteuerung",
+                                    "type": "datagrid",
+                                    "removePlacement": "col",
+                                    "mask": false,
+                                    "alwaysEnabled": false,
+                                    "input": true,
+                                    "components": [
+                                        {
+                                            "label": "Ausgabekanal",
+                                            "columns": [
+                                                {
+                                                    "components": [
+                                                        {
+                                                            "label": "Field Set",
+                                                            "hideLabel": true,
+                                                            "mask": false,
+                                                            "tableView": true,
+                                                            "alwaysEnabled": false,
+                                                            "type": "fieldset",
+                                                            "input": false,
+                                                            "key": "fieldSet",
+                                                            "components": [
+                                                                {
+                                                                    "label": "Ausgabekanal",
+                                                                    "widget": "choicesjs",
+                                                                    "tableView": true,
+                                                                    "data": {
+                                                                        "values": [
+                                                                            {
+                                                                                "label": "ARCHIV",
+                                                                                "value": "ARCHIV"
+                                                                            },
+                                                                            {
+                                                                                "label": "EMAIL",
+                                                                                "value": "EMAIL"
+                                                                            },
+                                                                            {
+                                                                                "label": "EMAILATTACHMENT",
+                                                                                "value": "EMAILATTACHMENT"
+                                                                            },
+                                                                            {
+                                                                                "label": "FAX",
+                                                                                "value": "FAX"
+                                                                            },
+                                                                            {
+                                                                                "label": "LOKALDRUCK",
+                                                                                "value": "LOKALDRUCK"
+                                                                            },
+                                                                            {
+                                                                                "label": "ZENTRALDRUCK",
+                                                                                "value": "ZENTRALDRUCK"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "valueProperty": "value",
+                                                                    "selectThreshold": 0.3,
+                                                                    "validate": {
+                                                                        "select": false
+                                                                    },
+                                                                    "key": "Ausgabekanal",
+                                                                    "type": "select",
+                                                                    "indexeddb": {
+                                                                        "filter": {}
+                                                                    },
+                                                                    "mask": false,
+                                                                    "alwaysEnabled": false,
+                                                                    "input": true,
+                                                                    "lazyLoad": false,
+                                                                    "disableLimit": false,
+                                                                    "reference": false,
+                                                                    "row": "0-0",
+                                                                    "reorder": false
+                                                                }
+                                                            ],
+                                                            "reorder": false,
+                                                            "hideOnChildrenHidden": false
+                                                        }
+                                                    ],
+                                                    "width": 6,
+                                                    "offset": 0,
+                                                    "push": 0,
+                                                    "pull": 0,
+                                                    "type": "column",
+                                                    "input": false,
+                                                    "hideOnChildrenHidden": false,
+                                                    "key": "column",
+                                                    "tableView": true,
+                                                    "label": "Column",
+                                                    "size": "md"
+                                                },
+                                                {
+                                                    "components": [
+                                                        {
+                                                            "label": "Field Set",
+                                                            "hideLabel": true,
+                                                            "mask": false,
+                                                            "tableView": true,
+                                                            "alwaysEnabled": false,
+                                                            "type": "fieldset",
+                                                            "input": false,
+                                                            "key": "Ausgabe2",
+                                                            "components": [
+                                                                {
+                                                                    "label": "ARCHIV",
+                                                                    "tableView": true,
+                                                                    "key": "ARCHIV3",
+                                                                    "conditional": {
+                                                                        "show": true,
+                                                                        "when": "Ausgabekanal",
+                                                                        "eq": "ARCHIV"
+                                                                    },
+                                                                    "type": "container",
+                                                                    "mask": false,
+                                                                    "alwaysEnabled": false,
+                                                                    "input": true,
+                                                                    "components": [
+                                                                        {
+                                                                            "label": "PartnerID",
+                                                                            "tableView": true,
+                                                                            "alwaysEnabled": false,
+                                                                            "type": "textfield",
+                                                                            "input": true,
+                                                                            "key": "PartnerID4",
+                                                                            "reorder": false
+                                                                        }
+                                                                    ],
+                                                                    "row": "0-3",
+                                                                    "reorder": false
+                                                                },
+                                                                {
+                                                                    "label": "ZENTRALDRUCK",
+                                                                    "tableView": true,
+                                                                    "key": "ZENTRALDRUCK3",
+                                                                    "conditional": {
+                                                                        "show": true,
+                                                                        "when": "Ausgabekanal",
+                                                                        "eq": "ZENTRALDRUCK"
+                                                                    },
+                                                                    "type": "container",
+                                                                    "mask": false,
+                                                                    "alwaysEnabled": false,
+                                                                    "input": true,
+                                                                    "components": [
+                                                                        {
+                                                                            "label": "Batch",
+                                                                            "tableView": true,
+                                                                            "key": "Batch3",
+                                                                            "type": "textfield",
+                                                                            "alwaysEnabled": false,
+                                                                            "input": true,
+                                                                            "reorder": false
+                                                                        },
+                                                                        {
+                                                                            "label": "PLZ",
+                                                                            "tableView": true,
+                                                                            "key": "PLZ3",
+                                                                            "type": "textfield",
+                                                                            "alwaysEnabled": false,
+                                                                            "input": true,
+                                                                            "reorder": false
+                                                                        },
+                                                                        {
+                                                                            "label": "LKZ",
+                                                                            "tableView": true,
+                                                                            "key": "LKZ3",
+                                                                            "type": "textfield",
+                                                                            "alwaysEnabled": false,
+                                                                            "input": true,
+                                                                            "reorder": false
+                                                                        },
+                                                                        {
+                                                                            "label": "PartnerID",
+                                                                            "tableView": true,
+                                                                            "alwaysEnabled": false,
+                                                                            "type": "textfield",
+                                                                            "input": true,
+                                                                            "key": "PartnerID4",
+                                                                            "reorder": false
+                                                                        }
+                                                                    ],
+                                                                    "row": "0-2",
+                                                                    "reorder": false
+                                                                },
+                                                                {
+                                                                    "label": "LOKALDRUCK",
+                                                                    "tableView": true,
+                                                                    "key": "LOKALDRUCK",
+                                                                    "conditional": {
+                                                                        "show": true,
+                                                                        "when": "Ausgabekanal",
+                                                                        "eq": "LOKALDRUCK"
+                                                                    },
+                                                                    "type": "container",
+                                                                    "mask": false,
+                                                                    "alwaysEnabled": false,
+                                                                    "input": true,
+                                                                    "components": [
+                                                                        {
+                                                                            "label": "UserID",
+                                                                            "tableView": true,
+                                                                            "key": "UserID",
+                                                                            "type": "textfield",
+                                                                            "alwaysEnabled": false,
+                                                                            "input": true,
+                                                                            "reorder": false
+                                                                        },
+                                                                        {
+                                                                            "label": "Druckername",
+                                                                            "tableView": true,
+                                                                            "key": "Druckername",
+                                                                            "type": "textfield",
+                                                                            "alwaysEnabled": false,
+                                                                            "input": true,
+                                                                            "reorder": false
+                                                                        }
+                                                                    ],
+                                                                    "row": "0-1",
+                                                                    "reorder": false
+                                                                },
+                                                                {
+                                                                    "label": "FAX",
+                                                                    "mask": false,
+                                                                    "tableView": true,
+                                                                    "alwaysEnabled": false,
+                                                                    "type": "container",
+                                                                    "input": true,
+                                                                    "key": "FAX3",
+                                                                    "conditional": {
+                                                                        "show": "true",
+                                                                        "when": "Ausgabekanal",
+                                                                        "eq": "FAX"
+                                                                    },
+                                                                    "components": [
+                                                                        {
+                                                                            "label": "Absender",
+                                                                            "tableView": true,
+                                                                            "alwaysEnabled": false,
+                                                                            "type": "textfield",
+                                                                            "input": true,
+                                                                            "key": "Absender5",
+                                                                            "reorder": false
+                                                                        },
+                                                                        {
+                                                                            "label": "Empfaenger",
+                                                                            "tableView": true,
+                                                                            "alwaysEnabled": false,
+                                                                            "type": "textfield",
+                                                                            "input": true,
+                                                                            "key": "Empfaenger4",
+                                                                            "reorder": false
+                                                                        }
+                                                                    ],
+                                                                    "row": "0-4",
+                                                                    "reorder": false
+                                                                },
+                                                                {
+                                                                    "label": "EMAIL",
+                                                                    "mask": false,
+                                                                    "tableView": true,
+                                                                    "alwaysEnabled": false,
+                                                                    "type": "container",
+                                                                    "input": true,
+                                                                    "key": "EMAIL",
+                                                                    "conditional": {
+                                                                        "show": "true",
+                                                                        "when": "Ausgabekanal",
+                                                                        "eq": "EMAIL"
+                                                                    },
+                                                                    "components": [
+                                                                        {
+                                                                            "label": "Absender",
+                                                                            "tableView": true,
+                                                                            "alwaysEnabled": false,
+                                                                            "type": "textfield",
+                                                                            "input": true,
+                                                                            "key": "Absender5",
+                                                                            "reorder": false
+                                                                        },
+                                                                        {
+                                                                            "label": "Empfaenger",
+                                                                            "tableView": true,
+                                                                            "alwaysEnabled": false,
+                                                                            "type": "textfield",
+                                                                            "input": true,
+                                                                            "key": "Empfaenger4",
+                                                                            "reorder": false
+                                                                        },
+                                                                        {
+                                                                            "label": "Betreff",
+                                                                            "tableView": true,
+                                                                            "alwaysEnabled": false,
+                                                                            "type": "textfield",
+                                                                            "input": true,
+                                                                            "key": "Betreff4",
+                                                                            "reorder": false
+                                                                        }
+                                                                    ],
+                                                                    "row": "0-5",
+                                                                    "reorder": false
+                                                                }
+                                                            ],
+                                                            "row": "0-0",
+                                                            "reorder": false,
+                                                            "hideOnChildrenHidden": false
+                                                        }
+                                                    ],
+                                                    "width": 6,
+                                                    "offset": 0,
+                                                    "push": 0,
+                                                    "pull": 0,
+                                                    "type": "column",
+                                                    "input": false,
+                                                    "hideOnChildrenHidden": false,
+                                                    "key": "column",
+                                                    "tableView": true,
+                                                    "label": "Column",
+                                                    "size": "md"
+                                                }
+                                            ],
+                                            "tableView": false,
+                                            "key": "Ausgabekanal",
+                                            "type": "columns",
+                                            "mask": false,
+                                            "alwaysEnabled": false,
+                                            "input": false,
+                                            "reorder": false,
+                                            "row": "0-0"
+                                        }
+                                    ],
+                                    "row": "0-1",
+                                    "groupToggle": false
+                                }
+                            ],
+                            "groupToggle": false
+                        }
+                    ],
+                    "row": "0-0",
+                    "reorder": false
+                }
+            ],
+            "groupToggle": false
+        },
+        {
+            "label": "Debug",
+            "action": "custom",
+            "showValidations": false,
+            "custom": "console.log(JSON.stringify(data,null,4))",
+            "mask": false,
+            "tableView": true,
+            "alwaysEnabled": false,
+            "type": "button",
+            "input": true,
+            "key": "debug",
+            "defaultValue": false,
+            "reorder": false
+        },
+        {
+            "type": "button",
+            "label": "Submit",
+            "key": "submit",
+            "disableOnInvalid": true,
+            "input": true,
+            "tableView": true
+        }
+    ]
+}

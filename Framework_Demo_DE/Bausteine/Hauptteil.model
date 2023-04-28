@@ -1,0 +1,68 @@
+<DocumentPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Auftragssteuerung" ref="\\Framework_DE\Data\Auftragssteuerung.datamodel">
+   <Description></Description>
+  </ParamDef>
+  <DataNodeDef name="MAIL" data-type="boolean">
+   <Description></Description>
+   <Input true-value="true" false-value="false"></Input>
+   <Output true-value="true" false-value="false"></Output>
+   <Subtype></Subtype>
+   <Script><![CDATA[true]]></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="false">
+    <Values></Values>
+   </Validation>
+  </DataNodeDef>
+  <ParamDef name="MOMS_ID" data-type="number">
+   <Description></Description>
+   <Input text-prefix="" text-suffix="" decimal-separator="44" thousand-separator="46" use-current-locale="false" currency-symbol="" fractional-digits="-1" leading-zeros="1"></Input>
+   <Output text-prefix="" text-suffix="" decimal-separator="44" thousand-separator="46" use-current-locale="true" currency-symbol="" fractional-digits="-1" leading-zeros="1"></Output>
+   <Subtype></Subtype>
+   <Validation validation-type="any_value" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+ </DataDefinition>
+ <Section title="Hauptteil">
+  <OutputSettingsRef uri="\\Framework_DE\Framework\FW_Ausgabesteuerung_Aufgabe3.outputSettings">
+   <Param name="ExemplarAusgabesteuerung">$Auftragssteuerung.Korrespondenz.instance(0).Exemplare.Exemplar.instance(0)</Param>
+  </OutputSettingsRef>
+  <Style parentName="Infoblatt"></Style>
+  <StaticContainer>
+   <Style>
+    <RegionRef>heading</RegionRef>
+   </Style>
+   <Par>
+    <Span>
+     <Text>Hauptteil des Dokuments</Text>
+    </Span>
+   </Par>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>logo</RegionRef>
+   </Style>
+   <Image uri="mtx://Framework_DE/Grafiken/Logo.jpg"></Image>
+  </StaticContainer>
+  <Container>
+   <Par>
+    <Style parentName="Heading1"></Style>
+    <Span>
+     <Text>Das ist der Hauptteil des Dokuments. </Text>
+    </Span>
+   </Par>
+   <Par>
+    <Style parentName="Heading1"></Style>
+    <Span>
+     <Text></Text>
+    </Span>
+   </Par>
+   <Par>
+    <Style parentName="Heading1"></Style>
+    <Span>
+     <Text>Nur dieser soll in der E-Mail erscheinen!</Text>
+    </Span>
+   </Par>
+  </Container>
+ </Section>
+</DocumentPart>

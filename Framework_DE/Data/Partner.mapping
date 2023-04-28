@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mapping>
+   <DataModel root-path="">\\Framework_DE\Data\Partner.datamodel</DataModel>
+   <SourceRoot xpath="/taskcontrol/message/instance/recipient/Partner"/>
+   <Rules/>
+   <Params/>
+   <Namespaces/>
+</Mapping>

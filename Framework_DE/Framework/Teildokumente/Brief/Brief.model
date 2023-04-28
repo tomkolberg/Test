@@ -1,0 +1,92 @@
+<DocumentPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Korrespondenz" ref="\\Framework_DE\Data\Korrespondenz.datamodel" provided="true">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <ParamDef name="Exemplar" ref="\\Framework_DE\Data\Exemplar.datamodel" provided="true">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <ParamDef name="Empfaenger" ref="\\Framework_DE\Data\Empfaenger.datamodel" provided="true">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <ParamDef name="Absender" ref="\\Framework_DE\Data\Absender.datamodel" provided="true">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <ParamDef name="Betreff1" provided="true"></ParamDef>
+  <ParamDef name="Betreff2" provided="true"></ParamDef>
+  <ParamDef name="Betreff3" provided="true"></ParamDef>
+  <ParamDef name="ExemplarAusgabesteuerung" ref="\\Framework_DE\Data\Exemplar.datamodel" provided="true"></ParamDef>
+ </DataDefinition>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Section>
+  <OutputSettingsRef uri="Framework\FW_Ausgabesteuerung.outputSettings"></OutputSettingsRef>
+  <Style parentName="Brief"></Style>
+  <StaticContainer>
+   <Style>
+    <RegionRef>logo</RegionRef>
+   </Style>
+   <ContainerExtensionDef id="AnschreibenLogo"></ContainerExtensionDef>
+   <ContainerPartRef uri="Framework/Teildokumente/Brief/FW_Logo.model"></ContainerPartRef>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>infobereich</RegionRef>
+   </Style>
+   <ContainerPartRef uri="Framework/Teildokumente/Brief/FW_Infobereich.model">
+    <Param name="Absender">$Absender</Param>
+   </ContainerPartRef>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>absender</RegionRef>
+   </Style>
+   <ContainerPartRef uri="Framework/Teildokumente/Brief/FW_Absender.model">
+    <Param name="Absender">$Absender</Param>
+   </ContainerPartRef>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>empfaenger</RegionRef>
+   </Style>
+   <ContainerPartRef uri="Framework/Teildokumente/Brief/FW_Empfaenger.model">
+    <Param name="Empfaenger">$Empfaenger</Param>
+   </ContainerPartRef>
+  </StaticContainer>
+  <Container>
+   <ContainerExtensionDef id="Brief Inhalt"></ContainerExtensionDef>
+  </Container>
+  <SectionPartRef uri="Framework/Teildokumente/Brief/FW_Gruss.model">
+   <Param name="Absender">$Exemplar.Absender</Param>
+  </SectionPartRef>
+  <SectionPartRef uri="\\Framework_DE\Framework\Layoutelemente\FW_Randvermerk.model"></SectionPartRef>
+  <StaticContainer>
+   <Style>
+    <RegionRef>fusszeile</RegionRef>
+   </Style>
+   <ContainerPartRef uri="Framework/Teildokumente/Brief/FW_Seitennummer.model"></ContainerPartRef>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>firmenleiste</RegionRef>
+   </Style>
+   <ContainerPartRef uri="Framework/Teildokumente/Brief/FW_Firmenleiste.model"></ContainerPartRef>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>firmenleisteResponsive</RegionRef>
+   </Style>
+   <ContainerPartRef uri="Framework/Teildokumente/Brief/FW_FirmenleisteInfo1.model"></ContainerPartRef>
+   <ContainerPartRef uri="Framework/Teildokumente/Brief/FW_FirmenleisteInfo2.model"></ContainerPartRef>
+   <ContainerPartRef uri="Framework/Teildokumente/Brief/FW_FirmenleisteInfo3.model"></ContainerPartRef>
+  </StaticContainer>
+ </Section>
+</DocumentPart>

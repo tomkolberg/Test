@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mapping>
+   <DataModel root-path="">\\Framework_Demo_DE\Data\Insurance.datamodel</DataModel>
+   <Rules>
+      <Rule copySubtree="true" name="/Insurance" xpath="/insurance"/>
+   </Rules>
+   <Params/>
+   <Namespaces/>
+</Mapping>

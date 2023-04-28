@@ -1,0 +1,14 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition></DataDefinition>
+ <Par>
+  <Span>
+   <Text>Das ist Text aus dem Baustein! Dieser Baustein stellt nur eine Inhaltserweiterung zur Verfügung, die in der Vorlage mit Text gefüllt wird.</Text>
+  </Span>
+ </Par>
+ <Par>
+  <Span>
+   <Text></Text>
+  </Span>
+ </Par>
+ <ContainerExtensionDef id="Inhalt Demobaustein"></ContainerExtensionDef>
+</ContainerPart>

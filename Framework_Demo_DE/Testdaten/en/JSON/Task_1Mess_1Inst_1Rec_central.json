@@ -1,0 +1,70 @@
+{
+  "Auftragssteuerung": {
+    "Korrespondenz": {
+      "Briefdatum": "29.02.2020",
+      "Exemplar": {
+        "Absender": {
+          "Name": "SAM AG",
+          "Strasse": "Kruppallee 42",
+          "PLZ": "13373",
+          "Ort": "Essen",
+          "Absenderzeile": "sam ag - kruppallee 42 - 13373 essen",
+          "Sachbearbeiter": {
+            "PartnerID": "14213373",
+            "UserID": "HB",
+            "Anrede": "Herr",
+            "Vorname": "Hans",
+            "Nachname": "Brackhaus",
+            "Firmenname1": "SAM AG",
+            "Hausnummer": "42",
+            "Strasse": "Kruppallee",
+            "PLZ": "13373",
+            "Ort": "Essen",
+            "Adresse": {
+              "Zeile": [
+                "SAM AG",
+                "Hans Brackhaus",
+                "Kruppallee 42",
+                "13373 Essen"
+              ]
+            },
+            "Rolle": "rückwärts",
+            "email": "h.brackhaus@sam-ag.com",
+            "Telefon": "0815-47111337",
+            "fax": "0815-47114242"
+          }
+        },
+        "Empfaenger": {
+          "Partner": {
+            "PartnerID": "20698101",
+            "Anrede": "Frau",
+            "Vorname": "Maria",
+            "Nachname": "Mercurial",
+            "Adresszusatz": "Postfach 1337",
+            "PLZ": "98199",
+            "Ort": "Smaragdstadt",
+            "Adresse": {
+              "Zeile": [
+                "Maria Mercurial",
+                "Postfach 1337",
+                "98199 Smaragdstadt"
+              ]
+            },
+            "Rolle": "vorwärts",
+            "email": "m.mercurial@fasa.sr",
+            "Telefon": "01989-2050",
+            "fax": "01989-2001"
+          }
+        },
+        "Ausgabesteuerung": {
+          "Ausgabekanal": "ZENTRALDRUCK",
+          "ARCHIV": { "PartnerID": "20698101" },
+          "ZENTRALDRUCK": {
+            "PLZ": "98199",
+            "LKZ": "DE"
+          }
+        }
+      }
+    }
+  }
+}

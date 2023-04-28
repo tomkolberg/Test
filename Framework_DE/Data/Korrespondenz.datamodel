@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel>
+   <Node data-type="NUMBER"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Nr"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input decimal-separator="46" thousand-separator="44"/>
+            <Output currency-format="BEFORE_WITH_SPACE"
+                    currency-symbol="€"
+                    decimal-separator="44"
+                    formatting-type="NUMBER"
+                    fractional-digits="-1"
+                    leading-zeros="1"
+                    text-prefix=""
+                    text-suffix=""
+                    thousand-separator="46"
+                    use-current-locale="true"/>
+         </Format>
+         <Script>dataNodeIndexOfInstance($Korrespondenz) + 1;</Script>
+      </Settings>
+   </Node>
+   <Node data-type="DATETIME"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Briefdatum"
+         searchable="false">
+      <Settings>
+         <Description>Briefdatum</Description>
+         <Validation allow-empty-value="true"
+                     dialog-field="EDITFIELD"
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input date-format="dd.MM.yyyy"/>
+            <Output date-format="dd.MM.yyyy HH:mm:ss"
+                    date-style="2"
+                    date-type="DATE"
+                    use-current-locale="true"/>
+         </Format>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node multiple="false" name="Exemplare">
+      <Settings>
+         <Script/>
+      </Settings>
+      <Node multiple="true"
+            name="Exemplar"
+            ref="\\Framework_DE\Data\Exemplar.datamodel">
+         <Settings>
+            <Script/>
+         </Settings>
+      </Node>
+   </Node>
+   <Node multiple="false" name="ErstExemplar">
+      <Settings>
+         <Script>$current.add( $current.Exemplar, 
+		$current.parent().Exemplare.Exemplar.instance(0) );</Script>
+      </Settings>
+      <Node multiple="false"
+            name="Exemplar"
+            ref="\\Framework_DE\Data\Exemplar.datamodel">
+         <Settings>
+            <Script/>
+         </Settings>
+      </Node>
+   </Node>
+</DataModel>

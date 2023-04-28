@@ -1,0 +1,68 @@
+<TestCases xmlns="urn:kwsoft:mtext:tonic:dom" activeTestCase="GenderList_de">
+ <TestCase name="GenderList_de" includeInRegressionTool="false">
+  <Root base="Framework_TONIC_Demo">
+   <DocumentDescription></DocumentDescription>
+   <RootPartInstance partIndex="0">
+    <Data>
+     <DataNode name="GenderList">
+      <Value><![CDATA[string:]]></Value>
+      <DataNode name="gender">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="text" valueChanged="fromDataSource">
+        <Value><![CDATA[string:männlich]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="gender">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="text" valueChanged="fromDataSource">
+        <Value><![CDATA[string:weiblich]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="gender">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="text" valueChanged="fromDataSource">
+        <Value><![CDATA[string:divers]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="selectedGender" valueChanged="fromDataSource">
+       <Value><![CDATA[string:]]></Value>
+      </DataNode>
+     </DataNode>
+     <DataNode name="Metadata">
+      <Value><![CDATA[string:]]></Value>
+      <DataNode name="State" valueChanged="fromDataSource">
+       <Value><![CDATA[string:Created]]></Value>
+      </DataNode>
+      <DataNode name="TestMode" valueChanged="fromDataSource">
+       <Value><![CDATA[string:]]></Value>
+      </DataNode>
+      <DataNode name="ValidationState" valueChanged="manually">
+       <Value><![CDATA[string:OK]]></Value>
+      </DataNode>
+      <DataNode name="Editor">
+       <Value><![CDATA[string:]]></Value>
+       <DataNode name="DefaultDocumentName" valueChanged="fromDataSource">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+       <DataNode name="DefaultDocumentDescription" valueChanged="fromDataSource">
+        <Value><![CDATA[string:]]></Value>
+       </DataNode>
+      </DataNode>
+      <DataNode name="DocumentLanguage" valueChanged="fromDataSource">
+       <Value><![CDATA[string:]]></Value>
+      </DataNode>
+      <DataNode name="InitialDataBinding" valueChanged="fromDataSource">
+       <Value><![CDATA[string:\library\Framework_Demo_DE\Vorlagen\FormIO\GenderList.template]]></Value>
+      </DataNode>
+      <DataNode name="Language">
+       <Value><![CDATA[string:de]]></Value>
+      </DataNode>
+     </DataNode>
+    </Data>
+   </RootPartInstance>
+  </Root>
+  <DataSourceProperties>
+   <Property value="\\Framework_Demo_DE\Testdaten\GenderList_de.xml" name="GenderList.FILE_NAME"></Property>
+  </DataSourceProperties>
+ </TestCase>
+</TestCases>

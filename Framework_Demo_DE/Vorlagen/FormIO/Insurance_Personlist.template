@@ -1,0 +1,186 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom" id="\library\Framework_Demo_DE\Templates\InDocumentation\de\FormIO\Insurance_Personlist.template" title="" description="Eingabe Personendaten in FormIO-Dialog">
+ <DataDefinition>
+  <ParamDef name="Auftragssteuerung" ref="\\Framework_DE\Data\Auftragssteuerung.datamodel" dataMappingRef="\\Framework_DE\Data\Auftragssteuerung.mapping">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+  </ParamDef>
+  <DataNodeDef name="Betreff1">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true" label="Betreff line #1">
+    <Values></Values>
+    <ErrorMessage>Bitte geben Sie einen Betreff ein!</ErrorMessage>
+   </Validation>
+  </DataNodeDef>
+  <DataNodeDef name="Betreff2">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </DataNodeDef>
+  <DataNodeDef name="Betreff3">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </DataNodeDef>
+  <ParamDef name="Insurance" ref="\\Framework_Demo_DE\Data\Insurance.datamodel" dataMappingRef="Data\Insurance.mapping">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <UIContribution>
+  <GuideArea>
+   <ActionLink title="Liste bearbeiten mit DataGrid" hint="" inputAreaGroupID="">
+    <Script><![CDATA[var formFunc = $context.FormIO.createForm("\\\\Framework_Demo_DE\\FormIO\\de\\Insurance_Personlist_DataGrid.formio");
+var layout = {
+	"height": "1000",
+	"width" : "1100",
+	"title" : "Liste bearbeiten mit DataGrid"
+};
+$context.showForm(formFunc, $Insurance, layout);]]></Script>
+   </ActionLink>
+  </GuideArea>
+  <InputArea></InputArea>
+ </UIContribution>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Document>
+  <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Korrespondenz.model">
+   <Extensions>
+    <DocumentExtension id="Korrespondenz Inhalt">
+     <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Anschreiben.model">
+      <Extensions>
+       <ContainerExtension id="Anschreiben Inhalt">
+        <Par>
+         <Span>
+          <Text>bitte kontrollieren Sie die Daten der nachfolgenden Personen:</Text>
+         </Span>
+        </Par>
+        <Par>
+         <Span>
+          <Text></Text>
+         </Span>
+        </Par>
+        <Table>
+         <Headers>
+          <Header>
+           <Row>
+            <Cell>
+             <Container>
+              <Par>
+               <Span>
+                <Text>Vorname</Text>
+               </Span>
+              </Par>
+             </Container>
+            </Cell>
+            <Cell>
+             <Container>
+              <Par>
+               <Span>
+                <Text>Name</Text>
+               </Span>
+              </Par>
+             </Container>
+            </Cell>
+            <Cell>
+             <Container>
+              <Par>
+               <Span>
+                <Text>Geschlecht</Text>
+               </Span>
+              </Par>
+             </Container>
+            </Cell>
+            <Cell>
+             <Container>
+              <Par>
+               <Span>
+                <Text>Geburtsdatum</Text>
+               </Span>
+              </Par>
+             </Container>
+            </Cell>
+           </Row>
+          </Header>
+         </Headers>
+         <Columns></Columns>
+         <Style parentName="Border"></Style>
+         <TablePart>
+          <ForEach alias="Person"><![CDATA[$Insurance.person]]></ForEach>
+          <DataDefinition></DataDefinition>
+          <Row>
+           <Cell>
+            <Container>
+             <Par>
+              <Span>
+               <Data>$Person.firstname</Data>
+               <Text></Text>
+              </Span>
+             </Par>
+            </Container>
+           </Cell>
+           <Cell>
+            <Container>
+             <Par>
+              <Span>
+               <Data>$Person.name</Data>
+               <Text></Text>
+              </Span>
+             </Par>
+            </Container>
+           </Cell>
+           <Cell>
+            <Container>
+             <Par>
+              <Span>
+               <Data>$Person.gender</Data>
+               <Text></Text>
+              </Span>
+             </Par>
+            </Container>
+           </Cell>
+           <Cell>
+            <Container>
+             <Par>
+              <Span>
+               <Data>$Person.dateofbirth</Data>
+               <Text></Text>
+              </Span>
+             </Par>
+            </Container>
+           </Cell>
+          </Row>
+         </TablePart>
+        </Table>
+       </ContainerExtension>
+      </Extensions>
+      <Param name="Korrespondenz">$Korrespondenz</Param>
+      <Param name="Exemplar">$Exemplar</Param>
+      <Param name="Betreff1">$Betreff1</Param>
+      <Param name="Betreff2">$Betreff2</Param>
+      <Param name="Betreff3">$Betreff3</Param>
+     </DocumentPartRef>
+    </DocumentExtension>
+   </Extensions>
+   <Param name="Korrespondenz">$Auftragssteuerung.Korrespondenz.instance(0)</Param>
+  </DocumentPartRef>
+ </Document>
+</RootPart>

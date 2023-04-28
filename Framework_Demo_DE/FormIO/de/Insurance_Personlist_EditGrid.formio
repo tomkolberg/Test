@@ -1,0 +1,208 @@
+{
+    "components": [
+        {
+            "label": "Versicherte Personen",
+            "tableView": false,
+            "templates": {
+                "header": "<div class=\"row\">\n  {% util.eachComponent(components,function(component) { %}\n    <div class=\"col-sm-3\">{{ component.label }}</div>\n  {% }) %}\n</div>",
+                "row": "<div class=\"row\">\n   {% util.eachComponent(components, function(component) { %}\n    <div class=\"col-sm-3\">\n      {{ row[component.key] }}\n    </div>\n  {% }) %}\n  {% if (!instance.options.readOnly && !instance.originalComponent.disabled) { %}\n    <div class=\"col-sm-2\">\n      <div class=\"btn-group pull-right\">\n        <button class=\"btn btn-default btn-light btn-sm editRow\"><i class=\"{{ iconClass('edit') }}\"></i></button>\n        {% if (!instance.hasRemoveButtons || instance.hasRemoveButtons()) { %}\n          <button class=\"btn btn-danger btn-sm removeRow\"><i class=\"{{ iconClass('trash') }}\"></i></button>\n        {% } %}\n      </div>\n    </div>\n  {% } %}\n</div>"
+            },
+            "rowDrafts": false,
+            "key": "person",
+            "type": "editgrid",
+            "input": true,
+            "components": [
+                {
+                    "label": "Vorname",
+                    "tableView": true,
+                    "key": "firstname",
+                    "type": "textfield",
+                    "input": true
+                },
+                {
+                    "label": "Nachname",
+                    "tableView": true,
+                    "key": "name",
+                    "type": "textfield",
+                    "alwaysEnabled": false,
+                    "input": true,
+                    "row": "0-0",
+                    "reorder": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Geschlecht",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "dataSrc": "custom",
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "custom": "var temp = [];\ndata['gender'].forEach(function(g){\n  temp.push({\"value\": g.text ,\"label\": g.text });\n});\n\nvalues = temp;"
+                                    },
+                                    "valueProperty": "value",
+                                    "selectThreshold": 0.3,
+                                    "validate": {
+                                        "select": false
+                                    },
+                                    "key": "gender",
+                                    "type": "select",
+                                    "indexeddb": {
+                                        "filter": {}
+                                    },
+                                    "mask": false,
+                                    "alwaysEnabled": false,
+                                    "input": true,
+                                    "row": "0-1",
+                                    "reorder": false,
+                                    "lazyLoad": false,
+                                    "disableLimit": false,
+                                    "reference": false,
+                                    "hideOnChildrenHidden": false
+                                }
+                            ],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Geburtsdatum",
+                                    "displayInTimezone": "location",
+                                    "format": "dd.MM.yyyy",
+                                    "tableView": false,
+                                    "enableMinDateInput": false,
+                                    "datePicker": {
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false
+                                    },
+                                    "enableMaxDateInput": false,
+                                    "enableTime": false,
+                                    "timePicker": {
+                                        "showMeridian": false
+                                    },
+                                    "key": "dateofbirth",
+                                    "type": "datetime",
+                                    "timezone": "Europe/Berlin",
+                                    "input": true,
+                                    "suffix": "<i ref=\"icon\" class=\"fa fa-calendar\" style=\"\"></i>",
+                                    "widget": {
+                                        "type": "calendar",
+                                        "timezone": "Europe/Berlin",
+                                        "displayInTimezone": "location",
+                                        "language": "de",
+                                        "useLocaleSettings": false,
+                                        "allowInput": true,
+                                        "mode": "single",
+                                        "enableTime": false,
+                                        "noCalendar": false,
+                                        "format": "dd.MM.yyyy",
+                                        "hourIncrement": 1,
+                                        "minuteIncrement": 1,
+                                        "time_24hr": true,
+                                        "minDate": null,
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false,
+                                        "maxDate": null
+                                    },
+                                    "hideOnChildrenHidden": false
+                                }
+                            ],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md"
+                        }
+                    ],
+                    "tableView": false,
+                    "key": "columns",
+                    "type": "columns",
+                    "input": false
+                }
+            ]
+        },
+        {
+            "label": "Columns",
+            "columns": [
+                {
+                    "components": [
+                        {
+                            "label": "Speichern",
+                            "showValidations": false,
+                            "disableOnInvalid": true,
+                            "tableView": true,
+                            "key": "submit",
+                            "type": "button",
+                            "mask": false,
+                            "alwaysEnabled": false,
+                            "input": true,
+                            "defaultValue": false,
+                            "reorder": false,
+                            "hideOnChildrenHidden": false
+                        }
+                    ],
+                    "width": 6,
+                    "offset": 0,
+                    "push": 0,
+                    "pull": 0,
+                    "type": "column",
+                    "input": false,
+                    "hideOnChildrenHidden": false,
+                    "key": "column",
+                    "tableView": true,
+                    "label": "Column",
+                    "size": "md"
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Debug",
+                            "action": "custom",
+                            "mask": false,
+                            "tableView": true,
+                            "alwaysEnabled": false,
+                            "type": "button",
+                            "input": true,
+                            "key": "debug",
+                            "defaultValue": false,
+                            "showValidations": false,
+                            "custom": "console.log(JSON.stringify(data));",
+                            "reorder": false,
+                            "hideOnChildrenHidden": false
+                        }
+                    ],
+                    "width": 6,
+                    "offset": 0,
+                    "push": 0,
+                    "pull": 0,
+                    "type": "column",
+                    "input": false,
+                    "hideOnChildrenHidden": false,
+                    "key": "column",
+                    "tableView": true,
+                    "label": "Column",
+                    "size": "md"
+                }
+            ],
+            "mask": false,
+            "tableView": false,
+            "alwaysEnabled": false,
+            "type": "columns",
+            "input": false,
+            "key": "columns2",
+            "reorder": false
+        }
+    ]
+}

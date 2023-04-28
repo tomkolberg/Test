@@ -1,0 +1,31 @@
+<DocumentPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Auftragssteuerung" ref="\\Framework_DE\Data\Auftragssteuerung.datamodel">
+   <Description></Description>
+  </ParamDef>
+  <DataNodeDef name="MAIL" data-type="boolean">
+   <Description></Description>
+   <Input true-value="true" false-value="false"></Input>
+   <Output true-value="true" false-value="false"></Output>
+   <Subtype></Subtype>
+   <Script><![CDATA[false]]></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </DataNodeDef>
+  <ParamDef name="MOMS_ID" data-type="number">
+   <Description></Description>
+   <Input text-prefix="" text-suffix="" decimal-separator="44" thousand-separator="46" use-current-locale="false" currency-symbol="" fractional-digits="-1" leading-zeros="1"></Input>
+   <Output text-prefix="" text-suffix="" decimal-separator="44" thousand-separator="46" use-current-locale="true" currency-symbol="" fractional-digits="-1" leading-zeros="1"></Output>
+   <Subtype></Subtype>
+   <Validation validation-type="any_value" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+ </DataDefinition>
+ <AttachmentSection url="mtx:Anlagen/SEPA_Mandat.pdf">
+  <OutputSettingsRef uri="\\Framework_DE\Framework\FW_Ausgabesteuerung_Aufgabe3.outputSettings">
+   <Param name="ExemplarAusgabesteuerung">$Auftragssteuerung.Korrespondenz.instance(0).Exemplare.Exemplar.instance(0)</Param>
+  </OutputSettingsRef>
+ </AttachmentSection>
+</DocumentPart>

@@ -1,0 +1,39 @@
+<UIModification xmlns="urn:kwsoft:mtext:tonic:ui">
+	<ActionModifications>
+		<ActionModification
+			enabledIf="$Metadata.State.valueOf() !== 'Finished'"
+			visibleIf="$Metadata.State.valueOf() !== 'Finished' &amp;&amp; true"
+			name="Finalize"
+			code="ActionCode:EXECUTE_SCRIPT"
+			title="Finalisieren"
+			title-en_EN="Finalize"
+			title-fr_FR="Finaliser"
+			description="Dokument speichern, an OMS senden und schließen"
+			description-en_EN="Save document, send to OMS and close"
+			description-fr_FR="Sauvegarder le document,l'envoyer à l'OMS et fermer"
+			icon="Papierflieger.png"
+			selectedIcon="Papierflieger.png"
+			>
+		<Script><![CDATA[
+			$context.setDataValue($Metadata.State,'Finished');
+			$context.save();
+			$context.print('OMS');
+			$context.close();
+		]]></Script>
+		</ActionModification>
+		<ActionModification
+			visibleIf="true"
+			enabledIf="true"
+			code="ActionCode:DOCUMENT_SAVE"
+			>
+		</ActionModification>
+		<ActionModification
+			visibleIf="true"
+			enabledIf="true"
+			code="ActionCode:CHANGE_FONT_STYLE"
+			shortcut="ui.i18n.kursiv"
+			parameter="FontStyle:ITALICS"
+			>
+		</ActionModification>
+	</ActionModifications>
+</UIModification>

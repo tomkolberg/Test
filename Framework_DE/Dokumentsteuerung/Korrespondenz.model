@@ -1,0 +1,103 @@
+<DocumentPart xmlns="urn:kwsoft:mtext:tonic:dom" scriptResource="Scripts\LoadAll.js" resolveLoopOnEdit="false">
+ <DataDefinition>
+  <ParamDef name="Korrespondenz" ref="\\Framework_DE\Data\Korrespondenz.datamodel" provided="true"></ParamDef>
+  <ParamDef name="Betreff1" provided="true"></ParamDef>
+  <ParamDef name="Betreff2" provided="true"></ParamDef>
+  <ParamDef name="Betreff3" provided="true"></ParamDef>
+ </DataDefinition>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <DocumentPart resolveLoopOnEdit="false">
+  <VisibleIf><![CDATA[$system.Destination == "preview" || $Metadata.TestMode == "TEMPLATE"]]></VisibleIf>
+  <DataDefinition></DataDefinition>
+  <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Exemplar.model">
+   <Extensions>
+    <DocumentExtension id="Exemplar Inhalt">
+     <DocumentExtensionDef id="Korrespondenz Inhalt"></DocumentExtensionDef>
+    </DocumentExtension>
+   </Extensions>
+   <Param name="Exemplar">$Korrespondenz.Exemplare.Exemplar.instance(0)</Param>
+   <Param name="ExemplarAusgabesteuerung">$Korrespondenz.Exemplare.Exemplar.instance(0)</Param>
+   <Param name="ExemplarOriginal">$Korrespondenz.Exemplare.Exemplar.instance(0)</Param>
+   <Param name="Korrespondenz">$Korrespondenz</Param>
+  </DocumentPartRef>
+ </DocumentPart>
+ <DocumentPart>
+  <VisibleIf><![CDATA[else]]></VisibleIf>
+  <DataDefinition></DataDefinition>
+  <DocumentPart>
+   <ForEach alias="$ExemplarInSchleife"><![CDATA[$Korrespondenz.Exemplare.Exemplar]]></ForEach>
+   <Validation></Validation>
+   <DataDefinition></DataDefinition>
+   <DocumentPart>
+    <VisibleIf><![CDATA[$ExemplarInSchleife.Typ.valueOf() != "ORIGINAL" /***** Vorblatt für weitere Instanz *****/]]></VisibleIf>
+    <DataDefinition></DataDefinition>
+    <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Exemplar.model">
+     <Extensions>
+      <DocumentExtension id="Exemplar Inhalt">
+       <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Anschreiben.model">
+        <Extensions>
+         <ContainerExtension id="Anschreiben Inhalt">
+          <ContainerPartRef uri="Framework/Standardinhalte/Anschreiben/BriefinhaltWeiteresExemplar.model">
+           <Param name="Exemplar">$ExemplarInSchleife</Param>
+           <Param name="ExemplarOriginal">$Korrespondenz.Exemplare.Exemplar.instance(0)</Param>
+          </ContainerPartRef>
+         </ContainerExtension>
+        </Extensions>
+        <Param name="Exemplar">$ExemplarInSchleife</Param>
+        <Param name="Betreff1">$Betreff1 || 'Betreff Anschreiben weiterer Empfänger'</Param>
+        <Param name="Betreff2">$Betreff2</Param>
+       </DocumentPartRef>
+      </DocumentExtension>
+     </Extensions>
+     <Param name="Exemplar">$ExemplarInSchleife</Param>
+     <Param name="ExemplarAusgabesteuerung">$ExemplarInSchleife</Param>
+     <Param name="ExemplarOriginal">$Korrespondenz.Exemplare.Exemplar.instance(0)</Param>
+     <Param name="Korrespondenz">$Korrespondenz</Param>
+    </DocumentPartRef>
+   </DocumentPart>
+   <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Exemplar.model">
+    <Extensions>
+     <DocumentExtension id="Exemplar Inhalt">
+      <DocumentExtensionDef id="Korrespondenz Inhalt"></DocumentExtensionDef>
+     </DocumentExtension>
+    </Extensions>
+    <Param name="Exemplar">$Korrespondenz.Exemplare.Exemplar.instance(0)</Param>
+    <Param name="ExemplarAusgabesteuerung">$ExemplarInSchleife</Param>
+    <Param name="ExemplarOriginal">$Korrespondenz.Exemplare.Exemplar.instance(0)</Param>
+    <Param name="Korrespondenz">$Korrespondenz</Param>
+   </DocumentPartRef>
+  </DocumentPart>
+ </DocumentPart>
+ <DocumentPart>
+  <DataDefinition></DataDefinition>
+  <UIContribution>
+   <GuideArea>
+    <Folder title="Dokument finalisieren" title-en_US="Finalize the document" title-de_DE="Dokument finalisieren">
+     <ActionLink title="PDF Vorschau" title-en_US="PDF Preview" title-de_DE="PDF Vorschau" inputAreaGroupID="">
+      <Script><![CDATA[ $context.save(); 
+      					$context.export('export-application/pdf');]]></Script>
+     </ActionLink>
+     <ActionLink title="M/OMS" title-en_US="M/OMS" inputAreaGroupID="">
+      <Script><![CDATA[
+$context.save(); 
+console.log("saved document...");
+$context.print('OMS');
+console.log("printed to OMS...");
+$context.setDataValue($Metadata.State, 'OMS');
+console.log("set state to OMS...");
+$context.save();
+console.log("saved document...");
+$context.close();
+		]]></Script>
+     </ActionLink>
+    </Folder>
+   </GuideArea>
+   <InputArea></InputArea>
+  </UIContribution>
+ </DocumentPart>
+</DocumentPart>

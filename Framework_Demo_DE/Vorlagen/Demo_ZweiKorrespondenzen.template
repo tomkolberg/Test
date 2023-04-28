@@ -1,0 +1,159 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom" id="\library\Framework_TONIC_Demo\Templates\InDocumentation\de\Demo_ZweiKorrespondenzen.template">
+ <DataDefinition>
+  <ParamDef name="Auftragssteuerung" ref="\\Framework_DE\Data\Auftragssteuerung.datamodel" dataMappingRef="\\Framework_DE\Data\Auftragssteuerung.mapping">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+  </ParamDef>
+  <DataNodeDef name="Korrespondenzsteuerung">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+   <DataNodeDef name="Korrespondenz1" data-type="boolean">
+    <Description></Description>
+    <Input true-value="true" false-value="false"></Input>
+    <Output true-value="true" false-value="false"></Output>
+    <Script><![CDATA[true]]></Script>
+    <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+     <Values></Values>
+    </Validation>
+   </DataNodeDef>
+   <DataNodeDef name="Korrespondenz2" data-type="boolean">
+    <Description></Description>
+    <Input true-value="true" false-value="false"></Input>
+    <Output true-value="true" false-value="false"></Output>
+    <Subtype></Subtype>
+    <Script><![CDATA[true]]></Script>
+    <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+     <Values></Values>
+    </Validation>
+   </DataNodeDef>
+  </DataNodeDef>
+ </DataDefinition>
+ <UIContribution>
+  <GuideArea>
+   <ContentLink targetId="" dataNode="$Korrespondenzsteuerung"></ContentLink>
+  </GuideArea>
+  <InputArea>
+   <Field dataNode="$Korrespondenzsteuerung.Korrespondenz1"></Field>
+   <Field dataNode="$Korrespondenzsteuerung.Korrespondenz2"></Field>
+  </InputArea>
+ </UIContribution>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Document>
+  <DocumentPart>
+   <VisibleIf><![CDATA[$Korrespondenzsteuerung.Korrespondenz1.valueOf()]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Korrespondenz.model">
+    <Extensions>
+     <DocumentExtension id="Korrespondenz Inhalt">
+      <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Anschreiben.model">
+       <Extensions>
+        <ContainerExtension id="Anschreiben Inhalt">
+         <Par>
+          <Translations>
+           <Translation>
+            <Language language="en" country="US" variant=""></Language>
+            <Span>
+             <Text>we are happy to inform you that we will cover the costs of your inpatient treatment.</Text>
+            </Span>
+           </Translation>
+          </Translations>
+          <Style parentName="TextSpaceAfter"></Style>
+          <Span>
+           <Text>wir freuen uns Ihnen mitteilen zu können, dass wir die Kosten Ihrer stationären Behandlung übernehmen werden.</Text>
+          </Span>
+         </Par>
+         <Par>
+          <Translations>
+           <Translation>
+            <Language language="it" country="IT" variant=""></Language>
+            <Span>
+             <Text>TRANSLATE: Weitere Informationen finden Sie im beigefügten Infoblatt.</Text>
+            </Span>
+           </Translation>
+           <Translation>
+            <Language language="en" country="US" variant=""></Language>
+            <Span>
+             <Text>You will find further details in the attached Information Infos.</Text>
+            </Span>
+           </Translation>
+          </Translations>
+          <Style parentName="TextSpaceAfter"></Style>
+          <Span>
+           <Text>Weitere Informationen finden Sie im beigefügten Infoblatt.</Text>
+          </Span>
+         </Par>
+        </ContainerExtension>
+       </Extensions>
+       <Param name="Korrespondenz">$Korrespondenz</Param>
+       <Param name="Exemplar">$Exemplar</Param>
+       <Param name="Betreff3"></Param>
+      </DocumentPartRef>
+      <DocumentPartRef uri="\\Framework_DE\Framework\Teildokumente\Infoblatt\Infoblatt.model">
+       <Extensions>
+        <ContainerExtension id="Infoblatt Inhalt">
+         <Par>
+          <Span>
+           <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
+
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.   
+
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur</Text>
+          </Span>
+         </Par>
+        </ContainerExtension>
+       </Extensions>
+       <Param name="DoNotArchive">true</Param>
+       <Param name="SendAsAttachment"></Param>
+       <Param name="AttachmentName"></Param>
+       <Param name="Titel">"Infoblatt zur Kostenübernahme"</Param>
+      </DocumentPartRef>
+     </DocumentExtension>
+    </Extensions>
+    <Param name="Korrespondenz">$Auftragssteuerung.Korrespondenz.instance(0)</Param>
+    <Param name="Betreff1">"Übernahme der Behandlungskosten"</Param>
+    <Param name="Betreff2">"ihrer stationären Behandlung"</Param>
+   </DocumentPartRef>
+  </DocumentPart>
+  <DocumentPart>
+   <VisibleIf><![CDATA[$Korrespondenzsteuerung.Korrespondenz2.valueOf()]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Korrespondenz.model">
+    <Extensions>
+     <DocumentExtension id="Korrespondenz Inhalt">
+      <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Anschreiben.model">
+       <Extensions>
+        <ContainerExtension id="Anschreiben Inhalt">
+         <ContainerPartRef uri="Bausteine\Behandlungskosten.model">
+          <Param name="Empfaenger">$Auftragssteuerung.Korrespondenz.instance(0).Exemplare.Exemplar.instance(0).Empfaenger</Param>
+         </ContainerPartRef>
+        </ContainerExtension>
+       </Extensions>
+       <Param name="Korrespondenz">$Korrespondenz</Param>
+       <Param name="Exemplar">$Exemplar</Param>
+       <Param name="Betreff1">"Übernahme der Behandlungskosten"</Param>
+       <Param name="Betreff2">"Patientin Maria Mercurial"</Param>
+       <Param name="Betreff3"></Param>
+      </DocumentPartRef>
+     </DocumentExtension>
+    </Extensions>
+    <Param name="Korrespondenz">$Auftragssteuerung.Korrespondenz.instance(1)</Param>
+   </DocumentPartRef>
+  </DocumentPart>
+ </Document>
+</RootPart>

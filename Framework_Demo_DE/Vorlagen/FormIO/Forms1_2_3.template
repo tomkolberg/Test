@@ -1,0 +1,62 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom" id="\library\Framework_Demo_DE\Vorlagen\FormIO\RuecksendedatumBerechnen.template" description="FormIO: Form1 ruft Form2 auf">
+ <DataDefinition>
+  <ParamDef name="CalculateDates" ref="\\Framework_Demo_DE\Data\CalculateDates.datamodel" dataMappingRef="">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <ParamDef name="Auftragssteuerung" ref="\\Framework_DE\Data\Auftragssteuerung.datamodel" dataMappingRef="">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <UIContribution>
+  <GuideArea>
+   <ActionLink title="Formulare aufrufen" inputAreaGroupID="">
+    <Script><![CDATA[
+var form1Func = $context.FormIO.createForm("\\\\Framework_Demo_DE\\FormIO\\de\\Form1.formio");
+var form2Func = $context.FormIO.createForm("\\\\Framework_Demo_DE\\FormIO\\de\\Form2.formio");
+var form3Func = $context.FormIO.createForm("\\\\Framework_Demo_DE\\FormIO\\de\\Form3.formio");
+
+var options = {
+	"height" : $Auftragssteuerung.Defaults.FormIO.win_height,
+	"width" : $Auftragssteuerung.Defaults.FormIO.win_width,
+	"customCSS" : $Auftragssteuerung.Defaults.FormIO.customCSS,
+	"language" : "de",
+	"title" : "Formular aufrufen"
+};
+
+$context.showForm(form1Func, $CalculateDates, options)
+	.then((result) => {
+		if (result.submitted) {
+			if (result.state == 'submit-form2') { // 'state' property in FormIO button
+				$context.showForm(form2Func, $CalculateDates, options)
+			}
+			if (result.state == 'submit-form3') { // 'state' property in FormIO button
+				$context.showForm(form3Func, $CalculateDates, options)
+			}
+		}
+	});
+]]></Script>
+   </ActionLink>
+  </GuideArea>
+  <InputArea></InputArea>
+ </UIContribution>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Document>
+  <Section>
+   <Container>
+    <Par>
+     <Style parentName="TextSpaceAfter"></Style>
+     <Span>
+      <Text>Formular 1 ruft Formular 2 oder Formular 3 auf.</Text>
+     </Span>
+    </Par>
+   </Container>
+  </Section>
+ </Document>
+</RootPart>

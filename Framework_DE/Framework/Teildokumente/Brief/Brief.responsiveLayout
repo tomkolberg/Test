@@ -1,0 +1,63 @@
+<ResponsiveLayouts xmlns="urn:kwsoft:mtext:tonic:dom">
+ <ResponsiveLayout>
+  <Grid>
+   <Columns>
+    <Column>8.0px</Column>
+    <Column>1.0fr</Column>
+    <Column>1.0fr</Column>
+    <Column>1.0fr</Column>
+    <Column>1.0fr</Column>
+    <Column>8.0px</Column>
+   </Columns>
+   <Rows>
+    <Row>8.0px</Row>
+    <Row>auto</Row>
+    <Row>auto</Row>
+   </Rows>
+   <ColumnGap>5.0px</ColumnGap>
+   <RowGap>5.0px</RowGap>
+   <Regions>
+    <Row>
+     <Cell></Cell>
+     <Cell></Cell>
+     <Cell></Cell>
+     <Cell></Cell>
+     <Cell></Cell>
+     <Cell></Cell>
+    </Row>
+    <Row>
+     <Cell></Cell>
+     <Cell>
+      <Region name="Body"></Region>
+     </Cell>
+     <Cell>
+      <Region name="Body"></Region>
+     </Cell>
+     <Cell>
+      <Region name="Body"></Region>
+     </Cell>
+     <Cell>
+      <Region name="Body"></Region>
+     </Cell>
+     <Cell></Cell>
+    </Row>
+    <Row>
+     <Cell></Cell>
+     <Cell>
+      <Region name="logo"></Region>
+     </Cell>
+     <Cell>
+      <Region name="infobereich"></Region>
+     </Cell>
+     <Cell>
+      <Region name="firmenleisteResponsive"></Region>
+     </Cell>
+     <Cell>
+      <Region name="firmenleisteResponsive"></Region>
+     </Cell>
+     <Cell></Cell>
+    </Row>
+   </Regions>
+  </Grid>
+ </ResponsiveLayout>
+</ResponsiveLayouts>

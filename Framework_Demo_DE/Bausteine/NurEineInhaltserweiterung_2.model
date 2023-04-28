@@ -1,0 +1,14 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition></DataDefinition>
+ <Par>
+  <Span>
+   <Text>Text der Inhaltserweiterung 2, die hier Platz bietet für ...</Text>
+  </Span>
+ </Par>
+ <ContainerExtensionDef id="Inhalt Demobaustein2"></ContainerExtensionDef>
+ <Par>
+  <Span>
+   <Text>... und noch etwas Text beisteuert.</Text>
+  </Span>
+ </Par>
+</ContainerPart>

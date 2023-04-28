@@ -1,0 +1,47 @@
+<DocumentPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Anlage">
+   <Description></Description>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="AnlageName" provided="true">
+   <Description></Description>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="ExemplarAusgabesteuerung" ref="\\Framework_DE\Data\Exemplar.datamodel" provided="true">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <AttachmentSection>
+  <OutputSettingsRef uri="\\Framework_DE\Framework\FW_Ausgabesteuerung.outputSettings">
+   <Param name="AlsAttachment">true</Param>
+  </OutputSettingsRef>
+  <DataUri>$Anlage</DataUri>
+  <Style parentName="Anlage">
+   <OriginalPageSizes>false</OriginalPageSizes>
+   <FillContainerWidth>true</FillContainerWidth>
+   <FillContainerHeight>true</FillContainerHeight>
+  </Style>
+  <StaticContainer>
+   <Style>
+    <RegionRef>AnlageName</RegionRef>
+   </Style>
+   <Par>
+    <Style parentName="AttachmentMarker"></Style>
+    <Span>
+     <Data>$AnlageName</Data>
+     <Text></Text>
+    </Span>
+   </Par>
+  </StaticContainer>
+ </AttachmentSection>
+</DocumentPart>

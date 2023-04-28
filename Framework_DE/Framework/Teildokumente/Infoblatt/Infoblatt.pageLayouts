@@ -1,0 +1,135 @@
+<PageLayouts xmlns="urn:kwsoft:mtext:tonic:dom">
+ <First>
+  <PageSize name="A4"></PageSize>
+  <Landscape>false</Landscape>
+  <RendererMetadata></RendererMetadata>
+  <Region name="Body">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="114519.0mpt" anchorSide="same"></Top>
+   <Right distance="67751.0mpt" anchorSide="same"></Right>
+   <Bottom distance="50741.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="logo" role="Figure">
+   <Left distance="431714.0mpt" anchorSide="same"></Left>
+   <Top distance="36283.0mpt" anchorSide="same"></Top>
+   <Right distance="67750.0mpt" anchorSide="same"></Right>
+   <Bottom distance="740126.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="heading">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="36283.0mpt" anchorSide="same"></Top>
+   <Right distance="174048.0mpt" anchorSide="same"></Right>
+   <Bottom distance="740126.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="footer" role="Artifact">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="799937.0mpt" anchorSide="same"></Top>
+   <Right distance="67749.0mpt" anchorSide="same"></Right>
+   <Bottom distance="19275.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="marginalnotes" role="Artifact" contentRotation="90">
+   <Left distance="18425.0mpt" anchorSide="same"></Left>
+   <Top distance="589725.0mpt" anchorSide="same"></Top>
+   <Right distance="531496.0mpt" anchorSide="same"></Right>
+   <Bottom distance="19275.0mpt" anchorSide="same"></Bottom>
+  </Region>
+ </First>
+ <Front>
+  <PageSize name="A4"></PageSize>
+  <Landscape>false</Landscape>
+  <RendererMetadata></RendererMetadata>
+  <Region name="Body">
+   <Left distance="68313.0mpt" anchorSide="same"></Left>
+   <Top distance="114519.0mpt" anchorSide="same"></Top>
+   <Right distance="67752.0mpt" anchorSide="same"></Right>
+   <Bottom distance="70298.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="logo" role="Figure">
+   <Left distance="431714.0mpt" anchorSide="same"></Left>
+   <Top distance="36283.0mpt" anchorSide="same"></Top>
+   <Right distance="67750.0mpt" anchorSide="same"></Right>
+   <Bottom distance="740126.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="heading">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="36283.0mpt" anchorSide="same"></Top>
+   <Right distance="174048.0mpt" anchorSide="same"></Right>
+   <Bottom distance="740126.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="footer" role="Artifact">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="799937.0mpt" anchorSide="same"></Top>
+   <Right distance="67749.0mpt" anchorSide="same"></Right>
+   <Bottom distance="19275.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="marginalnotes" role="Artifact" contentRotation="90">
+   <Left distance="18425.0mpt" anchorSide="same"></Left>
+   <Top distance="589725.0mpt" anchorSide="same"></Top>
+   <Right distance="531496.0mpt" anchorSide="same"></Right>
+   <Bottom distance="19275.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="last_page" role="Artifact" produceOnLastPage="only" lastPageScope="logicaldocument">
+   <Left distance="68312.0mpt" anchorSide="same"></Left>
+   <Top distance="771591.0mpt" anchorSide="same"></Top>
+   <Right distance="67751.0mpt" anchorSide="same"></Right>
+   <Bottom distance="41952.0mpt" anchorSide="same"></Bottom>
+  </Region>
+ </Front>
+ <Back>
+  <PageSize name="A4"></PageSize>
+  <Landscape>false</Landscape>
+  <RendererMetadata></RendererMetadata>
+  <Region name="Body">
+   <Left distance="68313.0mpt" anchorSide="same"></Left>
+   <Top distance="2.0cm" anchorSide="same"></Top>
+   <Right distance="67752.0mpt" anchorSide="same"></Right>
+   <Bottom distance="70298.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="footerbackpage" role="Artifact">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="799937.0mpt" anchorSide="same"></Top>
+   <Right distance="67749.0mpt" anchorSide="same"></Right>
+   <Bottom distance="19275.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="last_page" role="Artifact" produceOnLastPage="only" lastPageScope="logicaldocument">
+   <Left distance="68312.0mpt" anchorSide="same"></Left>
+   <Top distance="771591.0mpt" anchorSide="same"></Top>
+   <Right distance="67751.0mpt" anchorSide="same"></Right>
+   <Bottom distance="41952.0mpt" anchorSide="same"></Bottom>
+  </Region>
+ </Back>
+ <DefaultPageLayout>
+  <PageSize name="A4"></PageSize>
+  <RendererMetadata></RendererMetadata>
+  <Region name="Body">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="114519.0mpt" anchorSide="same"></Top>
+   <Right distance="67751.0mpt" anchorSide="same"></Right>
+   <Bottom distance="50741.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="logo" role="Figure">
+   <Left distance="431714.0mpt" anchorSide="same"></Left>
+   <Top distance="36283.0mpt" anchorSide="same"></Top>
+   <Right distance="67750.0mpt" anchorSide="same"></Right>
+   <Bottom distance="740126.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="heading">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="36283.0mpt" anchorSide="same"></Top>
+   <Right distance="174048.0mpt" anchorSide="same"></Right>
+   <Bottom distance="740126.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="footer" role="Artifact">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="799937.0mpt" anchorSide="same"></Top>
+   <Right distance="67749.0mpt" anchorSide="same"></Right>
+   <Bottom distance="19275.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="marginalnotes" role="Artifact" contentRotation="90">
+   <Left distance="18425.0mpt" anchorSide="same"></Left>
+   <Top distance="589725.0mpt" anchorSide="same"></Top>
+   <Right distance="531496.0mpt" anchorSide="same"></Right>
+   <Bottom distance="19275.0mpt" anchorSide="same"></Bottom>
+  </Region>
+ </DefaultPageLayout>
+</PageLayouts>

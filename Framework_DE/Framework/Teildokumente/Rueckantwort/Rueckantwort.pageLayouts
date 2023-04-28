@@ -1,0 +1,89 @@
+<PageLayouts xmlns="urn:kwsoft:mtext:tonic:dom">
+ <First>
+  <PageSize name="A4"></PageSize>
+  <Landscape>false</Landscape>
+  <RendererMetadata></RendererMetadata>
+  <Region name="Body">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="289133.0mpt" anchorSide="same"></Top>
+   <Right distance="68031.0mpt" anchorSide="same"></Right>
+   <Bottom distance="55843.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="logo" role="Figure">
+   <Left distance="14.91cm" anchorSide="same"></Left>
+   <Top distance="1.28cm" anchorSide="same"></Top>
+   <Right distance="68316.0mpt" anchorSide="same"></Right>
+   <Bottom distance="740126.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="empfaenger">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="5.0cm" anchorSide="same"></Top>
+   <Right distance="285166.0mpt" anchorSide="same"></Right>
+   <Bottom distance="617669.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="betreff">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="235842.0mpt" anchorSide="same"></Top>
+   <Right distance="67749.0mpt" anchorSide="same"></Right>
+   <Bottom distance="565511.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="fusszeile" role="Artifact">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="790864.0mpt" anchorSide="same"></Top>
+   <Right distance="67749.0mpt" anchorSide="same"></Right>
+   <Bottom distance="28348.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="randvermerk" role="Artifact" contentRotation="90">
+   <Left distance="18425.0mpt" anchorSide="same"></Left>
+   <Top distance="580653.0mpt" anchorSide="same"></Top>
+   <Right distance="531496.0mpt" anchorSide="same"></Right>
+   <Bottom distance="28347.0mpt" anchorSide="same"></Bottom>
+  </Region>
+ </First>
+ <Front>
+  <PageSize name="A4"></PageSize>
+  <Landscape>false</Landscape>
+  <RendererMetadata></RendererMetadata>
+  <Region name="Body">
+   <Left distance="2.41cm" anchorSide="same"></Left>
+   <Top distance="4.01cm" anchorSide="same"></Top>
+   <Right distance="2.39cm" anchorSide="same"></Right>
+   <Bottom distance="1.74cm" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="logo" role="Figure">
+   <Left distance="431714.0mpt" anchorSide="same"></Left>
+   <Top distance="34866.0mpt" anchorSide="same"></Top>
+   <Right distance="67750.0mpt" anchorSide="same"></Right>
+   <Bottom distance="741543.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="fusszeile" role="Artifact">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="799937.0mpt" anchorSide="same"></Top>
+   <Right distance="67749.0mpt" anchorSide="same"></Right>
+   <Bottom distance="19275.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="randvermerk" role="Artifact" contentRotation="90">
+   <Left distance="18425.0mpt" anchorSide="same"></Left>
+   <Top distance="589725.0mpt" anchorSide="same"></Top>
+   <Right distance="531496.0mpt" anchorSide="same"></Right>
+   <Bottom distance="19275.0mpt" anchorSide="same"></Bottom>
+  </Region>
+ </Front>
+ <Back>
+  <PageSize name="A4"></PageSize>
+  <Landscape>false</Landscape>
+  <RendererMetadata></RendererMetadata>
+  <Region name="Body">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="2.0cm" anchorSide="same"></Top>
+   <Right distance="67749.0mpt" anchorSide="same"></Right>
+   <Bottom distance="1.74cm" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="fusszeilerueckseite" role="Artifact">
+   <Left distance="68314.0mpt" anchorSide="same"></Left>
+   <Top distance="796818.0mpt" anchorSide="same"></Top>
+   <Right distance="67749.0mpt" anchorSide="same"></Right>
+   <Bottom distance="22394.0mpt" anchorSide="same"></Bottom>
+  </Region>
+ </Back>
+</PageLayouts>

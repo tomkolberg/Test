@@ -1,0 +1,315 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom" id="\library\Framework_Demo_DE\Vorlagen\Demo_EineKorrespondenz_Infoblatt_AGB.template">
+ <DataDefinition>
+  <ParamDef name="Auftragssteuerung" ref="\\Framework_DE\Data\Auftragssteuerung.datamodel" dataMappingRef="\\Framework_DE\Data\Auftragssteuerung.mapping">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+  </ParamDef>
+ </DataDefinition>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Document>
+  <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Korrespondenz.model">
+   <Extensions>
+    <DocumentExtension id="Korrespondenz Inhalt">
+     <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Anschreiben.model">
+      <Extensions>
+       <ContainerExtension id="Anschreiben Inhalt">
+        <Par>
+         <Translations>
+          <Translation>
+           <Language language="en" country="US" variant=""></Language>
+           <Span>
+            <Text>we are happy to inform you that we will cover the costs of your inpatient treatment.</Text>
+           </Span>
+          </Translation>
+          <Translation>
+           <Language language="it" country="IT" variant=""></Language>
+           <Span>
+            <Text>TRANSLATE: wir freuen uns Ihnen mitteilen zu können, dass wir die Kosten Ihrer stationären Behandlung übernehmen werden.</Text>
+           </Span>
+          </Translation>
+         </Translations>
+         <Style parentName="TextSpaceAfter"></Style>
+         <Span>
+          <Text>wir freuen uns Ihnen mitteilen zu können, dass wir die Kosten Ihrer stationären Behandlung übernehmen werden.</Text>
+         </Span>
+        </Par>
+        <Par>
+         <Translations>
+          <Translation>
+           <Language language="en" country="US" variant=""></Language>
+           <Span>
+            <Text>Please note the attached information sheet and our current treatment conditions.</Text>
+           </Span>
+          </Translation>
+         </Translations>
+         <Style parentName="TextSpaceAfter"></Style>
+         <Span>
+          <Text>Bitte beachten Sie dazu das beigefügte Informationsblatt sowie unsere aktuellen Behandlungsbedingungen.</Text>
+         </Span>
+        </Par>
+       </ContainerExtension>
+      </Extensions>
+      <Param name="Korrespondenz">$Korrespondenz</Param>
+      <Param name="Exemplar">$Exemplar</Param>
+      <Param name="Betreff3"></Param>
+     </DocumentPartRef>
+     <DocumentPartRef uri="\\Framework_DE\Framework\Teildokumente\Infoblatt\Infoblatt.model">
+      <Extensions>
+       <ContainerExtension id="Infoblatt Inhalt">
+        <Par>
+         <Style parentName="TextSpaceAfter"></Style>
+         <Span>
+          <Text>Dieser Abschnitt besteht aus einem </Text>
+         </Span>
+         <Span>
+          <Style>
+           <FontStyle>bold</FontStyle>
+          </Style>
+          <Text>Logischen Dokument</Text>
+         </Span>
+         <Span>
+          <Text> (Document Part: Logical Document = true). Innerhalb eines </Text>
+         </Span>
+         <Span>
+          <Style>
+           <FontStyle>bold</FontStyle>
+          </Style>
+          <Text>logischen Dokuments</Text>
+         </Span>
+         <Span>
+          <Text> ist es möglich, </Text>
+         </Span>
+         <Span>
+          <Style>
+           <FontStyle>bold</FontStyle>
+          </Style>
+          <Text>unabhängige</Text>
+         </Span>
+         <Span>
+          <Text> Seitennummerierungen, Marker und Regionen zu konfigurieren, die </Text>
+         </Span>
+         <Span>
+          <Style>
+           <FontStyle>bold</FontStyle>
+          </Style>
+          <Text>nicht vom gesamten Dokument abhängen</Text>
+         </Span>
+         <Span>
+          <Text>.</Text>
+         </Span>
+        </Par>
+        <Par>
+         <Style parentName="TextSpaceAfter"></Style>
+         <Span>
+          <Text>Auf der letzten Seite dieses logischen Dokuments finden Sie einen </Text>
+         </Span>
+         <Span>
+          <Style>
+           <FontStyle>bold</FontStyle>
+          </Style>
+          <Text>Container</Text>
+         </Span>
+         <Span>
+          <Text>, dessen Eigenschaft "Produktion" auf "Nur auf letzter Seite" mit dem "last page scope" auf "logical document" eingestellt ist.</Text>
+         </Span>
+        </Par>
+        <Par>
+         <Style parentName="TextSpaceAfter"></Style>
+         <Span>
+          <Text>Ebenso ist die </Text>
+         </Span>
+         <Span>
+          <Style>
+           <FontStyle>bold</FontStyle>
+          </Style>
+          <Text>Seitennummerierung</Text>
+         </Span>
+         <Span>
+          <Text> auf "Gültigkeitsbereich" = "logical document" eingestellt.</Text>
+         </Span>
+        </Par>
+       </ContainerExtension>
+      </Extensions>
+      <Param name="Titel">"Informationsblatt zu Ihrer Behandlung"</Param>
+     </DocumentPartRef>
+     <DocumentPart>
+      <VisibleIf><![CDATA[true]]></VisibleIf>
+      <DataDefinition></DataDefinition>
+      <DocumentPartRef uri="\\Framework_DE\Framework\Teildokumente\AGB\AGB.model">
+       <Extensions>
+        <ContainerExtension id="AGB Inhalt">
+         <Container>
+          <Style>
+           <ColumnsDefinition>
+            <ColumnDefinition gap="0.5cm"></ColumnDefinition>
+            <ColumnDefinition gap="0.5cm"></ColumnDefinition>
+           </ColumnsDefinition>
+          </Style>
+          <Numbering id="avb">
+           <Style name="AVB">
+            <Levels>
+             <Level number="1" firstLineIndent="0.0cm" indent="0.0cm">
+              <Text pattern="%1."></Text>
+              <Tab position="0.5cm" tabType="left" underlineStyle="default"></Tab>
+             </Level>
+             <Level number="2" firstLineIndent="0.0cm" indent="0.0cm">
+              <Text pattern="%1.%2."></Text>
+              <Tab position="0.5cm" tabType="left" underlineStyle="default"></Tab>
+             </Level>
+             <Level number="3" firstLineIndent="3.2cm" indent="4.5cm">
+              <Text pattern="%1.%2.%3."></Text>
+              <Tab position="1.4cm" tabType="left" underlineStyle="default"></Tab>
+             </Level>
+            </Levels>
+           </Style>
+          </Numbering>
+          <Par>
+           <Translations>
+            <Translation>
+             <Language language="en" country="US" variant=""></Language>
+             <Span>
+              <Text>Common</Text>
+             </Span>
+            </Translation>
+           </Translations>
+           <NumberingRef numberingId="avb" level="1"></NumberingRef>
+           <Span>
+            <Text>Allgemeines</Text>
+           </Span>
+          </Par>
+          <Par>
+           <Style parentName="Indented"></Style>
+           <Span>
+            <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</Text>
+           </Span>
+          </Par>
+          <Par>
+           <Style parentName="Indented"></Style>
+           <Span>
+            <Text>   </Text>
+           </Span>
+          </Par>
+          <Par>
+           <Translations>
+            <Translation>
+             <Language language="en" country="US" variant=""></Language>
+             <Span>
+              <Text>Wording</Text>
+             </Span>
+            </Translation>
+           </Translations>
+           <NumberingRef numberingId="avb" level="2"></NumberingRef>
+           <Style parentName="FW_Default"></Style>
+           <Span>
+            <Text>Begriffe</Text>
+           </Span>
+          </Par>
+          <Par>
+           <Style parentName="Indented"></Style>
+           <Span>
+            <Text>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.    </Text>
+           </Span>
+          </Par>
+          <Par>
+           <Style parentName="Indented"></Style>
+           <Span>
+            <Text></Text>
+           </Span>
+          </Par>
+          <Par>
+           <Translations>
+            <Translation>
+             <Language language="en" country="US" variant=""></Language>
+             <Span>
+              <Text>Conditions</Text>
+             </Span>
+            </Translation>
+           </Translations>
+           <NumberingRef numberingId="avb" level="2"></NumberingRef>
+           <Style parentName="FW_Default">
+            <LeftIndent>0.0cm</LeftIndent>
+           </Style>
+           <Span>
+            <Text>Voraussetzungen</Text>
+           </Span>
+          </Par>
+          <Par>
+           <Style parentName="Indented"></Style>
+           <Span>
+            <Text>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</Text>
+           </Span>
+          </Par>
+          <Par>
+           <Style parentName="Indented"></Style>
+           <Span>
+            <Text>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer</Text>
+           </Span>
+          </Par>
+          <Par>
+           <Translations>
+            <Translation>
+             <Language language="en" country="US" variant=""></Language>
+             <Span>
+              <Text>Particularities</Text>
+             </Span>
+            </Translation>
+           </Translations>
+           <NumberingRef numberingId="avb" level="1"></NumberingRef>
+           <Span>
+            <Text>Besonderes</Text>
+           </Span>
+          </Par>
+          <Par>
+           <Style parentName="Indented"></Style>
+           <Span>
+            <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla</Text>
+           </Span>
+          </Par>
+          <Par>
+           <Translations>
+            <Translation>
+             <Language language="en" country="US" variant=""></Language>
+             <Span>
+              <Text>Further reading</Text>
+             </Span>
+            </Translation>
+           </Translations>
+           <NumberingRef numberingId="avb" level="1"></NumberingRef>
+           <Span>
+            <Text>Weiteres</Text>
+           </Span>
+          </Par>
+          <Par>
+           <Style parentName="Indented"></Style>
+           <Span>
+            <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla</Text>
+           </Span>
+          </Par>
+         </Container>
+        </ContainerExtension>
+       </Extensions>
+       <Param name="Titel">"Allgemeine Behandlungsbedingungen"</Param>
+      </DocumentPartRef>
+     </DocumentPart>
+    </DocumentExtension>
+   </Extensions>
+   <Param name="Korrespondenz">$Auftragssteuerung.Korrespondenz.instance(0)</Param>
+   <Param name="Betreff1">"Informationen zu Ihrer Behandlung"</Param>
+   <Param name="Betreff2">"Übernahme der Behandlungskosten"</Param>
+  </DocumentPartRef>
+ </Document>
+</RootPart>

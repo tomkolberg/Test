@@ -1,0 +1,12 @@
+{
+	"en": {
+		"Exemplar": "Instance"
+	},
+	"de": {
+		"Submit": "Schließen",
+		"cancel": "Zurücksetzen",
+		"next": "Weiter",
+		"previous": "Zurück",
+		"submit": "Speichern"
+	}
+}

@@ -1,0 +1,43 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Betreff1" provided="true">
+   <Output text-prefix="" text-suffix=""></Output>
+  </ParamDef>
+  <ParamDef name="Betreff2" provided="true">
+   <Output text-prefix="" text-suffix=""></Output>
+  </ParamDef>
+  <ParamDef name="Betreff3" provided="true"></ParamDef>
+ </DataDefinition>
+ <Container>
+  <Style parentName="FW_Subject"></Style>
+  <Par>
+   <Style parentName="FW_Subject"></Style>
+   <Span>
+    <Data>$Betreff1</Data>
+    <Text></Text>
+   </Span>
+  </Par>
+  <ContainerPart>
+   <VisibleIf><![CDATA[$Betreff2 && !$Betreff2.isEmpty()]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <Par>
+    <Style parentName="FW_Subject2"></Style>
+    <Span>
+     <Data>$Betreff2</Data>
+     <Text></Text>
+    </Span>
+   </Par>
+  </ContainerPart>
+  <ContainerPart>
+   <VisibleIf><![CDATA[$Betreff3 && !$Betreff3.isEmpty()]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <Par>
+    <Style parentName="FW_Subject2"></Style>
+    <Span>
+     <Data>$Betreff3</Data>
+     <Text></Text>
+    </Span>
+   </Par>
+  </ContainerPart>
+ </Container>
+</ContainerPart>

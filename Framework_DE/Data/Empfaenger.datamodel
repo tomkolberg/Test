@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel>
+   <Node data-type="BOOLEAN"
+         hierarchical="FLAT"
+         multiple="false"
+         name="istGueltig"
+         searchable="false">
+      <Settings>
+         <Description>Checks if partner in recipient is set and valid</Description>
+         <Validation allow-empty-value="true"
+                     dialog-field="CHECKBOX"
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input false-value="false" true-value="true"/>
+            <Output false-value="false" true-value="true"/>
+         </Format>
+         <Script>//print("********** 1 :" + !$current.parent().isAbsent());
+//print("********** 2 :" + $Partner.PLZ);
+//print("********** 3 :" + !$Partner.PLZ.isEmpty());
+//print("********** 4 :" + (!$current.parent().isAbsent() &amp;&amp; $Partner.PLZ &amp;&amp; !$Partner.PLZ.isEmpty()) );
+
+!$current.parent().isAbsent() &amp;&amp; $Partner.PLZ &amp;&amp; !$Partner.PLZ.isEmpty();</Script>
+      </Settings>
+   </Node>
+   <Node multiple="false"
+         name="Partner"
+         ref="\\Framework_DE\Data\Partner.datamodel">
+      <Settings>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Briefanrede"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field="EDITFIELD"
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script>if ($document &amp;&amp; $document.Metadata &amp;&amp; $document.Metadata.DocumentLanguage &amp;&amp; $document.Metadata.DocumentLanguage.notEmpty()) {
+	deriveSalutatoryAddress($Partner, $document.Metadata.DocumentLanguage);
+}</Script>
+      </Settings>
+   </Node>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="NameVorname"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field="EDITFIELD"
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script>deriveNameFirstname($Partner);</Script>
+      </Settings>
+   </Node>
+</DataModel>

@@ -1,0 +1,90 @@
+<SectionPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <DataNodeDef name="Unterschrift">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script><![CDATA[$Absender.Sachbearbeiter.Unterschrift || 'mtx://Framework_DE/Grafiken/signature_BG.png';]]></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </DataNodeDef>
+  <ParamDef name="Absender" ref="\\Framework_DE\Data\Absender.datamodel">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied>
+   <ModificationRight role="_EVERYONE_" operations="EDIT"></ModificationRight>
+  </Denied>
+ </ModificationRights>
+ <Container id="Grussformel">
+  <Style>
+   <RegionRef>Body</RegionRef>
+  </Style>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="it" country="IT" variant=""></Language>
+     <Span>
+      <Text>Con cordiali saluti</Text>
+     </Span>
+    </Translation>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>Sincerely yours</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="FW_Default">
+    <SpaceBefore>0.3cm</SpaceBefore>
+    <SpaceAfter resolution="combine">0.9cm</SpaceAfter>
+    <KeepWithPrevious>true</KeepWithPrevious>
+   </Style>
+   <Span>
+    <Text>Mit freundlichen Grüßen</Text>
+   </Span>
+  </Par>
+  <ContainerPart>
+   <VisibleIf><![CDATA[$Absender.Sachbearbeiter.Unterschrift.notEmpty()]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <Image>
+    <DataUri><![CDATA[$Absender.Sachbearbeiter.Unterschrift]]></DataUri>
+    <Style>
+     <KeepWithPrevious>true</KeepWithPrevious>
+     <Height>2.0cm</Height>
+     <Stretch>keep_aspect_ratio</Stretch>
+    </Style>
+   </Image>
+  </ContainerPart>
+  <ContainerPart>
+   <VisibleIf><![CDATA[else]]></VisibleIf>
+   <DataDefinition></DataDefinition>
+   <ContainerPart>
+    <VisibleIf><![CDATA[$Unterschrift.notEmpty()]]></VisibleIf>
+    <DataDefinition></DataDefinition>
+    <Image>
+     <DataUri><![CDATA[$Unterschrift]]></DataUri>
+     <Style>
+      <KeepWithPrevious>true</KeepWithPrevious>
+      <Height>2.0cm</Height>
+      <Stretch>keep_aspect_ratio</Stretch>
+     </Style>
+    </Image>
+   </ContainerPart>
+  </ContainerPart>
+  <Par>
+   <Style parentName="TextSpaceBefore">
+    <KeepWithPrevious>true</KeepWithPrevious>
+   </Style>
+   <Span>
+    <Data>$Absender.Sachbearbeiter.Nachname</Data>
+   </Span>
+  </Par>
+ </Container>
+</SectionPart>

@@ -1,0 +1,265 @@
+<Auftragssteuerung>
+	<Korrespondenz>
+		<Briefdatum>29.02.2020</Briefdatum>
+		<Exemplar>
+			<Absender>
+				<Name>SAM AG</Name>
+				<Strasse>Kruppallee 42</Strasse>
+				<PLZ>13373</PLZ>
+				<Ort>Essen</Ort>
+				
+				
+				<!-- <Ruecksendeanschrift>
+					
+					<Partner>
+						<PartnerID>14213373</PartnerID>
+						<UserID>HB</UserID>
+						<Anrede>Herr</Anrede>
+						<Titel></Titel>
+						<Vorname>Hans</Vorname>
+						<Nachname>Brackhaus</Nachname>
+						<Firmenname1>SAM AG</Firmenname1>
+						<Firmenname2></Firmenname2>
+						<Hausnummer>42</Hausnummer>
+						<Adresszusatz></Adresszusatz>
+						<Strasse>Kruppallee</Strasse>
+						<PLZ>13373</PLZ>
+						<Ort>Essen</Ort>
+						<Land></Land>
+						<Adresse>
+							<Zeile>SAM AG</Zeile>
+							<Zeile>Hans Brackhaus</Zeile>
+							<Zeile>Kruppallee 42</Zeile>
+							<Zeile>13373 Essen</Zeile>
+						</Adresse>
+						<Briefanrede>Moin Herr Brackhaus,</Briefanrede>
+						<Rolle>rückwärts</Rolle>
+						<email>h.brackhaus@sam-ag.com</email>
+						<Telefon>0815-47111337</Telefon>
+						<fax>0815-47114242</fax>
+					</Partner>
+					<Briefanrede>Moin Herr Brackhaus,</Briefanrede>
+					<NameVorname>Hans Brackhaus</NameVorname>
+				</Ruecksendeanschrift> -->
+				<Sachbearbeiter>
+					<PartnerID>14213373</PartnerID>
+					<UserID>HB</UserID>
+					<Anrede>Mr.</Anrede>
+					<Titel></Titel>
+					<Vorname>Hans</Vorname>
+					<Nachname>Brackhaus</Nachname>
+					<Firmenname1>SAM AG</Firmenname1>
+					<Firmenname2></Firmenname2>
+					<Hausnummer>42</Hausnummer>
+					<Adresszusatz></Adresszusatz>
+					<Strasse>Kruppallee</Strasse>
+					<PLZ>13373</PLZ>
+					<Ort>Essen</Ort>
+					<Land></Land>
+					<Adresse>
+						<Zeile>SAM AG</Zeile>
+						<Zeile>Hans Brackhaus</Zeile>
+						<Zeile>Kruppallee 42</Zeile>
+						<Zeile>13373 Essen</Zeile>
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+					</Adresse>
+					<Briefanrede>Hello Mr. Brackhaus,</Briefanrede>
+					<Rolle>rückwärts</Rolle>
+					<email>h.brackhaus@sam-ag.com</email>
+					<Telefon>0815-47111337</Telefon>
+					<fax>0815-47114242</fax>
+				</Sachbearbeiter>
+			</Absender>
+			<Empfaenger>
+				
+				<Partner>
+					<PartnerID>20698101</PartnerID>
+					<UserID></UserID>
+					<Anrede>Mr.</Anrede>
+					<Titel>Dr. </Titel>
+					<Vorname>Peter</Vorname>
+					<Nachname>Friedrich</Nachname>
+					<Firmenname1></Firmenname1>
+					<Firmenname2></Firmenname2>
+					<Hausnummer></Hausnummer>
+					<Adresszusatz></Adresszusatz>
+					<Strasse>Am Klinikum 31</Strasse>
+					<PLZ>47929</PLZ>
+					<Ort>Doktorendorf</Ort>
+					<Land></Land>
+					<Adresse>
+						<Zeile>Dr. Peter Friedrich</Zeile>
+						<Zeile>Am Klinikum 31</Zeile>
+						<Zeile>47929 Doktorendorf</Zeile>
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+					</Adresse>
+					<!-- <Briefanrede>Moin Frau Mercurial,</Briefanrede> -->
+					<Rolle>vorwärts</Rolle>
+					<email>m.mercurial@fasa.sr</email>
+					<Telefon>01989-2050</Telefon>
+					<fax>01989-2001</fax>
+				</Partner>
+				<!-- <Briefanrede>Moin Frau Mercurial,</Briefanrede> -->
+				<!-- <NameVorname>Maria Mercurial</NameVorname> -->
+			</Empfaenger>
+			<Ausgabesteuerung>
+				<Ausgabekanal>ZENTRALDRUCK</Ausgabekanal>
+				<ARCHIV>
+					<PartnerID>20698101</PartnerID>
+				</ARCHIV>
+				<LOKALDRUCK>
+					<UserID>14213373</UserID>
+					<Druckername>D4711</Druckername>
+				</LOKALDRUCK>
+				<ZENTRALDRUCK>
+					<Batch></Batch>
+					<PLZ>98199</PLZ>
+					<LKZ>DE</LKZ>
+				</ZENTRALDRUCK>
+				<FAX>
+					<Absender></Absender>
+					<Empfaenger></Empfaenger>
+				</FAX>
+				<EMAIL>
+					<Absender></Absender>
+					<Empfaenger></Empfaenger>
+				</EMAIL>
+			</Ausgabesteuerung>
+		</Exemplar>
+		<Exemplar>
+			<Absender>
+				<Name>SAM AG</Name>
+				<Strasse>Kruppallee 42</Strasse>
+				<PLZ>13373</PLZ>
+				<Ort>Essen</Ort>
+				
+				
+				<!-- <Ruecksendeanschrift>
+					
+					<Partner>
+						<PartnerID>14213373</PartnerID>
+						<UserID>HB</UserID>
+						<Anrede>Herr</Anrede>
+						<Titel></Titel>
+						<Vorname>Hans</Vorname>
+						<Nachname>Brackhaus</Nachname>
+						<Firmenname1>SAM AG</Firmenname1>
+						<Firmenname2></Firmenname2>
+						<Hausnummer>42</Hausnummer>
+						<Adresszusatz></Adresszusatz>
+						<Strasse>Kruppallee</Strasse>
+						<PLZ>13373</PLZ>
+						<Ort>Essen</Ort>
+						<Land></Land>
+						<Adresse>
+							<Zeile>SAM AG</Zeile>
+							<Zeile>Hans Brackhaus</Zeile>
+							<Zeile>Kruppallee 42</Zeile>
+							<Zeile>13373 Essen</Zeile>
+						</Adresse>
+						<Briefanrede>Moin Herr Brackhaus,</Briefanrede>
+						<Rolle>rückwärts</Rolle>
+						<email>h.brackhaus@sam-ag.com</email>
+						<Telefon>0815-47111337</Telefon>
+						<fax>0815-47114242</fax>
+					</Partner>
+					<Briefanrede>Moin Herr Brackhaus,</Briefanrede>
+					<NameVorname>Hans Brackhaus</NameVorname>
+				</Ruecksendeanschrift> -->
+				<Sachbearbeiter>
+					<PartnerID>14213373</PartnerID>
+					<UserID>HB</UserID>
+					<Anrede>Mr.</Anrede>
+					<Titel></Titel>
+					<Vorname>Hans</Vorname>
+					<Nachname>Brackhaus</Nachname>
+					<Firmenname1>SAM AG</Firmenname1>
+					<Firmenname2></Firmenname2>
+					<Hausnummer>42</Hausnummer>
+					<Adresszusatz></Adresszusatz>
+					<Strasse>Kruppallee</Strasse>
+					<PLZ>13373</PLZ>
+					<Ort>Essen</Ort>
+					<Land></Land>
+					<Adresse>
+						<Zeile>SAM AG</Zeile>
+						<Zeile>Hans Brackhaus</Zeile>
+						<Zeile>Kruppallee 42</Zeile>
+						<Zeile>13373 Essen</Zeile>
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+					</Adresse>
+					<Briefanrede>Moin Herr Brackhaus,</Briefanrede>
+					<Rolle>rückwärts</Rolle>
+					<email>h.brackhaus@sam-ag.com</email>
+					<Telefon>0815-47111337</Telefon>
+					<fax>0815-47114242</fax>
+				</Sachbearbeiter>
+			</Absender>
+			<Empfaenger>
+				
+				<Partner>
+					<PartnerID>20698101</PartnerID>
+					<UserID></UserID>
+					<Anrede>Mrs.</Anrede>
+					<Titel></Titel>
+					<Vorname>Maria</Vorname>
+					<Nachname>Mercurial</Nachname>
+					<Firmenname1></Firmenname1>
+					<Firmenname2></Firmenname2>
+					<Hausnummer></Hausnummer>
+					<Adresszusatz>Postfach 1337</Adresszusatz>
+					<Strasse></Strasse>
+					<PLZ>98199</PLZ>
+					<Ort>Smaragdstadt</Ort>
+					<Land></Land>
+					<Adresse>
+						<Zeile>Maria Mercurial</Zeile>
+						<Zeile>Postfach 1337</Zeile>
+						<Zeile>98199 Smaragdstadt</Zeile>
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+					</Adresse>
+					<!-- <Briefanrede>Moin Frau Mercurial,</Briefanrede> -->
+					<Rolle>vorwärts</Rolle>
+					<email>m.mercurial@fasa.sr</email>
+					<Telefon>01989-2050</Telefon>
+					<fax>01989-2001</fax>
+				</Partner>
+				<!-- <Briefanrede>Moin Frau Mercurial,</Briefanrede> -->
+				<!-- <NameVorname>Maria Mercurial</NameVorname> -->
+			</Empfaenger>
+			<Ausgabesteuerung>
+				<Ausgabekanal>ZENTRALDRUCK</Ausgabekanal>
+				<ARCHIV>
+					<PartnerID>20698101</PartnerID>
+				</ARCHIV>
+				<LOKALDRUCK>
+					<UserID>14213373</UserID>
+					<Druckername>D4711</Druckername>
+				</LOKALDRUCK>
+				<ZENTRALDRUCK>
+					<Batch></Batch>
+					<PLZ>98199</PLZ>
+					<LKZ>DE</LKZ>
+				</ZENTRALDRUCK>
+				<FAX>
+					<Absender></Absender>
+					<Empfaenger></Empfaenger>
+				</FAX>
+				<EMAIL>
+					<Absender></Absender>
+					<Empfaenger></Empfaenger>
+				</EMAIL>
+			</Ausgabesteuerung>
+		</Exemplar>
+	</Korrespondenz>
+</Auftragssteuerung>

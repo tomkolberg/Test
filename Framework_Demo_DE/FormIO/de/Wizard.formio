@@ -1,0 +1,83 @@
+{
+    "title": "My Wizard",
+    "type": "form",
+    "display": "wizard",
+    "components": [
+        {
+            "title": "Seite 1",
+            "breadcrumbClickable": true,
+            "buttonSettings": {
+                "previous": true,
+                "cancel": false,
+                "next": true
+            },
+            "collapsible": false,
+            "tableView": false,
+            "key": "panel",
+            "type": "panel",
+            "label": "Panel",
+            "components": [
+                {
+                    "label": "Rücksendedatum",
+                    "format": "dd.MM.yyyy",
+                    "tableView": false,
+                    "enableMinDateInput": false,
+                    "datePicker": {
+                        "disableWeekends": false,
+                        "disableWeekdays": false
+                    },
+                    "enableMaxDateInput": false,
+                    "enableTime": false,
+                    "defaultDate": "moment().add(14, 'days')",
+                    "key": "returndate",
+                    "type": "datetime",
+                    "input": true,
+                    "suffix": "<i ref=\"icon\" class=\"fa fa-calendar\" style=\"\"></i>",
+                    "widget": {
+                        "type": "calendar",
+                        "displayInTimezone": "viewer",
+                        "language": "de",
+                        "useLocaleSettings": false,
+                        "allowInput": true,
+                        "mode": "single",
+                        "enableTime": false,
+                        "noCalendar": false,
+                        "format": "dd.MM.yyyy",
+                        "hourIncrement": 1,
+                        "minuteIncrement": 1,
+                        "time_24hr": false,
+                        "minDate": null,
+                        "disableWeekends": false,
+                        "disableWeekdays": false,
+                        "maxDate": null
+                    }
+                }
+            ],
+            "input": false
+        },
+        {
+            "title": "Seite 2",
+            "breadcrumbClickable": true,
+            "buttonSettings": {
+                "previous": true,
+                "cancel": false,
+                "next": true
+            },
+            "collapsible": false,
+            "tableView": false,
+            "key": "page2",
+            "type": "panel",
+            "label": "Page 2",
+            "input": false,
+            "components": [
+                {
+                    "label": "Textfeld",
+                    "tableView": true,
+                    "key": "textField",
+                    "type": "textfield",
+                    "input": true
+                }
+            ]
+        }
+    ]
+}

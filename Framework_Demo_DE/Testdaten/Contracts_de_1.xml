@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<contracts>
+		<contract>
+			<sort>Glas</sort>
+			<afterTax>42.69</afterTax>
+			<tax>8.11</tax>
+		</contract>
+		<contract>
+			<sort>Hausrat</sort>
+			<afterTax>119.37</afterTax>
+			<tax>19.28</tax>
+		</contract>		
+		<contract>
+			<sort>Rechtsschutz</sort>
+			<afterTax>142.16</afterTax>
+			<tax>27.01</tax>
+		</contract>
+		<contract>
+			<sort>Wohnen-Rechtsschutz</sort>
+			<afterTax>29.92</afterTax>
+			<tax>5.68</tax>
+		</contract>				
+</contracts>

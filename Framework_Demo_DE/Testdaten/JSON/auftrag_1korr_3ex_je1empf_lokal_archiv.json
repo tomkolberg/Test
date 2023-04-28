@@ -1,0 +1,289 @@
+{
+  "Auftragssteuerung": {
+    "Korrespondenz": {
+      "Briefdatum": "29.02.2020",
+      "Exemplar": [
+        {
+          "Absender": {
+            "Name": "SAM AG",
+            "Strasse": "Kruppallee 42",
+            "PLZ": "13373",
+            "Ort": "Essen",
+            "Absenderzeile": "sam ag - kruppallee 42 - 13373 essen",
+            "Sachbearbeiter": {
+              "PartnerID": "14213373",
+              "UserID": "HB",
+              "Anrede": "Herr",
+              "Vorname": "Hans",
+              "Nachname": "Brackhaus",
+              "Firmenname1": "SAM AG",
+              "Hausnummer": "42",
+              "Strasse": "Kruppallee",
+              "PLZ": "13373",
+              "Ort": "Essen",
+              "Adresse": {
+                "Zeile": [
+                  "SAM AG",
+                  "Hans Brackhaus",
+                  "Kruppallee 42",
+                  "13373 Essen"
+                ]
+              },
+              "Briefanrede": "Moin Herr Brackhaus,",
+              "Rolle": "rückwärts",
+              "email": "h.brackhaus@sam-ag.com",
+              "Telefon": "0815-47111337",
+              "fax": "0815-47114242"
+            }
+          },
+          "Empfaenger": {
+            "Partner": {
+              "PartnerID": "20698101",
+              "Anrede": "Frau",
+              "Vorname": "Maria",
+              "Nachname": "Mercurial",
+              "Adresszusatz": "Postfach 1337",
+              "PLZ": "98199",
+              "Ort": "Smaragdstadt",
+              "Adresse": {
+                "Zeile": [
+                  "Maria Mercurial",
+                  "Postfach 1337",
+                  "98199 Smaragdstadt"
+                ]
+              },
+              "Rolle": "vorwärts",
+              "email": "m.mercurial@fasa.sr",
+              "Telefon": "01989-2050",
+              "fax": "01989-2001"
+            }
+          },
+          "Ausgabesteuerung": [
+            {
+              "Ausgabekanal": "LOKALDRUCK",
+              "ARCHIV": { "PartnerID": "20698101" },
+              "LOKALDRUCK": {
+                "UserID": "14213373",
+                "Druckername": "D4711"
+              },
+              "ZENTRALDRUCK": {
+                
+              },
+              "FAX": {
+                
+              },
+              "EMAIL": {
+                
+              }
+            },
+            {
+              "Ausgabekanal": "ARCHIV",
+              "ARCHIV": { "PartnerID": "20698101" },
+              "LOKALDRUCK": {
+                "UserID": "14213373",
+                "Druckername": "D4711"
+              },
+              "ZENTRALDRUCK": {
+                
+              },
+              "FAX": {
+                
+              },
+              "EMAIL": {
+                
+              }
+            }
+          ]
+        },
+        {
+          "Absender": {
+            "Name": "SAM AG",
+            "Strasse": "Kruppallee 42",
+            "PLZ": "13373",
+            "Ort": "Essen",
+            "Absenderzeile": "sam ag - kruppallee 42 - 13373 essen",
+            "Sachbearbeiter": {
+              "PartnerID": "14213373",
+              "UserID": "HB",
+              "Anrede": "Herr",
+              "Vorname": "Hans",
+              "Nachname": "Brackhaus",
+              "Firmenname1": "SAM AG",
+              "Hausnummer": "42",
+              "Strasse": "Kruppallee",
+              "PLZ": "13373",
+              "Ort": "Essen",
+              "Adresse": {
+                "Zeile": [
+                  "SAM AG",
+                  "Hans Brackhaus",
+                  "Kruppallee 42",
+                  "13373 Essen"
+                ]
+              },
+              "Briefanrede": "Moin Herr Brackhaus,",
+              "Rolle": "rückwärts",
+              "email": "h.brackhaus@sam-ag.com",
+              "Telefon": "0815-47111337",
+              "fax": "0815-47114242"
+            }
+          },
+          "Empfaenger": {
+            "Partner": {
+              "PartnerID": "20698117",
+              "Anrede": "Frau",
+              "Vorname": "Marla",
+              "Nachname": "Aguilar",
+              "Hausnummer": "17",
+              "Strasse": "Am Boulevard",
+              "PLZ": "98142",
+              "Ort": "Smaragdstadt",
+              "Adresse": {
+                "Zeile": [
+                  "Marla Aguilar",
+                  "Am Boulevard 17",
+                  "98142 Smaragdstadt"
+                ]
+              },
+              "Rolle": "Purzelbaum",
+              "email": "m.aguilar@fasa.sr"
+            }
+          },
+          "Ausgabesteuerung": [
+            {
+              "Ausgabekanal": "LOKALDRUCK",
+              "ARCHIV": { "PartnerID": "20698117" },
+              "LOKALDRUCK": {
+                "UserID": "14213373",
+                "Druckername": "D4711"
+              },
+              "ZENTRALDRUCK": {
+                
+              },
+              "FAX": {
+                
+              },
+              "EMAIL": {
+                
+              }
+            },
+            {
+              "Ausgabekanal": "ARCHIV",
+              "ARCHIV": { "PartnerID": "20698117" },
+              "LOKALDRUCK": {
+                "UserID": "14213373",
+                "Druckername": "D4711"
+              },
+              "ZENTRALDRUCK": {
+                
+              },
+              "FAX": {
+                
+              },
+              "EMAIL": {
+                
+              }
+            }
+          ]
+        },
+        {
+          "Absender": {
+            "Name": "SAM AG",
+            "Strasse": "Kruppallee 42",
+            "PLZ": "13373",
+            "Ort": "Essen",
+            "Absenderzeile": "sam ag - kruppallee 42 - 13373 essen",
+            "Sachbearbeiter": {
+              "PartnerID": "14213373",
+              "UserID": "HB",
+              "Anrede": "Herr",
+              "Vorname": "Hans",
+              "Nachname": "Brackhaus",
+              "Firmenname1": "SAM AG",
+              "Hausnummer": "42",
+              "Strasse": "Kruppallee",
+              "PLZ": "13373",
+              "Ort": "Essen",
+              "Adresse": {
+                "Zeile": [
+                  "SAM AG",
+                  "Hans Brackhaus",
+                  "Kruppallee 42",
+                  "13373 Essen"
+                ]
+              },
+              "Briefanrede": "Moin Herr Brackhaus,",
+              "Rolle": "rückwärts",
+              "email": "h.brackhaus@sam-ag.com",
+              "Telefon": "0815-47111337",
+              "fax": "0815-47114242"
+            }
+          },
+          "Empfaenger": {
+            "Partner": {
+              "PartnerID": "14789632",
+              "Anrede": "Frau",
+              "Titel": "Dr.",
+              "Vorname": "Pauline",
+              "Nachname": "Paragraphenreiter",
+              "Firmenname1": "Rechtsanwälte",
+              "Firmenname2": "Paragraphenreiter, Buch & Partner",
+              "Hausnummer": "42",
+              "Adresszusatz": "vertraulich",
+              "Strasse": "Am Amtsgericht",
+              "PLZ": "12345",
+              "Ort": "Gottesgnade",
+              "Adresse": {
+                "Zeile": [
+                  "Rechtsanwälte",
+                  "Paragraphenreiter, Buch & Partner",
+                  "Dr. Pauline Paragraphenreiter",
+                  "vertraulich",
+                  "Am Amtsgericht 42",
+                  "12345 Gottesgnade"
+                ]
+              },
+              "Rolle": "salto"
+            }
+          },
+          "Ausgabesteuerung": [
+            {
+              "Ausgabekanal": "LOKALDRUCK",
+              "ARCHIV": { "PartnerID": "14789632" },
+              "LOKALDRUCK": {
+                "UserID": "14213373",
+                "Druckername": "D4711"
+              },
+              "ZENTRALDRUCK": {
+                
+              },
+              "FAX": {
+                
+              },
+              "EMAIL": {
+                
+              }
+            },
+            {
+              "Ausgabekanal": "ARCHIV",
+              "ARCHIV": { "PartnerID": "14789632" },
+              "LOKALDRUCK": {
+                "UserID": "14213373",
+                "Druckername": "D4711"
+              },
+              "ZENTRALDRUCK": {
+                
+              },
+              "FAX": {
+                
+              },
+              "EMAIL": {
+                
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

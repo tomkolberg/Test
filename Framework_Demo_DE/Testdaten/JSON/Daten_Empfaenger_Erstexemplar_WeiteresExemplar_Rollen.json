@@ -1,0 +1,78 @@
+{
+  "angebot": {
+    "vermerkzone": {
+      "zusatz1": "Nicht nachsenden!",
+      "zusatz2": "Einschreiben"
+    },
+    "Rollen": {
+      "Rolle": [
+        {
+          "-name": "kunde",
+          "-PartnerID": "4711",
+          "Anrede": "Frau",
+          "Vorname": "Maria",
+          "Nachname": "Werner",
+          "Strasse": "Entenweg 5",
+          "PLZ": "75203",
+          "Ort": "Königsbach",
+          "Adresse": {
+            "line1": "Frau",
+            "line2": "Maria Werner",
+            "line3": "Entenweg 5",
+            "line4": "75203 Königsbach"
+          },
+          "Briefanrede": "Frau Werner",
+          "email": "m.musterfrau@web.de"
+        },
+        {
+          "-name": "Vermittler",
+          "-PartnerID": "8534",
+          "Firmenname1": "Gute Beratungsagentur",
+          "Strasse": "Große Gasse 1",
+          "PLZ": "12345",
+          "Ort": "Porschdorf",
+          "Adresse": {
+            "line1": "Gute Beratungsagentur",
+            "line2": "Große Gasse 1",
+            "line3": "12345 Porschdorf"
+          },
+          "email": "info@gutberaten.de",
+          "vermittlerkennungen": {
+            "policealsoriginal": "true",
+            "sonstigekopie": "true"
+          }
+        }
+      ]
+    },
+    "steuerung": {
+      "Briefdatum": "11.04.2018",
+      "versandart": "Zentral"
+    },
+    "unterzeichner": "Erich Hofmeier",
+    "Absender": {
+      "name": "sam bank Aktiengesellschaft",
+      "Strasse": "HauptStrasse 1",
+      "PLZ": "09990",
+      "Ort": "MeinOrt"
+    },
+    "betreff": "Angebot für Zusatzzahnversicherung",
+    "versicherungsdaten": {
+      "versicherungsnummer": "987-654-D1",
+      "versicherungsart": "Lebensversicherung"
+    },
+    "Sachbearbeiter": {
+      "Anrede": "Herr",
+      "name": "Erich Hofmeier",
+      "abteilung": "Kundenservice",
+      "Telefon": "07766 (99 66 44)",
+      "telefax": "07766 (99 66 66)"
+    },
+    "versicherungsdatenLV": {
+      "reserven": "669.26",
+      "rückkaufwert": "11,087.32",
+      "überschuss": "3,690.51",
+      "VersPerson": "Dr. Kurt Graf",
+      "WertDatum": "01.06.2012"
+    }
+  }
+}

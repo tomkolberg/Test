@@ -1,0 +1,91 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom" id="\library\Framework_Demo_DE\Vorlagen\FormIO\Sachbearbeiter.template" description="Einfacher FormIO-Dialog">
+ <DataDefinition>
+  <ParamDef name="ContactPerson" ref="\\Framework_Demo_DE\Data\ContactPerson.datamodel" dataMappingRef="">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <DataNodeDef name="AllowToEdit" data-type="boolean">
+   <Description></Description>
+   <Input true-value="true" false-value="false"></Input>
+   <Output true-value="true" false-value="false"></Output>
+   <Subtype></Subtype>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </DataNodeDef>
+ </DataDefinition>
+ <Document>
+  <DocumentPart>
+   <DataDefinition></DataDefinition>
+   <UIContribution>
+    <GuideArea></GuideArea>
+    <InputArea>
+     <Field title="Sachbearbeiter bearbeitbar" dataNode="$AllowToEdit"></Field>
+    </InputArea>
+   </UIContribution>
+   <ModificationRights>
+    <Allowed>
+     <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+    </Allowed>
+    <Denied></Denied>
+   </ModificationRights>
+  </DocumentPart>
+  <Section>
+   <Container>
+    <ContainerPart>
+     <DataDefinition></DataDefinition>
+     <UIContribution>
+      <GuideArea>
+       <ActionLink title="Sachbearbeiter bearbeiten" inputAreaGroupID="">
+        <Script><![CDATA[var formFunc = $context.FormIO.createForm("\\\\Framework_Demo_DE\\FormIO\\de\\ContactPerson.formio");
+var options = {
+	"height": "700",
+	"width" : "700",
+	"title" : "Sachbearbeiter",
+	"readOnly" : "true"
+};
+$context.showForm(formFunc, $ContactPerson, options);]]></Script>
+       </ActionLink>
+      </GuideArea>
+      <InputArea></InputArea>
+     </UIContribution>
+     <ModificationRights>
+      <Allowed>
+       <ModificationRight role="_EVERYONE_" operations="INPUT">
+        <ApplyIf><![CDATA[$AllowToEdit != false]]></ApplyIf>
+       </ModificationRight>
+      </Allowed>
+      <Denied></Denied>
+     </ModificationRights>
+     <Par>
+      <Style parentName="TextSpaceAfter"></Style>
+      <Span>
+       <Text>Dieses Beispiel zeigt einen einfachen FormIO-Dialog, in dem zwei Datenknoten befüllt werden.</Text>
+      </Span>
+     </Par>
+     <Par>
+      <Style parentName="TextSpaceAfter"></Style>
+      <Span>
+       <Text>Ihr Sachbearbeiter:</Text>
+      </Span>
+     </Par>
+     <Par>
+      <Style parentName="Text"></Style>
+      <Span>
+       <Text>Name: </Text>
+       <Data editable="true">$ContactPerson.name</Data>
+      </Span>
+     </Par>
+     <Par>
+      <Style parentName="Text"></Style>
+      <Span>
+       <Text>Durchwahl: </Text>
+       <Data editable="true">$ContactPerson.phone</Data>
+      </Span>
+     </Par>
+    </ContainerPart>
+   </Container>
+  </Section>
+ </Document>
+</RootPart>

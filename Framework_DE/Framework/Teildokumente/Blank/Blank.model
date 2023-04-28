@@ -1,0 +1,15 @@
+<DocumentPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+ </DataDefinition>
+ <Section>
+  <OutputSettings>
+   <Parameters></Parameters>
+   <DataDefinition></DataDefinition>
+   <RendererMetadata></RendererMetadata>
+  </OutputSettings>
+  <Style parentName="Blank"></Style>
+  <Container>
+   <ContainerExtensionDef id="Blank Content"></ContainerExtensionDef>
+  </Container>
+ </Section>
+</DocumentPart>

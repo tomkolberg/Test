@@ -1,0 +1,42 @@
+{
+    "components": [
+        {
+            "label": "Name",
+            "placeholder": "Bitte geben Sie den Sachbearbeiternamen ein",
+            "tableView": true,
+            "key": "name",
+            "type": "textfield",
+            "alwaysEnabled": false,
+            "input": true,
+            "reorder": false
+        },
+        {
+            "label": "Durchwahl",
+            "placeholder": "Bitte geben Sie die Durchwahl ein",
+            "mask": false,
+            "spellcheck": true,
+            "tableView": true,
+            "delimiter": false,
+            "requireDecimal": false,
+            "inputFormat": "plain",
+            "key": "phone",
+            "type": "number",
+            "alwaysEnabled": false,
+            "input": true,
+            "reorder": false
+        },
+        {
+            "label": "Übernehmen",
+            "disableOnInvalid": true,
+            "mask": false,
+            "tableView": true,
+            "alwaysEnabled": false,
+            "type": "button",
+            "key": "submit",
+            "input": true,
+            "defaultValue": false,
+            "showValidations": false,
+            "reorder": false
+        }
+    ]
+}

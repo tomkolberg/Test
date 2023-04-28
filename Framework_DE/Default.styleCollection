@@ -1,0 +1,662 @@
+<StyleCollection xmlns="urn:kwsoft:mtext:tonic:dom"><!-- Define the default parstyle if nothing is applied -->
+ <ParStyle>
+  <SpanStyle>
+   <FontSize>100.0%</FontSize>
+   <FontFamily>STANDARD</FontFamily>
+   <BaseFontSize>11.0pt</BaseFontSize>
+  </SpanStyle>
+  <Align>left</Align>
+  <LeftIndent>0.0cm</LeftIndent>
+  <RightIndent>0.0cm</RightIndent>
+ </ParStyle>
+ <ImageStyle>
+  <charts:ChartStyle xmlns:charts="urn:kwsoft:mtext:tonic:charts" name="ChartDefault" hideInEditor="true">
+   <charts:PlotColors>
+    <charts:PlotColor>rgb(255,80,0)</charts:PlotColor>
+    <charts:PlotColor>rgb(230,70,0)</charts:PlotColor>
+    <charts:PlotColor>rgb(210,60,0)</charts:PlotColor>
+    <charts:PlotColor>rgb(180,50,0)</charts:PlotColor>
+    <charts:PlotColor>rgb(150,40,0)</charts:PlotColor>
+    <charts:PlotColor>rgb(145,140,135)</charts:PlotColor>
+    <charts:PlotColor>rgb(175,170,165)</charts:PlotColor>
+    <charts:PlotColor>rgb(205,200,195)</charts:PlotColor>
+   </charts:PlotColors>
+  </charts:ChartStyle>
+  <charts:ChartStyle xmlns:charts="urn:kwsoft:mtext:tonic:charts" name="ChartSFW" title="SFW Chart" title-it_IT="Diagramma SFW" title-en_US="SFW Chart" title-de_DE="Diagram SFW" parentName="ChartDefault">
+   <charts:DefaultFontSize>9.0pt</charts:DefaultFontSize>
+   <charts:DefaultFontStyle>bold</charts:DefaultFontStyle>
+   <charts:BackgroundColor>rgb(255,255,255)</charts:BackgroundColor>
+   <charts:PlotBorderColor>none</charts:PlotBorderColor>
+   <charts:LegendPosition>none</charts:LegendPosition>
+   <charts:AxisLabelVisible>false</charts:AxisLabelVisible>
+  </charts:ChartStyle>
+  <charts:ChartStyle xmlns:charts="urn:kwsoft:mtext:tonic:charts" name="ChartSFWKey" title="SFW Chart with Key" title-it_IT="Diagramma - con leggenda" title-en_US="SFW Chart with Key" title-de_DE="Diagram SFW - mit Legende" parentName="ChartSFW">
+   <charts:LegendPosition>outside_right</charts:LegendPosition>
+   <charts:LegendFontSize>7.0pt</charts:LegendFontSize>
+   <charts:LegendBorderColor>rgb(255,255,255)</charts:LegendBorderColor>
+  </charts:ChartStyle>
+ </ImageStyle>
+ <!-- Sections styles used in document parts. See \\Framework\Framework\Teildokumente folder -->
+ <SectionStyle name="Brief" title="Brief" title-en_US="Letter" title-de_DE="Brief">
+  <ContainerStyle><!-- Copy of default style here; see https://jira.kwsoft.de/browse/TEXT-43546 -->
+   <ParStyle>
+    <SpanStyle>
+     <FontSize>100.0%</FontSize>
+     <FontFamily>STANDARD</FontFamily>
+     <BaseFontSize>11.0pt</BaseFontSize>
+    </SpanStyle>
+    <Align>left</Align>
+    <LeftIndent>0.0cm</LeftIndent>
+    <RightIndent>0.0cm</RightIndent>
+   </ParStyle>
+   <ParStyle name="FW_Default" hideInEditor="true">
+    <Variants>
+     <ParStyleVariant>
+      <MediaQuery>
+       <MinMediaWidth>300.0px</MinMediaWidth>
+      </MediaQuery>
+      <LineSpacing type="fixed" value="0.26cm"></LineSpacing>
+     </ParStyleVariant>
+     <ParStyleVariant>
+      <MediaQuery>
+       <MinMediaWidth>500.0px</MinMediaWidth>
+      </MediaQuery>
+      <LineSpacing type="fixed" value="0.35cm"></LineSpacing>
+     </ParStyleVariant>
+     <ParStyleVariant>
+      <MediaQuery>
+       <MinMediaWidth>700.0px</MinMediaWidth>
+      </MediaQuery>
+      <LineSpacing type="fixed" value="0.44cm"></LineSpacing>
+     </ParStyleVariant>
+    </Variants>
+    <SpanStyle>
+     <Variants>
+      <SpanStyleVariant>
+       <MediaQuery>
+        <MinMediaWidth>300.0px</MinMediaWidth>
+       </MediaQuery>
+       <FontSize>60.0%</FontSize>
+      </SpanStyleVariant>
+      <SpanStyleVariant>
+       <MediaQuery>
+        <MinMediaWidth>500.0px</MinMediaWidth>
+       </MediaQuery>
+       <FontSize>80.0%</FontSize>
+      </SpanStyleVariant>
+      <SpanStyleVariant>
+       <MediaQuery>
+        <MinMediaWidth>700.0px</MinMediaWidth>
+       </MediaQuery>
+       <FontSize>100.0%</FontSize>
+      </SpanStyleVariant>
+     </Variants>
+     <FontSize>100.0%</FontSize>
+     <FontFamily>STANDARD</FontFamily>
+     <BaseFontSize>11.0pt</BaseFontSize>
+    </SpanStyle>
+    <Align>left</Align>
+    <LeftIndent>0.0mpt</LeftIndent>
+    <RightIndent>0.0mpt</RightIndent>
+    <LineSpacing type="fixed" value="12.5pt"></LineSpacing>
+   </ParStyle>
+   <ParStyle name="FW_Subject" title="Subject" title-it_IT="Oggetto" title-en_US="Subject" title-de_DE="Betreff" parentName="FW_Default" hideInEditor="true">
+    <SpanStyle>
+     <FontStyle>bold</FontStyle>
+    </SpanStyle>
+    <Role>H1</Role>
+   </ParStyle>
+   <ParStyle name="FW_CompanyInfo" title="FW CompanyInfo" title-it_IT="FW Azienda informazioni" title-en_US="FW CompanyInfo" title-de_DE="FW Firmeninfo" parentName="FW_Default" hideInEditor="true">
+    <SpanStyle>
+     <Variants>
+      <SpanStyleVariant>
+       <MediaQuery>
+        <MinMediaWidth>300.0px</MinMediaWidth>
+       </MediaQuery>
+       <FontSize>60.0%</FontSize>
+      </SpanStyleVariant>
+      <SpanStyleVariant>
+       <MediaQuery>
+        <MinMediaWidth>500.0px</MinMediaWidth>
+       </MediaQuery>
+       <FontSize>70.0%</FontSize>
+      </SpanStyleVariant>
+      <SpanStyleVariant>
+       <MediaQuery>
+        <MinMediaWidth>700.0px</MinMediaWidth>
+       </MediaQuery>
+       <FontSize>80.0%</FontSize>
+      </SpanStyleVariant>
+     </Variants>
+     <FontSize>8.0pt</FontSize>
+     <BaseFontSize>8.0pt</BaseFontSize>
+    </SpanStyle>
+    <Role>Artifact</Role>
+    <LineSpacing type="fixed" value="6.5pt"></LineSpacing>
+    <SpaceAfter>0.0pt</SpaceAfter>
+   </ParStyle>
+   <ParStyle name="FW_Info" title="FW Info" title-it_IT="FW Informazioni" title-en_US="FW Info" title-de_DE="FW Info" parentName="FW_Default" hideInEditor="true">
+    <SpanStyle>
+     <FontSize>9.0pt</FontSize>
+    </SpanStyle>
+    <Role>Artifact</Role>
+   </ParStyle>
+   <ParStyle name="FW_InfoBold" title="FW InfoBold" title-it_IT="FW Informazioni grassetto" title-en_US="FW Info bold" title-de_DE="FW Info fett" parentName="FW_Default" hideInEditor="true">
+    <SpanStyle>
+     <FontSize>9.0pt</FontSize>
+     <FontStyle>bold</FontStyle>
+    </SpanStyle>
+    <Role>Artifact</Role>
+   </ParStyle>
+   <NumberingStyle parentName="TableOfContent"></NumberingStyle>
+   <ParStyle></ParStyle>
+   <ParStyle></ParStyle>
+  </ContainerStyle>
+  <ContainerStyle name="FW_CompanyInfo">
+   <SpaceAfter>0.3cm</SpaceAfter>
+  </ContainerStyle>
+  <ResponsiveLayoutRef uri="Framework\Teildokumente\Brief\Brief.responsiveLayout"></ResponsiveLayoutRef>
+  <PageLayouts parentRef="Framework/Teildokumente/Brief/Brief.pageLayouts"></PageLayouts>
+ </SectionStyle>
+ <SectionStyle name="Infoblatt">
+  <ResponsiveLayoutRef uri="Framework\Teildokumente\Infoblatt\Infoblatt.responsiveLayout"></ResponsiveLayoutRef>
+  <PageLayouts parentRef="Framework/Teildokumente/Infoblatt/Infoblatt.pageLayouts"></PageLayouts>
+ </SectionStyle>
+ <SectionStyle name="AGB">
+  <ResponsiveLayoutRef uri="Framework\Teildokumente\AGB\AGB.responsiveLayout"></ResponsiveLayoutRef>
+  <PageLayouts parentRef="Framework/Teildokumente/AGB/AGB.pageLayouts"></PageLayouts>
+ </SectionStyle>
+ <SectionStyle name="Rueckantwort">
+  <ContainerStyle>
+   <ParStyle name="FW_Subject" title="Subject" title-it_IT="Oggetto" title-en_US="Subject" title-de_DE="Betreff" parentName="FW_Default" hideInEditor="true">
+    <SpanStyle>
+     <FontStyle>bold</FontStyle>
+    </SpanStyle>
+    <Role>H1</Role>
+   </ParStyle>
+  </ContainerStyle>
+  <PageLayouts parentRef="Framework/Teildokumente/Rueckantwort/Rueckantwort.pageLayouts"></PageLayouts>
+ </SectionStyle>
+ <SectionStyle name="Blank">
+  <PageLayouts parentRef="Framework/Teildokumente/Blank/Blank.pageLayouts"></PageLayouts>
+ </SectionStyle>
+ <!-- This section style is for making testcases. The pages are small to 
+		see more than one page on the screen -->
+ <SectionStyle name="KleineSeiten">
+  <PageLayouts parentRef="Framework/Teildokumente/KleineSeiten.pageLayouts"></PageLayouts>
+ </SectionStyle>
+ <AttachmentSectionStyle name="Anlage">
+  <PageLayouts parentRef="Framework/Teildokumente/Anlage/Anlage.pageLayouts"></PageLayouts>
+ </AttachmentSectionStyle>
+ <ContainerStyle name="Enumeration">
+  <SpaceAfter resolution="overwrite">0.15cm</SpaceAfter>
+ </ContainerStyle>
+ <ColumnStyle name="RightAligned">
+  <CellStyle>
+   <ContainerStyle>
+    <ParStyle>
+     <Align>right</Align>
+    </ParStyle>
+   </ContainerStyle>
+  </CellStyle>
+ </ColumnStyle>
+ <InlineFieldStyle name="Formfield">
+  <Height>0.6cm</Height>
+ </InlineFieldStyle>
+ <InlineFieldStyle name="Inputfield" parentName="Formfield">
+  <Border>
+   <Bottom width="0.03cm" color="rgb(0,0,0)" style="solid"></Bottom>
+  </Border>
+  <FieldBackgroundColor>rgb(255,255,255)</FieldBackgroundColor>
+  <Transparent>true</Transparent>
+ </InlineFieldStyle>
+ <InlineFieldStyle name="Combfield" parentName="Inputfield">
+  <Border>
+   <Left width="426.0mpt" color="rgb(0,0,0)" style="none"></Left>
+   <Top width="426.0mpt" color="rgb(0,0,0)" style="none"></Top>
+   <Right width="426.0mpt" color="rgb(0,0,0)" style="none"></Right>
+   <Bottom width="426.0mpt" color="rgb(0,0,0)" style="none"></Bottom>
+  </Border>
+  <Comb>true</Comb>
+  <CombLineColor>rgb(227,0,24)</CombLineColor>
+  <CombFirstLineHeight>15.0pt</CombFirstLineHeight>
+  <CombFirstLineWidth>2.0pt</CombFirstLineWidth>
+  <CombLastLineHeight>15.0pt</CombLastLineHeight>
+  <CombLastLineWidth>2.0pt</CombLastLineWidth>
+  <CombZoneLineWidth>2.0pt</CombZoneLineWidth>
+  <CombZoneLineHeight>12.0pt</CombZoneLineHeight>
+  <CombLineHeight>8.0pt</CombLineHeight>
+  <CombLineWidth>1.0pt</CombLineWidth>
+ </InlineFieldStyle>
+ <NumberingStyle name="Bullet" title="Bullet" title-it_IT="Punto di enumerazione" title-en_US="Numbering Bullet" title-de_DE="Aufzählung PUNKT">
+  <Levels>
+   <Level number="1" firstLineIndent="0.0cm" indent="0.5cm">
+    <Symbol>bullet</Symbol>
+    <Tab position="0.5cm" tabType="left" underlineStyle="default"></Tab>
+   </Level>
+  </Levels>
+ </NumberingStyle>
+ <NumberingStyle name="BulletWithoutIndent" title="Bullet without Indent" title-it_IT="Enumerazione DOT senza indentazione" title-en_US="Bullet without Indent" title-de_DE="Aufzählung PUNKT ohne Einzug" parentName="Bullet">
+  <Levels>
+   <Level number="1">
+    <Text pattern=""></Text>
+    <Tab position="0.0cm" tabType="left" underlineStyle="default"></Tab>
+   </Level>
+  </Levels>
+ </NumberingStyle>
+ <NumberingStyle name="Circle" title="Circle" title-it_IT="Cerchio di enumerazione" title-en_US="Numbering Circle" title-de_DE="Aufzählung Kreis" parentName="Bullet">
+  <Levels>
+   <Level number="1">
+    <Symbol>circle</Symbol>
+   </Level>
+  </Levels>
+ </NumberingStyle>
+ <NumberingStyle name="TableOfContent" title="TableOfContent" title-it_IT="Tabella dei contenuti" title-en_US="Table of Content" title-de_DE="Inhaltsverzeichnis">
+  <Levels>
+   <Level number="1" firstLineIndent="0.0cm" indent="0.0cm">
+    <Text pattern="%1."></Text>
+    <Tab position="0.6cm" tabType="left" underlineStyle="default"></Tab>
+   </Level>
+   <Level number="2" firstLineIndent="0.0cm" indent="0.0cm">
+    <Text pattern="%1.%2"></Text>
+    <Tab position="0.6cm" tabType="left" underlineStyle="default"></Tab>
+   </Level>
+  </Levels>
+ </NumberingStyle>
+ <NumberingStyle name="TC" title="Table of Content - 3 Level" title-it_IT="Indice dei contenuti - 3 livelli" title-en_US="Table of Content - 3 Level" title-de_DE="Inhaltsverzeichnis - 3 Ebenen">
+  <Levels>
+   <Level number="1" firstLineIndent="0.0cm" indent="0.5cm">
+    <Text pattern="%1."></Text>
+    <Tab position="0.5cm" tabType="left" underlineStyle="default"></Tab>
+   </Level>
+   <Level number="2" firstLineIndent="0.4cm" indent="1.1cm">
+    <Text pattern="%1.%2."></Text>
+    <Tab position="1.1cm" tabType="left" underlineStyle="default"></Tab>
+   </Level>
+   <Level number="3" firstLineIndent="3.2cm" indent="4.5cm">
+    <Text pattern="%1.%2.%3."></Text>
+    <Tab position="1.4cm" tabType="left" underlineStyle="default"></Tab>
+   </Level>
+  </Levels>
+ </NumberingStyle>
+ <ContainerStyle name="FW_Subject">
+  <SpaceAfter resolution="combine">0.5cm</SpaceAfter>
+ </ContainerStyle>
+ <ParStyle name="FW_Default" hideInEditor="true">
+  <Variants>
+   <ParStyleVariant>
+    <MediaQuery>
+     <MinMediaWidth>300.0px</MinMediaWidth>
+    </MediaQuery>
+    <LineSpacing type="fixed" value="0.26cm"></LineSpacing>
+   </ParStyleVariant>
+   <ParStyleVariant>
+    <MediaQuery>
+     <MinMediaWidth>500.0px</MinMediaWidth>
+    </MediaQuery>
+    <LineSpacing type="fixed" value="0.35cm"></LineSpacing>
+   </ParStyleVariant>
+   <ParStyleVariant>
+    <MediaQuery>
+     <MinMediaWidth>700.0px</MinMediaWidth>
+    </MediaQuery>
+    <LineSpacing type="fixed" value="0.44cm"></LineSpacing>
+   </ParStyleVariant>
+  </Variants>
+  <SpanStyle>
+   <Variants>
+    <SpanStyleVariant>
+     <MediaQuery>
+      <MinMediaWidth>300.0px</MinMediaWidth>
+     </MediaQuery>
+     <FontSize>60.0%</FontSize>
+    </SpanStyleVariant>
+    <SpanStyleVariant>
+     <MediaQuery>
+      <MinMediaWidth>500.0px</MinMediaWidth>
+     </MediaQuery>
+     <FontSize>80.0%</FontSize>
+    </SpanStyleVariant>
+    <SpanStyleVariant>
+     <MediaQuery>
+      <MinMediaWidth>700.0px</MinMediaWidth>
+     </MediaQuery>
+     <FontSize>100.0%</FontSize>
+    </SpanStyleVariant>
+   </Variants>
+   <FontSize>100.0%</FontSize>
+   <FontFamily>STANDARD</FontFamily>
+   <BaseFontSize>11.0pt</BaseFontSize>
+  </SpanStyle>
+  <Align>left</Align>
+  <LeftIndent>0.0mpt</LeftIndent>
+  <RightIndent>0.0mpt</RightIndent>
+  <LineSpacing type="fixed" value="12.5pt"></LineSpacing>
+ </ParStyle>
+ <ParStyle name="FW_Paragraph" parentName="FW_Default" hideInEditor="true">
+  <SpaceAfter>6000.0mpt</SpaceAfter>
+ </ParStyle>
+ <ParStyle name="FW_SenderAddress" parentName="FW_Paragraph" hideInEditor="true">
+  <Role>Artifact</Role>
+  <LineSpacing type="fixed" value="6.5pt"></LineSpacing>
+ </ParStyle>
+ <ParStyle name="FW_SenderAddressLine" parentName="FW_Paragraph" hideInEditor="true">
+  <SpanStyle>
+   <FontSize>8.0pt</FontSize>
+  </SpanStyle>
+  <Role>Artifact</Role>
+  <LineSpacing type="fixed" value="6.5pt"></LineSpacing>
+ </ParStyle>
+ <ParStyle name="FW_RecipientAddress" parentName="FW_Default" hideInEditor="true">
+  <Role>Artifact</Role>
+ </ParStyle>
+ <ParStyle name="FW_Subject2" parentName="FW_Default" hideInEditor="true">
+  <Role>P</Role>
+ </ParStyle>
+ <ParStyle name="FW_SalutatoryAddress" parentName="FW_Default" hideInEditor="true">
+  <Role>P</Role>
+  <SpaceAfter resolution="combine">0.44cm</SpaceAfter>
+  <NextCaseCorrection>lower</NextCaseCorrection>
+ </ParStyle>
+ <ParStyle name="FW_MarginalNotes" parentName="FW_Default" hideInEditor="true">
+  <Role>P</Role>
+ </ParStyle>
+ <ParStyle name="AttachmentMarker" title="AttachmentMarker" title-it_IT="Bandiere di piante" title-en_US="Attachment Marker" title-de_DE="Anlagen Merker">
+  <SpanStyle>
+   <MarkerName>Attachments</MarkerName>
+   <FontSize>7000.0mpt</FontSize>
+   <FontFamily>STANDARD</FontFamily>
+   <FontStyle>bold</FontStyle>
+   <TextColor>rgb(227,0,24)</TextColor>
+  </SpanStyle>
+  <Role>Artifact</Role>
+ </ParStyle>
+ <ParStyle name="Heading1" title="Heading1" title-it_IT="Titolo1" title-en_US="Heading1" title-de_DE="Überschrift1">
+  <SpanStyle>
+   <MarkerName>TOC</MarkerName>
+   <FontSize>24000.0mpt</FontSize>
+   <FontFamily>STANDARD</FontFamily>
+   <FontStyle>bold</FontStyle>
+   <TextColor>rgb(227,0,24)</TextColor>
+  </SpanStyle>
+  <Role>H2</Role>
+  <NextStyle>TextSpaceAfter</NextStyle>
+  <SpaceBefore>0.5cm</SpaceBefore>
+  <SpaceAfter>0.5cm</SpaceAfter>
+  <KeepWithNext>true</KeepWithNext>
+  <KeepTogether>true</KeepTogether>
+ </ParStyle>
+ <ParStyle name="Heading2" title="Heading2" title-it_IT="Titolo2" title-en_US="Heading2" title-de_DE="Überschrift2">
+  <SpanStyle>
+   <MarkerName>TOC</MarkerName>
+   <FontSize>18000.0mpt</FontSize>
+   <FontFamily>STANDARD</FontFamily>
+   <FontStyle>bold</FontStyle>
+   <TextColor>rgb(227,0,24)</TextColor>
+  </SpanStyle>
+  <Role>H3</Role>
+  <SpaceBefore>0.5cm</SpaceBefore>
+  <SpaceAfter>0.5cm</SpaceAfter>
+  <KeepWithNext>true</KeepWithNext>
+  <KeepTogether>true</KeepTogether>
+ </ParStyle>
+ <ParStyle name="Small" title="Small" title-it_IT="Piccolo 8pt" title-en_US="Small 8pt" title-de_DE="Klein 8pt">
+  <SpanStyle>
+   <FontSize>8.0pt</FontSize>
+  </SpanStyle>
+  <SpaceBefore>0.0cm</SpaceBefore>
+  <SpaceAfter>0.0cm</SpaceAfter>
+ </ParStyle>
+ <ParStyle name="TableDefault" hideInEditor="true">
+  <SpanStyle>
+   <FontSize>10.0pt</FontSize>
+  </SpanStyle>
+  <SpaceBefore>0.0cm</SpaceBefore>
+  <SpaceAfter>0.0cm</SpaceAfter>
+ </ParStyle>
+ <ParStyle name="Indented" title="Indented" title-it_IT="Indentato" title-en_US="Indented 0.8cm" title-de_DE="Einzug 8mm" parentName="Small">
+  <LeftIndent>0.8cm</LeftIndent>
+ </ParStyle>
+ <ParStyle name="Table_rightaligned" title="Table right aligned" title-it_IT="Tabella allineata a destra" title-en_US="Table right aligned" title-de_DE="Tabelle Rechtsbündig" parentName="TableDefault">
+  <Align>right</Align>
+ </ParStyle>
+ <ParStyle name="Table_rightaligned_small" title="Table right aligned small" title-it_IT="Tabella allineata a destra picolla" title-en_US="Table right aligned small" title-de_DE="Tabelle Rechtsbündig klein" parentName="Table_rightaligned">
+  <SpanStyle>
+   <FontSize>8.0pt</FontSize>
+  </SpanStyle>
+ </ParStyle>
+ <ParStyle name="Table_leftaligned_small" title="Table small" title-it_IT="Tabella piccola" title-en_US="Table small" title-de_DE="Tabelle klein" parentName="TableDefault">
+  <SpanStyle>
+   <FontSize>8.0pt</FontSize>
+  </SpanStyle>
+ </ParStyle>
+ <ParStyle name="Text" title="Text" title-it_IT="Testo" title-en_US="Text" title-de_DE="Text">
+  <SpaceAfter>0.0cm</SpaceAfter>
+ </ParStyle>
+ <ParStyle name="TextSpaceAfter" title="Text space after" title-it_IT="Spazio del testo dopo" title-en_US="Text space after" title-de_DE="Text Abstand danach" parentName="FW_Default">
+  <SpanStyle name="Hyperlink">
+   <HyperlinkColor>rgb(255,0,0)</HyperlinkColor>
+  </SpanStyle>
+  <SpaceAfter>0.44cm</SpaceAfter>
+ </ParStyle>
+ <ParStyle name="TextSpaceBefore" title="Text space before" title-it_IT="Spazio di testo prima" title-en_US="Text space before" title-de_DE="Text Abstand davor" parentName="FW_Default">
+  <SpaceBefore>0.44cm</SpaceBefore>
+ </ParStyle>
+ <ParStyle name="TextSpaceBeforeAndAfter" title="Text space after and before" title-it_IT="Spazio per il testo prima e dopo" title-en_US="Text space after and before" title-de_DE="Text Abstand davor und danach" parentName="FW_Default">
+  <SpaceBefore>0.44cm</SpaceBefore>
+  <SpaceAfter>0.44cm</SpaceAfter>
+ </ParStyle>
+ <ParStyle name="Hint" title="Hint italic" title-it_IT="Suggerimento corsivo" title-en_US="Hint italic" title-de_DE="Text Kursiv" parentName="TextSpaceBefore">
+  <SpanStyle>
+   <FontFamily>STANDARD</FontFamily>
+   <FontStyle>italics</FontStyle>
+  </SpanStyle>
+ </ParStyle>
+ <ParStyle name="Formfield_Label" title="Formfield Label" title-it_IT="Etichetta del campo del modulo" title-en_US="Formfield Label" title-de_DE="Formularfeld Name">
+  <SpanStyle>
+   <Padding left="0.0cm"></Padding>
+   <FontSize>8.0pt</FontSize>
+  </SpanStyle>
+  <SpaceBefore>0.0cm</SpaceBefore>
+  <SpaceAfter>0.0cm</SpaceAfter>
+ </ParStyle>
+ <ParStyle name="Formfield_Label_SpaceBefore" title="Formfield Label space before" title-it_IT="Spazio per l'etichetta del campo del modulo prima" title-en_US="Formfield Label space before" title-de_DE="Formularfeld Name - Abstand davor" parentName="Formfield_Label">
+  <SpaceBefore>0.3cm</SpaceBefore>
+ </ParStyle>
+ <TableStyle name="Border" title="Table with border" title-it_IT="Tavolo con bordo" title-en_US="Table with border" title-de_DE="Tabelle Umrandung">
+  <TableHeaderStyle>
+   <RowStyle>
+    <CellStyle>
+     <ContainerStyle>
+      <ParStyle>
+       <SpanStyle>
+        <FontStyle>bold</FontStyle>
+       </SpanStyle>
+      </ParStyle>
+     </ContainerStyle>
+    </CellStyle>
+   </RowStyle>
+  </TableHeaderStyle>
+  <TableFooterStyle>
+   <RowStyle>
+    <CellStyle>
+     <ContainerStyle>
+      <ParStyle>
+       <SpanStyle>
+        <FontStyle>bold</FontStyle>
+       </SpanStyle>
+      </ParStyle>
+     </ContainerStyle>
+    </CellStyle>
+   </RowStyle>
+  </TableFooterStyle>
+  <RowStyle>
+   <CellStyle>
+    <Padding top="0.05cm" right="0.3cm" bottom="0.05cm" left="0.3cm"></Padding>
+    <Border>
+     <Left width="500.0mpt" color="rgb(0,0,0)" style="solid"></Left>
+     <Top width="500.0mpt" color="rgb(0,0,0)" style="solid"></Top>
+     <Right width="500.0mpt" color="rgb(0,0,0)" style="solid"></Right>
+     <Bottom width="500.0mpt" color="rgb(0,0,0)" style="solid"></Bottom>
+    </Border>
+   </CellStyle>
+  </RowStyle>
+  <SpaceBefore>0.5cm</SpaceBefore>
+ </TableStyle>
+ <TableStyle name="Simple">
+  <TableHeaderStyle>
+   <RowStyle>
+    <CellStyle>
+     <ContainerStyle>
+      <ParStyle>
+       <SpanStyle>
+        <FontSize>8.0pt</FontSize>
+        <FontStyle></FontStyle>
+       </SpanStyle>
+      </ParStyle>
+     </ContainerStyle>
+    </CellStyle>
+   </RowStyle>
+  </TableHeaderStyle>
+  <TableFooterStyle>
+   <RowStyle>
+    <CellStyle>
+     <ContainerStyle>
+      <ParStyle>
+       <SpanStyle>
+        <FontStyle>bold</FontStyle>
+       </SpanStyle>
+      </ParStyle>
+     </ContainerStyle>
+    </CellStyle>
+   </RowStyle>
+  </TableFooterStyle>
+  <RowStyle>
+   <CellStyle>
+    <ContainerStyle>
+     <ParStyle>
+      <SpanStyle>
+       <FontSize>8.0pt</FontSize>
+       <FontStyle></FontStyle>
+      </SpanStyle>
+     </ParStyle>
+    </ContainerStyle>
+    <Padding top="0.0cm" right="0.0cm" bottom="0.0cm" left="0.0cm"></Padding>
+    <Border>
+     <Left width="500.0mpt" color="rgb(0,0,0)" style="none"></Left>
+     <Top width="500.0mpt" color="rgb(0,0,0)" style="none"></Top>
+     <Right width="500.0mpt" color="rgb(0,0,0)" style="none"></Right>
+     <Bottom width="500.0mpt" color="rgb(0,0,0)" style="none"></Bottom>
+    </Border>
+   </CellStyle>
+  </RowStyle>
+  <SpaceBefore>0.0cm</SpaceBefore>
+ </TableStyle>
+ <TableStyle name="Stripes" title="Table with stripes - grey" title-it_IT="Tavolo con strisce - grigio" title-en_US="Table with stripes - grey" title-de_DE="Tabelle mit Streifen - grau" parentName="Border">
+  <TableHeaderStyle>
+   <RowStyle>
+    <CellStyle>
+     <ContainerStyle>
+      <ParStyle>
+       <SpanStyle>
+        <TextColor>rgb(255,255,255)</TextColor>
+       </SpanStyle>
+      </ParStyle>
+     </ContainerStyle>
+    </CellStyle>
+    <CellStyle name="Test">
+     <ContainerStyle>
+      <ParStyle>
+       <SpanStyle>
+        <TextColor>rgb(0,0,255)</TextColor>
+       </SpanStyle>
+      </ParStyle>
+     </ContainerStyle>
+    </CellStyle>
+    <BackgroundColor>rgb(119,119,119)</BackgroundColor>
+   </RowStyle>
+  </TableHeaderStyle>
+  <RowStyle index="even">
+   <BackgroundColor>rgb(237,237,237)</BackgroundColor>
+  </RowStyle>
+  <RowStyle index="odd">
+   <BackgroundColor>rgb(245,245,245)</BackgroundColor>
+  </RowStyle>
+ </TableStyle>
+ <TableStyle name="StripesColoured" title="Table with stripes - colored" title-it_IT="Tavolo con strisce - colorato" title-en_US="Table with stripes - colored" title-de_DE="Tabelle mit Streifen - bunt" parentName="Border">
+  <TableHeaderStyle>
+   <RowStyle>
+    <CellStyle>
+     <ContainerStyle>
+      <ParStyle>
+       <SpanStyle>
+        <TextColor>rgb(255,255,255)</TextColor>
+       </SpanStyle>
+      </ParStyle>
+     </ContainerStyle>
+     <BackgroundColor>rgb(227,100,100)</BackgroundColor>
+    </CellStyle>
+    <BackgroundColor>rgb(227,0,24)</BackgroundColor>
+   </RowStyle>
+  </TableHeaderStyle>
+  <RowStyle index="even">
+   <BackgroundColor>rgb(248,161,77)</BackgroundColor>
+  </RowStyle>
+  <RowStyle index="odd">
+   <BackgroundColor>rgb(226,217,59)</BackgroundColor>
+  </RowStyle>
+  <TableFooterStyle>
+   <RowStyle>
+    <CellStyle>
+     <ContainerStyle>
+      <ParStyle>
+       <SpanStyle>
+        <TextColor>rgb(255,255,255)</TextColor>
+       </SpanStyle>
+      </ParStyle>
+     </ContainerStyle>
+     <BackgroundColor>rgb(227,100,100)</BackgroundColor>
+    </CellStyle>
+   </RowStyle>
+  </TableFooterStyle>
+ </TableStyle>
+ <TableStyle name="HeaderLineColoured" title="Table - colored Headerline" title-it_IT="Tavolo con testa colorata" title-en_US="Table - colored Headerline" title-de_DE="Tabelle mit buntem Kopf" parentName="Border">
+  <TableHeaderStyle>
+   <RowStyle>
+    <CellStyle>
+     <ContainerStyle>
+      <ParStyle>
+       <SpanStyle>
+        <TextColor>rgb(255,255,255)</TextColor>
+       </SpanStyle>
+      </ParStyle>
+     </ContainerStyle>
+    </CellStyle>
+    <BackgroundColor>rgb(227,0,24)</BackgroundColor>
+   </RowStyle>
+  </TableHeaderStyle>
+ </TableStyle>
+ <TableStyle name="Form" title="FormField Table" title-it_IT="Tabella dei campi del modulo" title-en_US="FormField Table" title-de_DE="Formularfeld Tabelle">
+  <RowStyle>
+   <CellStyle>
+    <ContainerStyle>
+     <ParStyle parentName="Formfield_Label">
+      <SpanStyle>
+       <InlineFieldStyle parentName="Formfield">
+        <Printable>true</Printable>
+       </InlineFieldStyle>
+      </SpanStyle>
+     </ParStyle>
+    </ContainerStyle>
+    <Padding top="0.05cm" right="0.3cm" bottom="0.05cm" left="0.0cm"></Padding>
+    <Border>
+     <Left width="500.0mpt" color="rgb(0,0,0)" style="none"></Left>
+     <Top width="500.0mpt" color="rgb(0,0,0)" style="none"></Top>
+     <Right width="500.0mpt" color="rgb(0,0,0)" style="none"></Right>
+     <Bottom width="500.0mpt" color="rgb(0,0,0)" style="none"></Bottom>
+    </Border>
+   </CellStyle>
+  </RowStyle>
+  <SpaceBefore>0.5cm</SpaceBefore>
+ </TableStyle>
+</StyleCollection>

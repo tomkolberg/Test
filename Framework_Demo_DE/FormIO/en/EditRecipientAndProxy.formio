@@ -1,0 +1,48 @@
+{
+    "components": [
+        {
+            "legend": "Recipient",
+            "tableView": false,
+            "key": "fieldSet",
+            "type": "fieldset",
+            "label": "Field Set",
+            "input": false,
+            "components": [
+                {
+                    "label": "Form",
+                    "tableView": true,
+                    "form": "FormIO%5Cen%5CPartner.formio",
+                    "key": "Recipient",
+                    "type": "form",
+                    "input": true
+                }
+            ]
+        },
+        {
+            "legend": "Proxy",
+            "tableView": false,
+            "key": "fieldSet1",
+            "type": "fieldset",
+            "label": "Field Set",
+            "input": false,
+            "components": [
+                {
+                    "label": "Form",
+                    "tableView": true,
+                    "form": "FormIO%5Cen%5CPartner.formio",
+                    "key": "Proxy",
+                    "type": "form",
+                    "input": true
+                }
+            ]
+        },
+        {
+            "type": "button",
+            "label": "Submit",
+            "key": "submit",
+            "disableOnInvalid": true,
+            "input": true,
+            "tableView": false
+        }
+    ]
+}

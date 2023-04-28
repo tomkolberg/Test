@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Ersteller"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node multiple="true"
+         name="Korrespondenz"
+         ref="\\Framework_DE\Data\Korrespondenz.datamodel">
+      <Settings>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node multiple="false"
+         name="Defaults"
+         ref="\\Framework_DE\Data\Defaults.datamodel">
+      <Settings>
+         <Script/>
+      </Settings>
+   </Node>
+</DataModel>

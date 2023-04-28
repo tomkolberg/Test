@@ -1,0 +1,15 @@
+%/Ausgabesteuerung/Ausgabekanal/__VAL_LI_VALUE__1=TRANSLATION: ARCHIV
+%/Ausgabesteuerung/Ausgabekanal/__VAL_LI_VALUE__2=TRANSLATION: LOKALDRUCK
+%/Ausgabesteuerung/Ausgabekanal/__VAL_LI_VALUE__3=TRANSLATION: ZENTRALDRUCK
+%/Ausgabesteuerung/Ausgabekanal/__VAL_LI_VALUE__4=TRANSLATION: FAX
+%/Ausgabesteuerung/Ausgabekanal/__VAL_LI_VALUE__5=TRANSLATION: EMAIL
+%/Partner/Anrede/__VALIDATION_LABEL__=TRANSLATION: Anrede
+%/Partner/Nachname/__VALIDATION_ERROR_MESSAGE__=TRANSLATION: Bitte geben Sie den Nachnamen ein
+%/Partner/Nachname/__VALIDATION_LABEL__=TRANSLATION: Nachname
+%/Partner/Ort/__VALIDATION_ERROR_MESSAGE__=TRANSLATION: Bitte geben Sie den Ort ein
+%/Partner/Ort/__VALIDATION_LABEL__=TRANSLATION: Ort
+%/Partner/PLZ/__VALIDATION_ERROR_MESSAGE__=TRANSLATION: Bitte geben Sie die Postleitzahl ein
+%/Partner/PLZ/__VALIDATION_LABEL__=TRANSLATION: Postleitzahl
+%/Partner/Strasse/__VALIDATION_LABEL__=TRANSLATION: Strasse
+%/Partner/Titel/__VALIDATION_LABEL__=TRANSLATION: Titel
+%/Partner/Vorname/__VALIDATION_LABEL__=TRANSLATION: Vorname

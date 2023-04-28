@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Ausgabekanal"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="LIST">
+            <Values>
+               <Value content="ARCHIV" valId="1"/>
+               <Value content="LOKALDRUCK" valId="2"/>
+               <Value content="ZENTRALDRUCK" valId="3"/>
+               <Value content="FAX" valId="4"/>
+               <Value content="EMAIL" valId="5"/>
+               <Value content="EMAIL_ARCHIV" valId="6"/>
+               <Value content="EMAIL_FEHLER" valId="7"/>
+            </Values>
+         </Validation>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="InstanzID"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script>var messageNo  = $current.parent().parent().parent().parent().Nr.valueOf() * 10000;
+var instanceNo = $current.parent().parent().Nr.valueOf() * 100;
+var channelNo  = dataNodeIndexOfInstance($current.parent());
+
+$Ausgabekanal + "_" + (messageNo + instanceNo + channelNo);
+	
+	
+	
+	</Script>
+      </Settings>
+   </Node>
+   <Node multiple="false" name="ARCHIV">
+      <Settings>
+         <Script/>
+      </Settings>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="PartnerID"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($Ausgabesteuerung.Ausgabekanal == "ARCHIV") {
+	if (	   $Ausgabesteuerung.parent() 
+			&amp;&amp; $Ausgabesteuerung.parent().Empfaenger 
+			&amp;&amp; $Ausgabesteuerung.parent().Empfaenger.Partner) {
+			
+			
+		$Ausgabesteuerung.parent().Empfaenger.Partner.PartnerID;
+	}
+}</Script>
+         </Settings>
+      </Node>
+   </Node>
+   <Node multiple="false" name="LOKALDRUCK">
+      <Settings>
+         <Script/>
+      </Settings>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="UserID"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($Ausgabesteuerung.Ausgabekanal == "LOKALDRUCK") {
+	if (	   $Ausgabesteuerung.parent() 
+			&amp;&amp; $Ausgabesteuerung.parent().Absender 
+			&amp;&amp; $Ausgabesteuerung.parent().Absender.User) {
+			
+			
+		$Ausgabesteuerung.parent().Absender.Sachbearbeiter.UserID;
+	}
+}</Script>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Druckername"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script/>
+         </Settings>
+      </Node>
+   </Node>
+   <Node multiple="false" name="ZENTRALDRUCK">
+      <Settings>
+         <Script/>
+      </Settings>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Batch"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script/>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="PLZ"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($Ausgabesteuerung.Ausgabekanal == "ZENTRALDRUCK") {
+	if (       $Ausgabesteuerung.parent() 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger.istGueltig.valueOf() 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger.Partner) {
+			
+			
+		$Ausgabesteuerung.parent().Alternativempfaenger.Partner.PLZ;
+		
+	}
+	else if (      $Ausgabesteuerung.parent() 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger.istGueltig.valueOf() 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger.Partner) {
+				
+				
+		$Ausgabesteuerung.parent().Empfaenger.Partner.PLZ;
+	}
+}</Script>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="LKZ"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($Ausgabesteuerung.Ausgabekanal == "ZENTRALDRUCK") {
+	if (       $Ausgabesteuerung.parent() 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger.istGueltig.valueOf() 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger.Partner) {
+			
+			
+		$Ausgabesteuerung.parent().Alternativempfaenger.Partner.Laendercode 
+			|| $Ausgabesteuerung.parent().Alternativempfaenger.Partner.Land;
+		
+	}
+	else if (	   $Ausgabesteuerung.parent() 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger.istGueltig.valueOf() 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger.Partner) {
+				
+				
+		$Ausgabesteuerung.parent().Empfaenger.Partner.Laendercode 
+			|| $Ausgabesteuerung.parent().Empfaenger.Partner.Land;
+		
+	}
+}</Script>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="PartnerID"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($Ausgabesteuerung.Ausgabekanal == "ZENTRALDRUCK") {
+	if (       $Ausgabesteuerung.parent() 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger.istGueltig.valueOf() 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger.Partner) {
+			
+			
+		$Ausgabesteuerung.parent().Alternativempfaenger.Partner.PartnerID;
+		
+	}
+	else if (      $Ausgabesteuerung.parent() 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger.istGueltig.valueOf() 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger.Partner) {
+				
+				
+		$Ausgabesteuerung.parent().Empfaenger.Partner.PartnerID;
+	}
+}</Script>
+         </Settings>
+      </Node>
+   </Node>
+   <Node multiple="false" name="FAX">
+      <Settings>
+         <Script/>
+      </Settings>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Absender"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($Ausgabesteuerung.Ausgabekanal == "FAX") {
+	if (       $Ausgabesteuerung.parent() 
+			&amp;&amp; $Ausgabesteuerung.parent().Absender 
+			&amp;&amp; $Ausgabesteuerung.parent().Absender.Sachbearbeiter) {
+			
+			
+		$Ausgabesteuerung.parent().Absender.Sachbearbeiter.Email;
+	}
+}</Script>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Empfaenger"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($Ausgabesteuerung.Ausgabekanal == "FAX") {
+	if (	   $Ausgabesteuerung.parent() 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger.istGueltig.valueOf() 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger.Partner) {
+			
+			
+		$Ausgabesteuerung.parent().Alternativempfaenger.Partner.Fax;
+		
+	}
+	else if (	   $Ausgabesteuerung.parent() 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger.istGueltig.valueOf() 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger.Partner) {
+				
+				
+		$Ausgabesteuerung.parent().Empfaenger.Partner.Fax;
+	}
+}</Script>
+         </Settings>
+      </Node>
+   </Node>
+   <Node multiple="false" name="EMAIL">
+      <Settings>
+         <Script/>
+      </Settings>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Absender"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($Ausgabesteuerung.Ausgabekanal == "EMAIL") {
+	if (	   $Ausgabesteuerung.parent() 
+			&amp;&amp; $Ausgabesteuerung.parent().Absender 
+			&amp;&amp; $Ausgabesteuerung.parent().Absender.User) {
+			
+			
+		$Ausgabesteuerung.parent().Absender.Sachbearbeiter.Email;
+	}
+}</Script>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Empfaenger"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($Ausgabesteuerung.Ausgabekanal == "EMAIL") {
+	if (	   $Ausgabesteuerung.parent() 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger.istGueltig.valueOf() 
+			&amp;&amp; $Ausgabesteuerung.parent().Alternativempfaenger.Partner) {
+			
+			
+		$Ausgabesteuerung.parent().Alternativempfaenger.Partner.Email;
+		
+	}
+	else if (	   $Ausgabesteuerung.parent() 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger.istGueltig.valueOf() 
+				&amp;&amp; $Ausgabesteuerung.parent().Empfaenger.Partner) {
+				
+				
+		$Ausgabesteuerung.parent().Empfaenger.Partner.Email;
+	}
+}</Script>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Betreff"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script/>
+         </Settings>
+      </Node>
+   </Node>
+   <Node multiple="false" name="PDF">
+      <Settings>
+         <Script/>
+      </Settings>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Ersteller"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($Ausgabesteuerung.Ausgabekanal == "PDF") {
+	if (	   $Ausgabesteuerung.parent() 
+			&amp;&amp; $Ausgabesteuerung.parent().Absender 
+			&amp;&amp; $Ausgabesteuerung.parent().Absender.Sachbearbeiter) {
+			
+			
+		$Ausgabesteuerung.parent().Absender.Sachbearbeiter.Vorname + " " 
+			+ $Ausgabesteuerung.parent().Absender.Sachbearbeiter.Nachname;
+	}
+}</Script>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="Titel"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($document &amp;&amp; $document.Betreff1) {
+	$document.Betreff1;
+}</Script>
+         </Settings>
+      </Node>
+   </Node>
+</DataModel>

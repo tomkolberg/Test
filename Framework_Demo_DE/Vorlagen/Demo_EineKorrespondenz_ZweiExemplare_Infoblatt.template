@@ -1,0 +1,77 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom" id="\library\Framework_Demo_DE\Vorlagen\Demo_EineKorrespondenz_ZweiExemplare_Infoblatt.template">
+ <DataDefinition>
+  <ParamDef name="Auftragssteuerung" ref="\\Framework_DE\Data\Auftragssteuerung.datamodel" dataMappingRef="\\Framework_DE\Data\Auftragssteuerung.mapping">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Document>
+  <DocumentPart>
+   <DataDefinition></DataDefinition>
+   <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Korrespondenz.model">
+    <Extensions>
+     <DocumentExtension id="Korrespondenz Inhalt">
+      <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Anschreiben.model">
+       <Extensions>
+        <ContainerExtension id="Anschreiben Inhalt">
+         <ContainerPartRef uri="Bausteine\Behandlungskosten.model">
+          <Param name="Empfaenger">$Korrespondenz.Exemplare.Exemplar.instance(1).Empfaenger</Param>
+         </ContainerPartRef>
+        </ContainerExtension>
+       </Extensions>
+       <Param name="Korrespondenz">$Korrespondenz</Param>
+       <Param name="Exemplar">$Exemplar</Param>
+       <Param name="Betreff3"></Param>
+      </DocumentPartRef>
+      <DocumentPart>
+       <VisibleIf><![CDATA[$ExemplarAusgabesteuerung.Typ.valueOf() == 'ORIGINAL']]></VisibleIf>
+       <DataDefinition></DataDefinition>
+       <DocumentPartRef uri="\\Framework_DE\Framework\Teildokumente\Infoblatt\Infoblatt.model">
+        <Extensions>
+         <ContainerExtension id="Infoblatt Inhalt">
+          <Par>
+           <Style parentName="Small"></Style>
+           <Span>
+            <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</Text>
+           </Span>
+          </Par>
+          <Par>
+           <Style parentName="Small"></Style>
+           <Span>
+            <Text> </Text>
+           </Span>
+          </Par>
+          <Par>
+           <Style parentName="Small"></Style>
+           <Span>
+            <Text>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+           </Span>
+          </Par>
+          <Par>
+           <Style parentName="Small"></Style>
+           <Span>
+            <Text> </Text>
+           </Span>
+          </Par>
+         </ContainerExtension>
+        </Extensions>
+        <Param name="Titel">"Informationsblatt zur Behandlung Ihrer Patientin/Ihres Patienten"</Param>
+       </DocumentPartRef>
+      </DocumentPart>
+     </DocumentExtension>
+    </Extensions>
+    <Param name="Korrespondenz">$Auftragssteuerung.Korrespondenz.instance(0)</Param>
+    <Param name="Betreff1">"Informationen zu Ihrer Behandlung"</Param>
+    <Param name="Betreff2">"Übernahme der Behandlungskosten"</Param>
+   </DocumentPartRef>
+  </DocumentPart>
+ </Document>
+</RootPart>

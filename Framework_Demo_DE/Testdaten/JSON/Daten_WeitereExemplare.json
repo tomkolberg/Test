@@ -1,0 +1,132 @@
+{
+  "angebot": {
+    "vermerkzone": {
+      "zusatz1": "Nicht nachsenden!",
+      "zusatz2": "Einschreiben"
+    },
+    "kunde": {
+      "PartnerID": "4711",
+      "Anrede": "Herr",
+      "Titel": "Prof. Dr.",
+      "Vorname": "Max",
+      "Nachname": "von Bülow",
+      "Strasse": "Berliner Allee 10",
+      "PLZ": "79098",
+      "Ort": "Freiburg",
+      "Adresse": {
+        "line1": "Herr",
+        "line2": "Prof. Dr. Max von Bülow",
+        "line3": "Berliner Allee 10",
+        "line4": "79098 Freiburg"
+      },
+      "Briefanrede": "Herr Professor von Bülow",
+      "email": "v.buelow@t-online.de"
+    },
+    "bevollmaechtigter": {
+      "PartnerID": "4720",
+      "Anrede": "Frau",
+      "Vorname": "Eva",
+      "Nachname": "Vollmacht",
+      "Hausnummer": "1",
+      "Strasse": "HauptStrasse",
+      "PLZ": "08880",
+      "Ort": "Meinestadt",
+      "Adresse": {
+        "line1": "Frau",
+        "line2": "Eva Vollmacht",
+        "line3": "HauptStrasse 1",
+        "line4": "08880 Meinestadt"
+      },
+      "Briefanrede": "Frau Vollmacht",
+      "email": "eva.vollmacht@gmx.de"
+    },
+    "VN": {
+      "PartnerID": "4730",
+      "Anrede": "Herr",
+      "Titel": "Dr.",
+      "Vorname": "Kurt",
+      "Nachname": "Graf",
+      "Strasse": "Rosenweg 4",
+      "PLZ": "07740",
+      "Ort": "Jena",
+      "Adresse": {
+        "line1": "Herr",
+        "line2": "Dr. Kurt Graf",
+        "line3": "Rosenweg 4",
+        "line4": "07740 Jena"
+      },
+      "Briefanrede": "Herr Graf",
+      "email": "kurt.graf@gmx.de"
+    },
+    "Beitragszahler": {
+      "PartnerID": "4800",
+      "Anrede": "Herr",
+      "Titel": "Dr.",
+      "Vorname": "Kurt",
+      "Nachname": "Graf",
+      "Strasse": "Rosenweg 4",
+      "PLZ": "07740",
+      "Ort": "Jena",
+      "Adresse": {
+        "line1": "Herr",
+        "line2": "Dr. Kurt Graf",
+        "line3": "Rosenweg 4",
+        "line4": "07740 Jena"
+      },
+      "Briefanrede": "Herr Graf",
+      "email": "kurt.graf@gmx.de",
+      "bankdaten": {
+        "iban": "DE67100700000012345678",
+        "bic": "DEUTDEBBXXX",
+        "bank": "Deutsche Bank Fil Berlin"
+      }
+    },
+    "Vermittler": {
+      "PartnerID": "8534",
+      "Firmenname1": "Gute Beratungsagentur",
+      "Strasse": "Große Gasse 1",
+      "PLZ": "12345",
+      "Ort": "Porschdorf",
+      "Adresse": {
+        "line1": "Gute Beratungsagentur",
+        "line2": "Große Gasse 1",
+        "line3": "12345 Porschdorf"
+      },
+      "email": "info@gutberaten.de",
+      "vermittlerkennungen": {
+        "policealsoriginal": "true",
+        "sonstigekopie": "true"
+      }
+    },
+    "steuerung": {
+      "Briefdatum": "11.04.2018",
+      "versandart": "Zentral"
+    },
+    "unterzeichner": "Erich Hofmeier",
+    "Absender": {
+      "name": "sam bank Aktiengesellschaft",
+      "Strasse": "HauptStrasse 1",
+      "PLZ": "09990",
+      "Ort": "MeinOrt"
+    },
+    "betreff": "Angebot für Zusatzzahnversicherung",
+    "versicherungsdaten": {
+      "versicherungsnummer": "987-654-D1",
+      "versicherungsart": "Lebensversicherung"
+    },
+    "Sachbearbeiter": {
+      "Anrede": "Herr",
+      "name": "Erich Hofmeier",
+      "abteilung": "Kundenservice",
+      "Telefon": "07766 (99 66 44)",
+      "telefax": "07766 (99 66 66)"
+    },
+    "versicherungsdatenLV": {
+      "reserven": "669.26",
+      "rückkaufwert": "11,087.32",
+      "überschuss": "3,690.51",
+      "VersPerson": "Dr. Kurt Graf",
+      "WertDatum": "01.06.2012"
+    }
+  }
+}

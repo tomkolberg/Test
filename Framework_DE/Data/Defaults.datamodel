@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel>
+   <Node multiple="false" name="FormIO">
+      <Settings>
+         <Script/>
+      </Settings>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="win_height"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>550;
+</Script>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="win_width"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>900;
+</Script>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="customCSS"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>// disabled ist einfach grau
+grau  = '#D3D3D3';
+weiss = '#ffffff';
+
+// überschreibe button für Thema Primary
+   ".btn-primary { background-color: " + $actionColor + "; border-color: " + $actionColor + "; } "
+ + ".btn-primary:hover { background-color: " + $hoverColor + "; border-color: " + $actionColor + "; } "
+ + ".btn-primary.disabled, .btn-primary:disabled { background-color: " + grau + "; border-color: " + grau + "; } "
+
+// für Tabs-, Grid-Steuerung
+ + ".page-item.active .page-link { background-color: " + $actionColor + "; border-color: " + $actionColor + "; } "
+ + ".page-link { color: " + $actionColor + "; border-color: " + $actionColor + "; } "
+ + ".page-link:hover { color: " + weiss + "; background-color: " + $hoverColor + "; border-color: " + $actionColor + "; } "
+//".btn:not(:disabled):not(.disabled) { background-color: " + grau + "; border-color: " + grau + "; } "
+
+ + ".nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{ color: " + weiss + "; background-color: " + $hoverColor + "; border-color: " + $actionColor + ";  } "
+ + ".nav-link{ color: " + $actionColor + "; border-color: " + $actionColor + "; } "
+
+// für Rahmen etc
+ + ".bg-primary { background-color: " + $actionColor + "!important; } "
+
+// Number-Eingaben rechtsbündig
+ + ".formio-component-number { text-align-last: end; } "
+; </Script>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="actionColor"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($document.Metadata){
+	switch ($document.Metadata.DocumentLanguage.toString()) {
+	
+	case 'GER':
+		'#D6B160';
+		break;
+		
+	default:
+		'#e30018';
+		break;
+	};
+};</Script>
+         </Settings>
+      </Node>
+      <Node data-type="TEXT"
+            hierarchical="FLAT"
+            multiple="false"
+            name="hoverColor"
+            searchable="false">
+         <Settings>
+            <Validation allow-empty-value="true"
+                        dialog-field=""
+                        label=""
+                        operator="ANY"
+                        validation-type="ANY_VALUE">
+               <Values/>
+            </Validation>
+            <Format>
+               <Input/>
+               <Output/>
+            </Format>
+            <Script>if ($document.Metadata){
+	switch ($document.Metadata.DocumentLanguage.toString()) {
+	
+	case 'GER':
+		'#e3cd00';
+		break;
+		
+	default:
+		'#ff3030';
+		break;
+	};
+};</Script>
+         </Settings>
+      </Node>
+   </Node>
+</DataModel>

@@ -1,0 +1,18 @@
+<PageLayouts xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DefaultPageLayout>
+  <PageSize name="A4"></PageSize>
+  <RendererMetadata></RendererMetadata>
+  <Region name="Body">
+   <Left distance="0.0mpt" anchorSide="same"></Left>
+   <Top distance="1.0cm" anchorSide="same"></Top>
+   <Right distance="0.0mpt" anchorSide="same"></Right>
+   <Bottom distance="0.0mpt" anchorSide="same"></Bottom>
+  </Region>
+  <Region name="AttachmentName" role="Artifact" contentRotation="90">
+   <Left distance="0.0mpt" anchorSide="same"></Left>
+   <Top distance="557858.0mpt" anchorSide="same"></Top>
+   <Right distance="545386.0mpt" anchorSide="same"></Right>
+   <Bottom distance="0.0mpt" anchorSide="same"></Bottom>
+  </Region>
+ </DefaultPageLayout>
+</PageLayouts>

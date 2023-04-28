@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <Person>
+  <Name>Manni Müller</Name>
+  <Geburtsdatum>06.08.1967</Geburtsdatum>>
+  <Telefon>+497615555555</Telefon>
+  <Ehestand>verheiratet</Ehestand>
+  <BIC>PBDE6666</BIC>
+  <IBAN>DE66 1234 5569 7788 9988 00</IBAN>
+  <Bank>Postbank</Bank>
+  <Kontoinhaber>Willi Mertens</Kontoinhaber>
+ </Person>

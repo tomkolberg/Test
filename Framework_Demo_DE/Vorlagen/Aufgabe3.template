@@ -1,0 +1,53 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom" id="\library\Framework_Demo_DE\Vorlagen\Archiv_Mail_Beispiel.template" title="Aufgabe3" description="Aufgabe3">
+ <DataDefinition>
+  <ParamDef name="Auftragssteuerung" ref="\\Framework_DE\Data\Auftragssteuerung.datamodel" dataMappingRef="\\Framework_DE\Data\Auftragssteuerung.mapping">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+  </ParamDef>
+ </DataDefinition>
+ <UIContribution>
+  <GuideArea>
+   <Folder title="Dokument finalisieren">
+    <ActionLink title="PDF Vorschau" inputAreaGroupID="">
+     <Script><![CDATA[ $context.save(); 
+      					$context.export('export-application/pdf');]]></Script>
+    </ActionLink>
+    <ActionLink title="M/OMS" inputAreaGroupID="">
+     <Script><![CDATA[
+$context.save(); 
+console.log("saved document...");
+$context.print('OMS');
+console.log("printed to OMS...");
+$context.setDataValue($Metadata.State, 'OMS');
+console.log("set state to OMS...");
+$context.save();
+console.log("saved document...");
+$context.close();]]></Script>
+    </ActionLink>
+   </Folder>
+  </GuideArea>
+  <InputArea></InputArea>
+ </UIContribution>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Document>
+  <DocumentPartRef uri="Bausteine\Anschreiben.model">
+   <Param name="Korrespondenz">$Auftragssteuerung.Korrespondenz</Param>
+   <Param name="Auftragssteuerung">$Auftragssteuerung</Param>
+   <Param name="MOMS_ID">0</Param>
+  </DocumentPartRef>
+  <DocumentPartRef uri="Bausteine\Hauptteil.model">
+   <Param name="Auftragssteuerung">$Auftragssteuerung</Param>
+   <Param name="MOMS_ID">1</Param>
+  </DocumentPartRef>
+  <DocumentPartRef uri="Bausteine\Anlage.model">
+   <Param name="Auftragssteuerung">$Auftragssteuerung</Param>
+   <Param name="MOMS_ID">2</Param>
+  </DocumentPartRef>
+ </Document>
+</RootPart>

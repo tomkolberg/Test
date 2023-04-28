@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mapping>
+   <DataModel root-path="">\\Framework_Demo_DE\Data\Antragsteller.datamodel</DataModel>
+   <Rules>
+      <Rule copySubtree="false" name="/Antragsteller" xpath="/Person"/>
+      <Rule copySubtree="true" name="/Antragsteller/Bank" xpath="Bank"/>
+      <Rule copySubtree="true" name="/Antragsteller/BIC" xpath="BIC"/>
+      <Rule copySubtree="true" name="/Antragsteller/Ehestand" xpath="Ehestand"/>
+      <Rule copySubtree="true"
+            name="/Antragsteller/Geburtsdatum"
+            xpath="Geburtsdatum"/>
+      <Rule copySubtree="true" name="/Antragsteller/IBAN" xpath="IBAN"/>
+      <Rule copySubtree="true"
+            name="/Antragsteller/Kontoinhaber"
+            xpath="Kontoinhaber"/>
+      <Rule copySubtree="true" name="/Antragsteller/Name" xpath="Name"/>
+      <Rule copySubtree="true" name="/Antragsteller/Telefon" xpath="Telefon"/>
+   </Rules>
+   <Params/>
+   <Namespaces/>
+</Mapping>

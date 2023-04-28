@@ -1,0 +1,21 @@
+{
+  "vp": {
+    "Geschlechter" : [
+    	{ "Text" : "weiblich" },
+    	{ "Text" : "männlich" },
+    	{ "Text" : "divers" }
+    },
+    "Person": [
+      {
+        "name": "Müller",
+        "Vorname": "Werner",
+        "geburtsdatum": "01.01.1988"
+      },
+      {
+        "name": "Meier",
+        "Vorname": "Walter",
+        "geburtsdatum": "02.02.1999"
+      }
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Empfaenger" ref="\\Framework_DE\Data\Empfaenger.datamodel" provided="true">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <ContainerPart>
+  <VisibleIf><![CDATA[$Empfaenger.Partner.Nachname.notEmpty() && $Empfaenger.Partner.Anrede.valueOf() == "Frau"]]></VisibleIf>
+  <DataDefinition></DataDefinition>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="it" country="IT" variant=""></Language>
+     <Span>
+      <Text>Cara signora </Text>
+      <Data>$Empfaenger.Partner.Vorname</Data>
+      <Text> </Text>
+      <Data>$Empfaenger.Partner.Nachname</Data>
+      <Text>,</Text>
+     </Span>
+    </Translation>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>Dear Mrs. </Text>
+      <Data>$Empfaenger.Partner.Vorname</Data>
+      <Text> </Text>
+      <Data>$Empfaenger.Partner.Nachname</Data>
+      <Text>,</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="TextSpaceAfter"></Style>
+   <Span>
+    <Text>Sehr geehrte Frau </Text>
+    <Data>$Empfaenger.Partner.Vorname</Data>
+    <Text> </Text>
+    <Data>$Empfaenger.Partner.Nachname</Data>
+    <Text>,</Text>
+   </Span>
+  </Par>
+ </ContainerPart>
+ <ContainerPart>
+  <VisibleIf><![CDATA[$Empfaenger.Partner.Nachname.notEmpty() && $Empfaenger.Partner.Anrede.valueOf() == "Herr"]]></VisibleIf>
+  <DataDefinition></DataDefinition>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="it" country="IT" variant=""></Language>
+     <Span>
+      <Text>Caro signor </Text>
+      <Data>$Empfaenger.Partner.Vorname</Data>
+      <Text> </Text>
+      <Data>$Empfaenger.Partner.Nachname</Data>
+      <Text>,</Text>
+     </Span>
+    </Translation>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>Dear Mr. </Text>
+      <Data>$Empfaenger.Partner.Vorname</Data>
+      <Text> </Text>
+      <Data>$Empfaenger.Partner.Nachname</Data>
+      <Text>,</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="TextSpaceAfter"></Style>
+   <Span>
+    <Text>Sehr geehrter Herr </Text>
+    <Data>$Empfaenger.Partner.Vorname</Data>
+    <Text> </Text>
+    <Data>$Empfaenger.Partner.Nachname</Data>
+    <Text>,</Text>
+   </Span>
+  </Par>
+ </ContainerPart>
+ <ContainerPart>
+  <VisibleIf><![CDATA[$Empfaenger.Partner.Nachname.isEmpty() || ($Empfaenger.Partner.Anrede.valueOf() != "Frau" && $Empfaenger.Partner.Anrede.valueOf() != "Herr")]]></VisibleIf>
+  <DataDefinition></DataDefinition>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="it" country="IT" variant=""></Language>
+     <Span>
+      <Text>Signore e signori,</Text>
+     </Span>
+    </Translation>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>Dear Sir or Madam,</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="TextSpaceAfter"></Style>
+   <Span>
+    <Text>Sehr geehrte Damen und Herren,</Text>
+   </Span>
+  </Par>
+ </ContainerPart>
+</ContainerPart>

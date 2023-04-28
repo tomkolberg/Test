@@ -1,0 +1,30 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Empfaenger" ref="\\Framework_DE\Data\Empfaenger.datamodel">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <ParamDef name="OriginalEmpfaenger" ref="\\Framework_DE\Data\Empfaenger.datamodel">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+ </DataDefinition>
+ <Par>
+  <Translations>
+   <Translation>
+    <Language language="en" country="US" variant=""></Language>
+    <Span>
+     <Text>You will receive this letter as a representative of </Text>
+     <Data>$OriginalEmpfaenger.NameVorname</Data>
+     <Text>.</Text>
+    </Span>
+   </Translation>
+  </Translations>
+  <Style parentName="FW_Default"></Style>
+  <Span>
+   <Text>stellvertretend für </Text>
+   <Data>$OriginalEmpfaenger.NameVorname</Data>
+   <Text> senden wir Ihnen die Korrespondenz im Anhang.</Text>
+  </Span>
+ </Par>
+</ContainerPart>

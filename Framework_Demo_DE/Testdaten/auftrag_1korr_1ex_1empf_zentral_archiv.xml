@@ -1,0 +1,74 @@
+<Auftragssteuerung>
+	<Korrespondenz>
+		<Briefdatum>29.02.2020</Briefdatum>
+		<Exemplar>
+			<Absender>
+				<Name>SAM AG</Name>
+				<Strasse>Kruppallee 42</Strasse>
+				<PLZ>13373</PLZ>
+				<Ort>Essen</Ort>
+				<Sachbearbeiter>
+					<PartnerID>14213373</PartnerID>
+					<UserID>HB</UserID>
+					<Anrede>Herr</Anrede>
+					<Vorname>Hans</Vorname>
+					<Nachname>Brackhaus</Nachname>
+					<Firmenname1>SAM AG</Firmenname1>
+					<Hausnummer>42</Hausnummer>
+					<Strasse>Kruppallee</Strasse>
+					<PLZ>13373</PLZ>
+					<Ort>Essen</Ort>
+					<Adresse>
+						<Zeile>SAM AG</Zeile>
+						<Zeile>Hans Brackhaus</Zeile>
+						<Zeile>Kruppallee 42</Zeile>
+						<Zeile>13373 Essen</Zeile>
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+					</Adresse>
+					<Briefanrede>Moin Herr Brackhaus,</Briefanrede>
+					<Rolle>rückwärts</Rolle>
+					<email>h.brackhaus@sam-ag.com</email>
+					<Telefon>0815-47111337</Telefon>
+					<fax>0815-47114242</fax>
+				</Sachbearbeiter>
+			</Absender>
+			<Empfaenger>
+				<Partner>
+					<PartnerID>20698101</PartnerID>
+					<Anrede>Frau</Anrede>
+					<Titel>Dr.</Titel>
+					<Vorname>Maria</Vorname>
+					<Nachname>Mercurial</Nachname>
+					<Adresszusatz>Postfach 1337</Adresszusatz>
+					<PLZ>98199</PLZ>
+					<Ort>Smaragdstadt</Ort>
+					<Adresse>
+						<Zeile>Maria Mercurial</Zeile>
+						<Zeile>Postfach 1337</Zeile>
+						<Zeile>98199 Smaragdstadt</Zeile>
+					</Adresse>
+					<Rolle>vorwärts</Rolle>
+					<email>m.mercurial@fasa.sr</email>
+					<Telefon>01989-2050</Telefon>
+					<fax>01989-2001</fax>
+				</Partner>
+			</Empfaenger>
+			<Ausgabesteuerung>
+				<Ausgabekanal>ZENTRALDRUCK</Ausgabekanal>
+				<ZENTRALDRUCK>
+					<LKZ>DE</LKZ>
+					<PLZ>1337</PLZ>
+					<PartnerID>20698101</PartnerID>
+				</ZENTRALDRUCK>
+			</Ausgabesteuerung>
+			<Ausgabesteuerung>
+				<Ausgabekanal>ARCHIV</Ausgabekanal>
+				<ARCHIV>
+					<PartnerID>20698101</PartnerID>
+				</ARCHIV>
+			</Ausgabesteuerung>
+		</Exemplar>
+	</Korrespondenz>
+</Auftragssteuerung>

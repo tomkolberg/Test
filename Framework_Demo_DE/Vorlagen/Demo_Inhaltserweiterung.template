@@ -1,0 +1,37 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition></DataDefinition>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Document>
+  <Section>
+   <Style parentName="Infoblatt"></Style>
+   <Container>
+    <Par>
+     <Span>
+      <Text>Das ist Text der Vorlage</Text>
+     </Span>
+    </Par>
+    <Par>
+     <Span>
+      <Text></Text>
+     </Span>
+    </Par>
+    <ContainerPartRef uri="Bausteine\NurEineInhaltserweiterung.model">
+     <Extensions>
+      <ContainerExtension id="Inhalt Demobaustein">
+       <Par>
+        <Span>
+         <Text>Dieser Text in der Inhaltserweiterung im Baustein wird gefüllt durch die Vorlage.</Text>
+        </Span>
+       </Par>
+      </ContainerExtension>
+     </Extensions>
+    </ContainerPartRef>
+   </Container>
+  </Section>
+ </Document>
+</RootPart>

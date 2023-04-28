@@ -1,0 +1,49 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom" id="\library\Framework_Demo_DE\Vorlagen\Demo_EineKorrespondenz_Anlage.template">
+ <DataDefinition>
+  <ParamDef name="Auftragssteuerung" ref="\\Framework_DE\Data\Auftragssteuerung.datamodel" dataMappingRef="\\Framework_DE\Data\Auftragssteuerung.mapping">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+  </ParamDef>
+ </DataDefinition>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Document>
+  <DocumentPart>
+   <DataDefinition></DataDefinition>
+   <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Korrespondenz.model">
+    <Extensions>
+     <DocumentExtension id="Korrespondenz Inhalt">
+      <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Anschreiben.model">
+       <Extensions>
+        <ContainerExtension id="Anschreiben Inhalt">
+         <Par>
+          <Style parentName="TextSpaceAfter"></Style>
+          <Span>
+           <Text>wir freuen uns Ihnen mitteilen zu können, dass wir die Kosten der Behandlung übernehmen.</Text>
+          </Span>
+         </Par>
+        </ContainerExtension>
+       </Extensions>
+       <Param name="Korrespondenz">$Korrespondenz</Param>
+       <Param name="Exemplar">$Exemplar</Param>
+       <Param name="Betreff3"></Param>
+      </DocumentPartRef>
+      <DocumentPartRef uri="\\Framework_DE\Framework\Teildokumente\Anlage\Anlage.model">
+       <Param name="ExemplarAusgabesteuerung" type="datanoderef">$ExemplarAusgabesteuerung</Param>
+       <Param name="Anlage">"Anlagen/SEPA_Mandat.pdf"</Param>
+       <Param name="AnlageName">"SEPA Mandat"</Param>
+      </DocumentPartRef>
+     </DocumentExtension>
+    </Extensions>
+    <Param name="Korrespondenz">$Auftragssteuerung.Korrespondenz.instance(0)</Param>
+    <Param name="Betreff1">"Informationen zu Ihrer Behandlung"</Param>
+    <Param name="Betreff2">"Übernahme der Behandlungskosten"</Param>
+   </DocumentPartRef>
+  </DocumentPart>
+ </Document>
+</RootPart>

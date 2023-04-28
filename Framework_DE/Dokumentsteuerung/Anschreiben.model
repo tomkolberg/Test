@@ -1,0 +1,62 @@
+<DocumentPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Korrespondenz" ref="\\Framework_DE\Data\Korrespondenz.datamodel" provided="true">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <ParamDef name="Exemplar" ref="\\Framework_DE\Data\Exemplar.datamodel" provided="true">
+   <Description></Description>
+   <Script></Script>
+  </ParamDef>
+  <ParamDef name="Betreff1" provided="true"></ParamDef>
+  <ParamDef name="Betreff2" provided="true"></ParamDef>
+  <ParamDef name="Betreff3" provided="true"></ParamDef>
+ </DataDefinition>
+ <DocumentPart>
+  <VisibleIf><![CDATA[$Exemplar.Alternativempfaenger.istGueltig.valueOf()]]></VisibleIf>
+  <DataDefinition></DataDefinition>
+  <DocumentPartRef uri="Framework/Teildokumente/Brief/Brief.model">
+   <Validation></Validation>
+   <Extensions>
+    <ContainerExtension id="Brief Inhalt">
+     <ContainerPartRef uri="Framework/Teildokumente/Brief/FW_Briefanrede.model">
+      <Param name="Empfaenger">$Exemplar.Alternativempfaenger</Param>
+     </ContainerPartRef>
+     <ContainerPartRef uri="Framework/Standardinhalte/Anschreiben/BriefinhaltAlternativEmpfaenger.model">
+      <Param name="Empfaenger">$Exemplar.Alternativempfaenger</Param>
+      <Param name="OriginalEmpfaenger">$Exemplar.Empfaenger</Param>
+     </ContainerPartRef>
+    </ContainerExtension>
+   </Extensions>
+   <Param name="Korrespondenz">$Korrespondenz</Param>
+   <Param name="Exemplar">$Exemplar</Param>
+   <Param name="Empfaenger">$Exemplar.Alternativempfaenger</Param>
+   <Param name="Absender">$Exemplar.Absender</Param>
+   <Param name="Betreff1">$Betreff1</Param>
+   <Param name="Betreff2">$Betreff2</Param>
+   <Param name="Betreff3">$Betreff3</Param>
+  </DocumentPartRef>
+ </DocumentPart>
+ <DocumentPartRef uri="Framework/Teildokumente/Brief/Brief.model">
+  <Extensions>
+   <ContainerExtension id="Brief Inhalt">
+    <ContainerPartRef uri="\\Framework_DE\Framework\Teildokumente\Brief\FW_Betreff.model">
+     <Param name="Betreff1">$Betreff1</Param>
+     <Param name="Betreff2">$Betreff2</Param>
+     <Param name="Betreff3">$Betreff3</Param>
+    </ContainerPartRef>
+    <ContainerPartRef uri="Framework/Teildokumente/Brief/FW_Briefanrede.model">
+     <Param name="Empfaenger">$Exemplar.Empfaenger</Param>
+    </ContainerPartRef>
+    <ContainerExtensionDef id="Anschreiben Inhalt"></ContainerExtensionDef>
+   </ContainerExtension>
+  </Extensions>
+  <Param name="Korrespondenz">$Korrespondenz</Param>
+  <Param name="Exemplar">$Exemplar</Param>
+  <Param name="Empfaenger">$Exemplar.Empfaenger</Param>
+  <Param name="Absender">$Exemplar.Absender</Param>
+  <Param name="Betreff1">$Betreff1</Param>
+  <Param name="Betreff2">$Betreff2</Param>
+  <Param name="Betreff3">$Betreff3</Param>
+ </DocumentPartRef>
+</DocumentPart>

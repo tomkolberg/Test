@@ -1,0 +1,124 @@
+<Auftragssteuerung>
+	<Korrespondenz>
+		<Briefdatum>29.02.2020</Briefdatum>
+		<Exemplar>
+			<Absender>
+				<Name>sam plc</Name>
+				<Strasse>St Helen's, 1 Undershaft</Strasse>
+				<PLZ>EC3P 3DQ</PLZ>
+				<Ort>London</Ort>
+				<Sachbearbeiter>
+					<PartnerID>14213373</PartnerID>
+					<UserID>HB</UserID>
+					<Anrede>Mr.</Anrede>
+					<Titel></Titel>
+					<Vorname>David</Vorname>
+					<Nachname>Brack</Nachname>
+					<Firmenname1>sam plc</Firmenname1>
+					<Firmenname2></Firmenname2>
+					<Hausnummer>42</Hausnummer>
+					<Adresszusatz></Adresszusatz>
+					<Strasse>St Helen's, 1 Undershaft</Strasse>
+					<PLZ>EC3P 3DQ</PLZ>
+					<Ort>London</Ort>
+					<Land></Land>
+					<Adresse>
+						<Zeile>sam plc</Zeile>
+						<Zeile>David Brack</Zeile>
+						<Zeile>St Helen's, 1 Undershaft</Zeile>
+						<Zeile>London EC3P 3DQ</Zeile>
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+					</Adresse>
+					<Briefanrede>Hello Mr. Brack,</Briefanrede>
+					<Rolle>rückwärts</Rolle>
+					<email>h.brack@sam-ag.com</email>
+					<Telefon>0815-47111337</Telefon>
+					<fax>+44 20 45689-11</fax>
+				</Sachbearbeiter>
+			</Absender>
+			<Empfaenger>
+				
+				<Partner>
+					<PartnerID>20698101</PartnerID>
+					<UserID></UserID>
+					<Anrede>Frau</Anrede>
+					<Titel></Titel>
+					<Vorname>Maria</Vorname>
+					<Nachname>Mercurial</Nachname>
+					<Firmenname1></Firmenname1>
+					<Firmenname2></Firmenname2>
+					<Hausnummer></Hausnummer>
+					<Adresszusatz>Postfach 1337</Adresszusatz>
+					<Strasse></Strasse>
+					<PLZ>98199</PLZ>
+					<Ort>Smaragdstadt</Ort>
+					<Land></Land>
+					<Adresse>
+						<Zeile>Maria Mercurial</Zeile>
+						<Zeile>Postfach 1337</Zeile>
+						<Zeile>98199 Smaragdstadt</Zeile>
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+						<!-- <Zeile></Zeile> -->
+					</Adresse>
+					<!-- <Briefanrede>Moin Frau Mercurial,</Briefanrede> -->
+					<Rolle>Director</Rolle>
+					<email>m.mercury@fasa.sr</email>
+					<Telefon>0815-47111340</Telefon>
+					<fax>+44 20 45689-15</fax>
+				</Partner>
+				<!-- <Briefanrede>Moin Frau Mercurial,</Briefanrede> -->
+				<!-- <NameVorname>Maria Mercurial</NameVorname> -->
+			</Empfaenger>
+			<Ausgabesteuerung>
+				<Ausgabekanal>LOKALDRUCK</Ausgabekanal>
+				<ARCHIV>
+					<PartnerID>20698101</PartnerID>
+				</ARCHIV>
+				<LOKALDRUCK>
+					<UserID>14213373</UserID>
+					<Druckername>D4711</Druckername>
+				</LOKALDRUCK>
+				<ZENTRALDRUCK>
+					<Batch></Batch>
+					<PLZ></PLZ>
+					<LKZ></LKZ>
+				</ZENTRALDRUCK>
+				<FAX>
+					<Absender></Absender>
+					<Empfaenger></Empfaenger>
+				</FAX>
+				<EMAIL>
+					<Absender></Absender>
+					<Empfaenger></Empfaenger>
+				</EMAIL>
+			</Ausgabesteuerung>
+			<Ausgabesteuerung>
+				<Ausgabekanal>ARCHIV</Ausgabekanal>
+				<ARCHIV>
+					<PartnerID>20698101</PartnerID>
+				</ARCHIV>
+				<LOKALDRUCK>
+					<UserID>14213373</UserID>
+					<Druckername>D4711</Druckername>
+				</LOKALDRUCK>
+				<ZENTRALDRUCK>
+					<Batch></Batch>
+					<PLZ></PLZ>
+					<LKZ></LKZ>
+				</ZENTRALDRUCK>
+				<FAX>
+					<Absender></Absender>
+					<Empfaenger></Empfaenger>
+				</FAX>
+				<EMAIL>
+					<Absender></Absender>
+					<Empfaenger></Empfaenger>
+				</EMAIL>
+			</Ausgabesteuerung>
+		</Exemplar>
+	</Korrespondenz>
+</Auftragssteuerung>

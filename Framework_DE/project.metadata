@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content>
+   <entry name="/Metadata.metadataembedded">
+      <DataModel>
+         <Node can-overwrite="true"
+               data-type="TEXT"
+               hierarchical="FLAT"
+               meta-restype="1"
+               meta-restype-docinst="1"
+               multiple="false"
+               name="Language"
+               searchable="false">
+            <Settings>
+               <Validation allow-empty-value="true"
+                           dialog-field=""
+                           label=""
+                           operator="ANY"
+                           validation-type="ANY_VALUE">
+                  <Values/>
+               </Validation>
+               <Format>
+                  <Input/>
+                  <Output/>
+               </Format>
+               <Script>load("Scripts\\Base.js");
+FW_I18n.toLanguage($DocumentLanguage);</Script>
+            </Settings>
+         </Node>
+         <Node can-overwrite="true"
+               meta-restype="1"
+               meta-restype-docinst="0"
+               multiple="false"
+               name="Template">
+            <Settings>
+               <Script/>
+            </Settings>
+            <Node can-overwrite="true"
+                  data-type="BOOLEAN"
+                  hierarchical="BOTH"
+                  meta-restype="1"
+                  meta-restype-docinst="0"
+                  multiple="false"
+                  name="Selectable"
+                  searchable="true">
+               <Settings>
+                  <Validation allow-empty-value="true"
+                              dialog-field=""
+                              label=""
+                              operator="ANY"
+                              validation-type="ANY_VALUE">
+                     <Values/>
+                  </Validation>
+                  <Format>
+                     <Input false-value="false" true-value="true"/>
+                     <Output false-value="false" true-value="true"/>
+                  </Format>
+                  <Script/>
+               </Settings>
+            </Node>
+         </Node>
+         <Node can-overwrite="true"
+               data-type="TEXT"
+               hierarchical="HIERARCHICAL"
+               meta-restype="4"
+               meta-restype-docinst="0"
+               multiple="false"
+               name="Models"
+               searchable="true">
+            <Settings>
+               <Validation allow-empty-value="true"
+                           dialog-field=""
+                           label=""
+                           operator="ANY"
+                           validation-type="ANY_VALUE">
+                  <Values/>
+               </Validation>
+               <Format>
+                  <Input/>
+                  <Output/>
+               </Format>
+               <Script/>
+            </Settings>
+            <Node can-overwrite="true"
+                  data-type="TEXT"
+                  hierarchical="BOTH"
+                  meta-restype="4"
+                  meta-restype-docinst="0"
+                  multiple="true"
+                  name="Selection_1"
+                  searchable="true">
+               <Settings>
+                  <Validation allow-empty-value="true"
+                              dialog-field=""
+                              label=""
+                              operator="ANY"
+                              validation-type="ANY_VALUE">
+                     <Values/>
+                  </Validation>
+                  <Format>
+                     <Input/>
+                     <Output/>
+                  </Format>
+                  <Script/>
+               </Settings>
+               <Node can-overwrite="true"
+                     data-type="TEXT"
+                     hierarchical="FLAT"
+                     meta-restype="4"
+                     meta-restype-docinst="0"
+                     multiple="true"
+                     name="Selection_2"
+                     searchable="true">
+                  <Settings>
+                     <Validation allow-empty-value="true"
+                                 dialog-field=""
+                                 label=""
+                                 operator="ANY"
+                                 validation-type="ANY_VALUE">
+                        <Values/>
+                     </Validation>
+                     <Format>
+                        <Input/>
+                        <Output/>
+                     </Format>
+                     <Script/>
+                  </Settings>
+                  <Node can-overwrite="true"
+                        data-type="TEXT"
+                        hierarchical="FLAT"
+                        meta-restype="4"
+                        meta-restype-docinst="0"
+                        multiple="true"
+                        name="Selection_3"
+                        searchable="true">
+                     <Settings>
+                        <Validation allow-empty-value="true"
+                                    dialog-field=""
+                                    label=""
+                                    operator="ANY"
+                                    validation-type="ANY_VALUE"/>
+                        <Format>
+                           <Input/>
+                           <Output/>
+                        </Format>
+                        <Script/>
+                     </Settings>
+                     <Node can-overwrite="true"
+                           data-type="TEXT"
+                           hierarchical="FLAT"
+                           meta-restype="4"
+                           meta-restype-docinst="0"
+                           multiple="true"
+                           name="Selection_4"
+                           searchable="true">
+                        <Settings>
+                           <Validation allow-empty-value="true"
+                                       dialog-field=""
+                                       label=""
+                                       operator="ANY"
+                                       validation-type="ANY_VALUE"/>
+                           <Format>
+                              <Input/>
+                              <Output/>
+                           </Format>
+                           <Script/>
+                        </Settings>
+                     </Node>
+                  </Node>
+               </Node>
+            </Node>
+         </Node>
+         <Node can-overwrite="true"
+               data-type="TEXT"
+               hierarchical="FLAT"
+               meta-restype="1"
+               meta-restype-docinst="1"
+               multiple="false"
+               name="State"
+               searchable="true">
+            <Settings>
+               <Description>Dokumentstatus</Description>
+               <Validation allow-empty-value="false"
+                           dialog-field=""
+                           label=""
+                           operator="ANY"
+                           validation-type="LIST">
+                  <Values>
+                     <Value content="Created" valId="1"/>
+                     <Value content="REGRESSIONTEST" valId="2"/>
+                     <Value content="REGRESSIONTEST_FRAMEWORK" valId="3"/>
+                  </Values>
+               </Validation>
+               <Format>
+                  <Input/>
+                  <Output/>
+               </Format>
+               <Script/>
+            </Settings>
+         </Node>
+         <Node can-overwrite="true"
+               data-type="TEXT"
+               hierarchical="FLAT"
+               meta-restype="1"
+               meta-restype-docinst="1"
+               multiple="false"
+               name="TestMode"
+               searchable="false">
+            <Settings>
+               <Validation allow-empty-value="true"
+                           dialog-field=""
+                           label=""
+                           operator="ANY"
+                           validation-type="LIST">
+                  <Values>
+                     <Value content="TEMPLATE" valId="2"/>
+                     <Value content="FRAMEWORK" valId="3"/>
+                  </Values>
+               </Validation>
+               <Format>
+                  <Input/>
+                  <Output/>
+               </Format>
+               <Script/>
+            </Settings>
+         </Node>
+      </DataModel>
+   </entry>
+   <entry name="/dataProviders/Metadata">
+      <SerializedDataProvider providerClass="de.kwsoft.mtext.format.dataprovider.MetadataNodeInstance">
+         <DataModelResourceName name="~\Metadata.metadataembedded"/>
+         <NodeInst name="Metadata" value="">
+            <Children>
+               <NodeInst alreadyComputed="true" name="Language" value="de"/>
+               <NodeInst name="Template" value="">
+                  <Children>
+                     <NodeInst name="Selectable" value="true"/>
+                  </Children>
+               </NodeInst>
+               <NodeInst name="Models" value="">
+                  <Children>
+                     <NodeInst name="Selection_1"
+                               uuid="42355314-4295-4c0a-8310-78f4d04fb8de"
+                               value="">
+                        <Children>
+                           <NodeInst name="Selection_2"
+                                     uuid="79fac29f-aa8a-47b9-abd2-85c6f214dbbf"
+                                     value="">
+                              <Children>
+                                 <NodeInst name="Selection_3"
+                                           uuid="71e53c6e-caa3-4511-86a7-2f5b0cf14644"
+                                           value="">
+                                    <Children>
+                                       <NodeInst name="Selection_4"
+                                                 uuid="58f0f1c3-4fb0-469f-8020-932fe0ab2cb4"
+                                                 value=""/>
+                                    </Children>
+                                 </NodeInst>
+                              </Children>
+                           </NodeInst>
+                        </Children>
+                     </NodeInst>
+                  </Children>
+               </NodeInst>
+               <NodeInst name="State" value="Created"/>
+               <NodeInst name="TestMode" value=""/>
+            </Children>
+         </NodeInst>
+      </SerializedDataProvider>
+   </entry>
+</content>

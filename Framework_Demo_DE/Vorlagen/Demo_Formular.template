@@ -1,0 +1,491 @@
+<RootPart xmlns="urn:kwsoft:mtext:tonic:dom" id="\library\Framework_Demo_DE\Vorlagen\Demo_Formular.template">
+ <DataDefinition>
+  <ParamDef name="Auftragssteuerung" ref="\\Framework_DE\Data\Auftragssteuerung.datamodel" dataMappingRef="\\Framework_DE\Data\Auftragssteuerung.mapping">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+  </ParamDef>
+  <ParamDef name="Antragsdaten" ref="\\Framework_Demo_DE\Data\Antragsdaten.datamodel" dataMappingRef="">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+  </ParamDef>
+  <ParamDef name="Antragsteller" ref="\\Framework_Demo_DE\Data\Antragsteller.datamodel" dataMappingRef="Data\Antragsteller.mapping">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+  </ParamDef>
+ </DataDefinition>
+ <ModificationRights>
+  <Allowed>
+   <ModificationRight role="_EVERYONE_" operations="INPUT"></ModificationRight>
+  </Allowed>
+  <Denied></Denied>
+ </ModificationRights>
+ <Document>
+  <Style>
+   <SectionStyle>
+    <ContainerStyle>
+     <ParStyle>
+      <SpanStyle>
+       <InlineFieldStyle name="MyFormfield" parentName="Formfield"></InlineFieldStyle>
+      </SpanStyle>
+     </ParStyle>
+    </ContainerStyle>
+   </SectionStyle>
+  </Style>
+  <DocumentPartRef uri="\\Framework_DE\Dokumentsteuerung\Korrespondenz.model">
+   <Extensions>
+    <DocumentExtension id="Korrespondenz Inhalt">
+     <Section>
+      <OutputSettingsRef uri="\\Framework_DE\Framework\FW_Ausgabesteuerung.outputSettings"></OutputSettingsRef>
+      <Style parentName="Rueckantwort"></Style>
+      <StaticContainer>
+       <Style>
+        <RegionRef>logo</RegionRef>
+       </Style>
+       <ContainerPartRef uri="\\Framework_DE\Framework\Teildokumente\Brief\FW_Logo.model"></ContainerPartRef>
+      </StaticContainer>
+      <StaticContainer>
+       <Style>
+        <RegionRef>empfaenger</RegionRef>
+       </Style>
+       <Par>
+        <Style parentName="FW_RecipientAddress"></Style>
+        <Span>
+         <Text>k&amp;w Krankenversicherung</Text>
+        </Span>
+       </Par>
+       <Par>
+        <Style parentName="FW_RecipientAddress"></Style>
+        <Span>
+         <Text>Linnéstr. 1-3</Text>
+        </Span>
+       </Par>
+       <Par>
+        <Style parentName="FW_RecipientAddress"></Style>
+        <Span>
+         <Text>79110 Freiburg</Text>
+        </Span>
+       </Par>
+      </StaticContainer>
+      <StaticContainer>
+       <Style>
+        <RegionRef>betreff</RegionRef>
+       </Style>
+       <Par>
+        <Style parentName="FW_Subject"></Style>
+        <Span>
+         <Text>Antrag auf Haushaltshilfe</Text>
+        </Span>
+       </Par>
+      </StaticContainer>
+      <Container>
+       <Par>
+        <Span>
+         <Text>Die Erhebung der persönlichen Daten (Sozialdaten) ist aufgrund der §§284 und 206 Sozialgesetzbuch (SGB) Fünftes Buch (V) in Verbindung mit §21 SGB Zehntes Buch (X) erforderlich.</Text>
+        </Span>
+       </Par>
+       <Table>
+        <Columns>
+         <Column>
+          <Style>
+           <ColumnWidth>22908.0mpt</ColumnWidth>
+          </Style>
+         </Column>
+         <Column>
+          <Style>
+           <ColumnWidth>100789.0mpt</ColumnWidth>
+          </Style>
+         </Column>
+         <Column>
+          <Style>
+           <ColumnWidth>85639.0mpt</ColumnWidth>
+          </Style>
+         </Column>
+         <Column>
+          <Style>
+           <ColumnWidth>48242.0mpt</ColumnWidth>
+          </Style>
+         </Column>
+         <Column>
+          <Style>
+           <ColumnWidth>71867.0mpt</ColumnWidth>
+          </Style>
+         </Column>
+         <Column>
+          <Style>
+           <ColumnWidth>auto</ColumnWidth>
+          </Style>
+         </Column>
+        </Columns>
+        <Style parentName="Form"></Style>
+        <Row>
+         <Cell colSpan="5">
+          <Container>
+           <Par>
+            <Span>
+             <Text>Name, Vorname</Text>
+            </Span>
+           </Par>
+           <Par>
+            <Span>
+             <InlineField fieldId="AntragstellerName" description="" dataNode="$Antragsteller.Name"></InlineField>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <Text>Geburtsdatum</Text>
+            </Span>
+           </Par>
+           <Par>
+            <Span>
+             <InlineField fieldId="AntragstellerGeburtsdatum" dataNode="$Antragsteller.Geburtsdatum"></InlineField>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+        </Row>
+        <Row>
+         <Cell colSpan="5">
+          <Container>
+           <Par>
+            <Span>
+             <Text>Für Rückfragen tagsüber telefonisch erreichbar (Angabe ist freiwillig)</Text>
+            </Span>
+           </Par>
+           <Par>
+            <Span>
+             <InlineField fieldId="AntragstellerTelefon" dataNode="$Antragsteller.Telefon"></InlineField>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <Text>Familienstand</Text>
+            </Span>
+           </Par>
+           <Par>
+            <Span>
+             <InlineField fieldId="AntragstellerEhestand" dataNode="$Antragsteller.Ehestand"></InlineField>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+        </Row>
+        <Row>
+         <Cell colSpan="5">
+          <Container>
+           <Par>
+            <Style parentName="Formfield_Label_SpaceBefore"></Style>
+            <Span>
+             <Text>Der Betrag soll auf folgendes Konto überwiesen werden:</Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+        </Row>
+        <Row>
+         <Cell colSpan="2">
+          <Container>
+           <Par>
+            <Span>
+             <Text>BIC</Text>
+            </Span>
+           </Par>
+           <Par>
+            <Span>
+             <InlineField fieldId="AntragstellerBIC" dataNode="$Antragsteller.BIC"></InlineField>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell colSpan="3">
+          <Container>
+           <Par>
+            <Span>
+             <Text>IBAN</Text>
+            </Span>
+           </Par>
+           <Par>
+            <Span>
+             <InlineField fieldId="AntragstellerIBAN" dataNode="$Antragsteller.IBAN"></InlineField>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <Text>Geldinstitut</Text>
+            </Span>
+           </Par>
+           <Par>
+            <Span>
+             <InlineField fieldId="AntragstellerBank" dataNode="$Antragsteller.Bank"></InlineField>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+        </Row>
+        <Row>
+         <Cell colSpan="6">
+          <Container>
+           <Par>
+            <Span>
+             <Text>Kontoinhaber (falls abweichend)</Text>
+            </Span>
+           </Par>
+           <Par>
+            <Span>
+             <InlineField fieldId="AntragstellerKontoinhaber" dataNode="$Antragsteller.Kontoinhaber"></InlineField>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+        </Row>
+        <Row>
+         <Cell colSpan="6">
+          <Container>
+           <Par>
+            <Style parentName="Formfield_Label_SpaceBefore"></Style>
+            <Span>
+             <Text>Mir ist lt. ärztlicher Bescheinigung die Weiterführung des Haushaltes nicht möglich wegen...</Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+        </Row>
+        <Row>
+         <Cell>
+          <Container>
+           <Par>
+            <Style parentName="Small"></Style>
+            <Span>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell colSpan="5">
+          <Container>
+           <Par>
+            <Span>
+             <InlineRadioButton fieldId="AntragsdatenGrundSchwangerschaft" valueIndex="0" groupId="Grund_der_Bescheinigung" dataNode="$Antragsdaten.Grund.Schwangerschaft"></InlineRadioButton>
+             <Text> </Text>
+             <Text>Schwangerschaft / Entbindung</Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+        </Row>
+        <Row>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell colSpan="5">
+          <Container>
+           <Par>
+            <Span>
+             <InlineRadioButton fieldId="AntragsdatenGrundErkrankung" valueIndex="1" groupId="Grund_der_Bescheinigung" dataNode="$Antragsdaten.Grund.Erkrankung"></InlineRadioButton>
+             <Text> </Text>
+             <Text>einer akuten Erkrankung</Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+        </Row>
+        <Row>
+         <Cell colSpan="6">
+          <Container>
+           <Par>
+            <Style parentName="Formfield_Label_SpaceBefore"></Style>
+            <Span>
+             <Text>Die Erkrankung ist die Folge</Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+        </Row>
+        <Row>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell colSpan="2">
+          <Container>
+           <Par>
+            <Span>
+             <Text>eines Arbeitsunfalls/einer Berufskrankheit</Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <InlineRadioButton fieldId="AntragsdatenFolgeArbeitsunfall_nein" valueIndex="0" groupId="AntragsdatenFolgeArbeitsunfall" dataNode="$Antragsdaten.Folge.Arbeitsunfall"></InlineRadioButton>
+             <Text> </Text>
+             <Text>nein</Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <InlineRadioButton fieldId="AntragsdatenFolgeArbeitsunfall_ja" valueIndex="1" groupId="AntragsdatenFolgeArbeitsunfall" dataNode="$Antragsdaten.Folge.Arbeitsunfall"></InlineRadioButton>
+             <Text> </Text>
+             <Text>ja</Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+        </Row>
+        <Row>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell colSpan="2">
+          <Container>
+           <Par>
+            <Span>
+             <Text>eines privaten Unfalls</Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <InlineRadioButton fieldId="AntragsdatenFolgeprivaterUnfall_nein" valueIndex="0" groupId="AntragsdatenFolgeprivaterUnfall" dataNode="$Antragsdaten.Folge.privaterUnfall"></InlineRadioButton>
+             <Text> </Text>
+             <Text>nein</Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <InlineRadioButton fieldId="AntragsdatenFolgeprivaterUnfall_ja" valueIndex="1" groupId="AntragsdatenFolgeprivaterUnfall" dataNode="$Antragsdaten.Folge.privaterUnfall"></InlineRadioButton>
+             <Text> </Text>
+             <Text>ja</Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+         <Cell>
+          <Container>
+           <Par>
+            <Span>
+             <Text>Unfalltag</Text>
+            </Span>
+           </Par>
+           <Par>
+            <Span>
+             <InlineField fieldId="AntragsdatenUnfalltag" dataNode="$Antragsdaten.Unfalltag"></InlineField>
+             <Text></Text>
+            </Span>
+           </Par>
+          </Container>
+         </Cell>
+        </Row>
+       </Table>
+       <Par>
+        <Span>
+         <InlineSignature fieldId="Unterschrift">
+          <Style>
+           <Width>8.0cm</Width>
+           <Height>3.0cm</Height>
+          </Style>
+         </InlineSignature>
+         <Text></Text>
+        </Span>
+       </Par>
+       <Par>
+        <Span>
+         <Text>Datum, Unterschrift der/des Versicherten</Text>
+        </Span>
+       </Par>
+      </Container>
+      <StaticContainer>
+       <Style>
+        <RegionRef>fusszeile</RegionRef>
+       </Style>
+       <Par>
+        <Style parentName="FW_Default"></Style>
+        <Span>
+         <Text>Seite </Text>
+         <PageNumber></PageNumber>
+         <Text> von </Text>
+         <PageCount></PageCount>
+        </Span>
+       </Par>
+      </StaticContainer>
+      <SectionPartRef uri="\\Framework_DE\Framework\Layoutelemente\FW_Randvermerk.model">
+       <Param name="ExemplarAusgabesteuerung">$ExemplarAusgabesteuerung</Param>
+       <Param name="Exemplar">$Exemplar</Param>
+      </SectionPartRef>
+     </Section>
+    </DocumentExtension>
+   </Extensions>
+   <Param name="Korrespondenz">$Auftragssteuerung.Korrespondenz.instance(0)</Param>
+  </DocumentPartRef>
+ </Document>
+</RootPart>

@@ -1,0 +1,300 @@
+<DocumentPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition>
+  <ParamDef name="Korrespondenz" multiple="true" ref="\\Framework_DE\Data\Korrespondenz.datamodel"></ParamDef>
+  <ParamDef name="Auftragssteuerung" ref="\\Framework_DE\Data\Auftragssteuerung.datamodel">
+   <Description></Description>
+  </ParamDef>
+  <DataNodeDef name="MAIL" data-type="boolean">
+   <Description></Description>
+   <Input true-value="true" false-value="false"></Input>
+   <Output true-value="true" false-value="false"></Output>
+   <Subtype></Subtype>
+   <Script><![CDATA[false]]></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="false">
+    <Values></Values>
+   </Validation>
+  </DataNodeDef>
+  <ParamDef name="MOMS_ID" data-type="number">
+   <Description></Description>
+   <Input text-prefix="" text-suffix="" decimal-separator="44" thousand-separator="46" use-current-locale="false" currency-symbol="" fractional-digits="-1" leading-zeros="1"></Input>
+   <Output text-prefix="" text-suffix="" decimal-separator="44" thousand-separator="46" use-current-locale="true" currency-symbol="" fractional-digits="-1" leading-zeros="1"></Output>
+   <Subtype></Subtype>
+   <Validation validation-type="any_value" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+ </DataDefinition>
+ <Section title="Anschreiben">
+  <OutputSettingsRef uri="\\Framework_DE\Framework\FW_Ausgabesteuerung_Aufgabe3.outputSettings">
+   <Param name="ExemplarAusgabesteuerung">$Auftragssteuerung.Korrespondenz.instance(0).Exemplare.Exemplar.instance(0)</Param>
+  </OutputSettingsRef>
+  <Style parentName="Brief"></Style>
+  <StaticContainer>
+   <Style>
+    <RegionRef>logo</RegionRef>
+   </Style>
+   <Image uri="mtx://Framework_DE/Grafiken/Logo.jpg"></Image>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>absender</RegionRef>
+   </Style>
+   <Par>
+    <Span>
+     <Data>$Korrespondenz.instance(0).Exemplare.Exemplar.instance(0).Absender.Absenderzeile</Data>
+     <Text></Text>
+    </Span>
+   </Par>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>infobereich</RegionRef>
+   </Style>
+   <Par>
+    <Translations>
+     <Translation outdated="true">
+      <Language language="it" country="IT" variant=""></Language>
+      <Span>
+       <Text>TRANSLATE: Ansprechpartner:</Text>
+      </Span>
+     </Translation>
+     <Translation outdated="true">
+      <Language language="en" country="US" variant=""></Language>
+      <Span>
+       <Text>TRANSLATE: Ansprechpartner:</Text>
+      </Span>
+     </Translation>
+    </Translations>
+    <Style parentName="FW_Info"></Style>
+    <Span>
+     <Text>Ansprechpartner:</Text>
+    </Span>
+    <Span>
+     <Text>  </Text>
+    </Span>
+   </Par>
+   <Par>
+    <Style parentName="FW_Info"></Style>
+    <Span>
+     <Data>$Korrespondenz.instance(0).Exemplare.Exemplar.instance(0).Absender.Sachbearbeiter.Vorname</Data>
+     <Text> </Text>
+     <Data>$Korrespondenz.instance(0).Exemplare.Exemplar.instance(0).Absender.Sachbearbeiter.Nachname</Data>
+    </Span>
+   </Par>
+   <Par>
+    <Style parentName="FW_Info"></Style>
+    <Span>
+     <Text></Text>
+    </Span>
+   </Par>
+   <Par>
+    <Translations>
+     <Translation outdated="true">
+      <Language language="en" country="US" variant=""></Language>
+      <Span>
+       <Text>Phone: </Text>
+       <Data>$Absender.Sachbearbeiter.Telefon</Data>
+      </Span>
+     </Translation>
+    </Translations>
+    <Style parentName="FW_Info"></Style>
+    <Span>
+     <Text>Telefon: </Text>
+    </Span>
+   </Par>
+   <Par>
+    <Style parentName="FW_Info"></Style>
+    <Span>
+     <Data>$Korrespondenz.instance(0).Exemplare.Exemplar.instance(0).Absender.Sachbearbeiter.Telefon</Data>
+    </Span>
+   </Par>
+   <Par>
+    <Style parentName="FW_Info"></Style>
+    <Span>
+     <Text></Text>
+    </Span>
+   </Par>
+   <Par>
+    <Translations>
+     <Translation outdated="true">
+      <Language language="en" country="US" variant=""></Language>
+      <Span>
+       <Text>Fax: </Text>
+       <Data>$Absender.Sachbearbeiter.Fax</Data>
+      </Span>
+     </Translation>
+    </Translations>
+    <Style parentName="FW_Info"></Style>
+    <Span>
+     <Text>Fax: </Text>
+    </Span>
+   </Par>
+   <Par>
+    <Style parentName="FW_Info"></Style>
+    <Span>
+     <Data>$Korrespondenz.instance(0).Exemplare.Exemplar.instance(0).Absender.Sachbearbeiter.Fax</Data>
+    </Span>
+   </Par>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>empfaenger</RegionRef>
+   </Style>
+   <ContainerPart>
+    <ForEach><![CDATA[$Korrespondenz.Exemplare.Exemplar.Empfaenger.Partner.Adresse.Zeile]]></ForEach>
+    <DataDefinition></DataDefinition>
+    <Par>
+     <Span>
+      <Data>$Zeile</Data>
+      <Text></Text>
+     </Span>
+    </Par>
+   </ContainerPart>
+  </StaticContainer>
+  <Container>
+   <Par>
+    <Style>
+     <SpaceAfter resolution="combine">0.44cm</SpaceAfter>
+    </Style>
+    <Span>
+     <Text>Sehr geehrte/r </Text>
+     <Data>$Korrespondenz.instance(0).Exemplare.Exemplar.instance(0).Empfaenger.Partner.Anrede</Data>
+     <Text> </Text>
+     <Data>$Korrespondenz.instance(0).Exemplare.Exemplar.instance(0).Empfaenger.Partner.Nachname</Data>
+     <Text>,</Text>
+    </Span>
+   </Par>
+   <Par>
+    <Style parentName="Heading1"></Style>
+    <Span>
+     <Text>das ist die Einleitung</Text>
+    </Span>
+   </Par>
+   <Par>
+    <Span>
+     <Text></Text>
+    </Span>
+   </Par>
+   <Container id="Grussformel">
+    <Style>
+     <RegionRef>Body</RegionRef>
+    </Style>
+    <Par>
+     <Translations>
+      <Translation>
+       <Language language="it" country="IT" variant=""></Language>
+       <Span>
+        <Text>Con cordiali saluti</Text>
+       </Span>
+      </Translation>
+      <Translation>
+       <Language language="en" country="US" variant=""></Language>
+       <Span>
+        <Text>Sincerely yours</Text>
+       </Span>
+      </Translation>
+     </Translations>
+     <Style parentName="FW_Default">
+      <SpaceBefore>0.3cm</SpaceBefore>
+      <SpaceAfter resolution="combine">0.9cm</SpaceAfter>
+      <KeepWithPrevious>true</KeepWithPrevious>
+     </Style>
+     <Span>
+      <Text>Mit freundlichen Grüßen</Text>
+     </Span>
+    </Par>
+    <ContainerPart>
+     <VisibleIf><![CDATA[$Korrespondenz.Exemplare.Exemplar.Absender.Sachbearbeiter.Unterschrift.notEmpty()]]></VisibleIf>
+     <DataDefinition></DataDefinition>
+     <Image>
+      <DataUri><![CDATA[$Korrespondenz.Exemplare.Exemplar.Absender.Sachbearbeiter.Unterschrift]]></DataUri>
+      <Style>
+       <KeepWithPrevious>true</KeepWithPrevious>
+       <Height>2.0cm</Height>
+       <Stretch>keep_aspect_ratio</Stretch>
+      </Style>
+     </Image>
+    </ContainerPart>
+    <ContainerPart>
+     <VisibleIf><![CDATA[else]]></VisibleIf>
+     <DataDefinition></DataDefinition>
+     <ContainerPart>
+      <VisibleIf><![CDATA[$Korrespondenz.Exemplare.Exemplar.Absender.Sachbearbeiter.Unterschrift.notEmpty()]]></VisibleIf>
+      <DataDefinition></DataDefinition>
+      <Image>
+       <DataUri><![CDATA[$Unterschrift]]></DataUri>
+       <Style>
+        <KeepWithPrevious>true</KeepWithPrevious>
+        <Height>2.0cm</Height>
+        <Stretch>keep_aspect_ratio</Stretch>
+       </Style>
+      </Image>
+     </ContainerPart>
+    </ContainerPart>
+    <Par>
+     <Style parentName="TextSpaceBefore">
+      <KeepWithPrevious>true</KeepWithPrevious>
+     </Style>
+     <Span>
+      <Data>$Korrespondenz.instance(0).Exemplare.Exemplar.instance(0).Absender.Sachbearbeiter.Nachname</Data>
+     </Span>
+    </Par>
+   </Container>
+  </Container>
+  <StaticContainer>
+   <Style>
+    <RegionRef>fusszeile</RegionRef>
+   </Style>
+   <Par>
+    <Span>
+     <Text>Seite </Text>
+     <PageNumber></PageNumber>
+     <Text> von </Text>
+     <PageCount></PageCount>
+    </Span>
+   </Par>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>firmenleiste</RegionRef>
+   </Style>
+   <Table>
+    <Columns>
+     <Column>
+      <Style>
+       <ColumnWidth>201371.0mpt</ColumnWidth>
+      </Style>
+     </Column>
+     <Column>
+      <Style>
+       <ColumnWidth>180070.0mpt</ColumnWidth>
+      </Style>
+     </Column>
+     <Column>
+      <Style>
+       <ColumnWidth>auto</ColumnWidth>
+      </Style>
+     </Column>
+    </Columns>
+    <Style parentName="Simple"></Style>
+    <Row>
+     <Cell>
+      <Container>
+       <ContainerPartRef uri="\\Framework_DE\Framework\Teildokumente\Brief\FW_FirmenleisteInfo1.model"></ContainerPartRef>
+      </Container>
+     </Cell>
+     <Cell>
+      <Container>
+       <ContainerPartRef uri="\\Framework_DE\Framework\Teildokumente\Brief\FW_FirmenleisteInfo2.model"></ContainerPartRef>
+      </Container>
+     </Cell>
+     <Cell>
+      <Container>
+       <ContainerPartRef uri="\\Framework_DE\Framework\Teildokumente\Brief\FW_FirmenleisteInfo3.model"></ContainerPartRef>
+      </Container>
+     </Cell>
+    </Row>
+   </Table>
+  </StaticContainer>
+ </Section>
+</DocumentPart>

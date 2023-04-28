@@ -1,0 +1,79 @@
+{
+  "Auftragssteuerung": {
+    "Korrespondenz": {
+      "Briefdatum": "29.02.2020",
+      "Exemplar": {
+        "Absender": {
+          "Name": "SAM AG",
+          "Strasse": "Kruppallee 42",
+          "PLZ": "13373",
+          "Ort": "Essen",
+          "Absenderzeile": "sam ag - kruppallee 42 - 13373 essen",
+          "Sachbearbeiter": {
+            "PartnerID": "14213373",
+            "UserID": "HB",
+            "Anrede": "Herr",
+            "Vorname": "Hans",
+            "Nachname": "Brackhaus",
+            "Firmenname1": "SAM AG",
+            "Hausnummer": "42",
+            "Strasse": "Kruppallee",
+            "PLZ": "13373",
+            "Ort": "Essen",
+            "Adresse": {
+              "Zeile": [
+                "SAM AG",
+                "Hans Brackhaus",
+                "Kruppallee 42",
+                "13373 Essen"
+              ]
+            },
+            "Briefanrede": "Moin Herr Brackhaus,",
+            "Rolle": "rückwärts",
+            "email": "h.brackhaus@sam-ag.com",
+            "Telefon": "0815-47111337",
+            "fax": "0815-47114242"
+          }
+        },
+        "Empfaenger": {
+          "Partner": {
+            "PartnerID": "20698101",
+            "Anrede": "Frau",
+            "Titel": "Dr.",
+            "Vorname": "Antje",
+            "Nachname": "von HolLand",
+            "Strasse": "NL-Strasse 4",
+            "PLZ": "44444",
+            "Ort": "NL-Stadt",
+            "Land": "NL",
+            "Adresse": {
+              "Zeile": [
+                "Frau Antje von HolLand",
+                "NL-Strasse 4",
+                "44444 NL-Stadt"
+              ]
+            },
+            "Rolle": "vorwärts",
+            "email": "m.mercurial@fasa.sr",
+            "Telefon": "01989-2050",
+            "fax": "01989-2001"
+          }
+        },
+        "Ausgabesteuerung": [
+          {
+            "Ausgabekanal": "ZENTRALDRUCK",
+            "ZENTRALDRUCK": {
+              "LKZ": "NL",
+              "PLZ": "4444",
+              "PartnerID": "20698101"
+            }
+          },
+          {
+            "Ausgabekanal": "ARCHIV",
+            "ARCHIV": { "PartnerID": "20698101" }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Name"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Strasse"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="PLZ"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field="EDITFIELD"
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Ort"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Absenderzeile"
+         searchable="false">
+      <Settings>
+         <Validation allow-empty-value="true"
+                     dialog-field="EDITFIELD"
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script>$Name + " \u00b7 " + $Strasse + ' \u00b7 ' + $PLZ + ' ' + $Ort</Script>
+      </Settings>
+   </Node>
+   <Node multiple="false"
+         name="Ruecksendeanschrift"
+         ref="\\Framework_DE\Data\Empfaenger.datamodel">
+      <Settings>
+         <Script>if ($current.Partner.count()== 0) {
+	var partner = $current.add($current.Partner, "");
+	partner.add(partner.Firmenname1, $Name);
+	partner.add(partner.Vorname, "");
+	partner.add(partner.Strasse, $Strasse);
+	partner.add(partner.PLZ, $PLZ);
+	partner.add(partner.Ort, $Ort);
+	var adresszeile = partner.add(partner.Adresse, "");
+	adresszeile.add(adresszeile.Zeile, $Name);
+	adresszeile.add(adresszeile.Zeile, $Strasse);
+	adresszeile.add(adresszeile.Zeile, $PLZ + ' ' + $Ort);
+}
+</Script>
+      </Settings>
+   </Node>
+   <Node multiple="false"
+         name="Sachbearbeiter"
+         ref="\\Framework_DE\Data\Partner.datamodel">
+      <Settings>
+         <Script/>
+      </Settings>
+   </Node>
+</DataModel>

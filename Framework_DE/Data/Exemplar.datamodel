@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel>
+   <Node data-type="NUMBER"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Nr"
+         searchable="false">
+      <Settings>
+         <Description>Number of instance
+
+The # of instance is 1 for the primary instance. The primary instance is the one instance which is required for every message. The primary instance is also called first instance.
+The other instances, copies, ... have numbers starting from 2.</Description>
+         <Validation allow-empty-value="true"
+                     dialog-field="EDITFIELD"
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input decimal-separator="46" thousand-separator="44"/>
+            <Output currency-format="BEFORE_WITH_SPACE"
+                    currency-symbol="€"
+                    decimal-separator="44"
+                    formatting-type="NUMBER"
+                    fractional-digits="-1"
+                    leading-zeros="1"
+                    text-prefix=""
+                    text-suffix=""
+                    thousand-separator="46"
+                    use-current-locale="true"/>
+         </Format>
+         <Script>dataNodeIndexOfInstance($Exemplar) + 1;</Script>
+      </Settings>
+   </Node>
+   <Node data-type="TEXT"
+         hierarchical="FLAT"
+         multiple="false"
+         name="Typ"
+         searchable="false">
+      <Settings>
+         <Description>Type of instance
+
+Valid values are:
+ORIGINAL
+WEITERES_EXEMPLAR</Description>
+         <Validation allow-empty-value="true"
+                     dialog-field=""
+                     label=""
+                     operator="ANY"
+                     validation-type="ANY_VALUE">
+            <Values/>
+         </Validation>
+         <Format>
+            <Input/>
+            <Output/>
+         </Format>
+         <Script>if ($Exemplar.Nr.valueOf() == 1) {
+	"ORIGINAL";
+}
+else {
+	"WEITERES_EXEMPLAR";
+}</Script>
+      </Settings>
+   </Node>
+   <Node multiple="false"
+         name="Absender"
+         ref="\\Framework_DE\Data\Absender.datamodel">
+      <Settings>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node multiple="false"
+         name="Empfaenger"
+         ref="\\Framework_DE\Data\Empfaenger.datamodel">
+      <Settings>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node multiple="false"
+         name="Alternativempfaenger"
+         ref="\\Framework_DE\Data\Empfaenger.datamodel">
+      <Settings>
+         <Script/>
+      </Settings>
+   </Node>
+   <Node multiple="true"
+         name="Ausgabesteuerung"
+         ref="\\Framework_DE\Data\Ausgabesteuerung.datamodel">
+      <Settings>
+         <Script/>
+      </Settings>
+   </Node>
+</DataModel>

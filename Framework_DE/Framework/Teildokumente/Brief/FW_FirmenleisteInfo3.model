@@ -1,0 +1,48 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition></DataDefinition>
+ <Container>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>Headquarter</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="FW_CompanyInfo"></Style>
+   <Span>
+    <Text>Stammsitz</Text>
+   </Span>
+  </Par>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>Linnéstr. 1-3</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="FW_CompanyInfo"></Style>
+   <Span>
+    <Text>Linnéstr. 1-3</Text>
+   </Span>
+  </Par>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>79110 Freiburg
+GERMANY</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="FW_CompanyInfo"></Style>
+   <Span>
+    <Text>79110 Freiburg</Text>
+   </Span>
+  </Par>
+ </Container>
+</ContainerPart>

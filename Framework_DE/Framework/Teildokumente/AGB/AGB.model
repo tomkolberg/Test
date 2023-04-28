@@ -1,0 +1,81 @@
+<DocumentPart xmlns="urn:kwsoft:mtext:tonic:dom" logicalDocument="true">
+ <DataDefinition>
+  <ParamDef name="Titel">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="DoNotArchive" data-type="boolean" provided="true">
+   <Description></Description>
+   <Input true-value="true" false-value="false"></Input>
+   <Output true-value="true" false-value="false"></Output>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="SendAsAttachment" data-type="boolean" provided="true">
+   <Description></Description>
+   <Input true-value="true" false-value="false"></Input>
+   <Output true-value="true" false-value="false"></Output>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="AttachmentName" provided="true">
+   <Description></Description>
+   <Input text-prefix="" text-suffix=""></Input>
+   <Output text-prefix="" text-suffix=""></Output>
+   <Script></Script>
+   <Validation validation-type="any_value" operator="any" allow-empty-value="true">
+    <Values></Values>
+   </Validation>
+  </ParamDef>
+  <ParamDef name="ExemplarAusgabesteuerung" ref="\\Framework_DE\Data\Exemplar.datamodel" provided="true"></ParamDef>
+ </DataDefinition>
+ <Section>
+  <OutputSettingsRef uri="Framework\FW_Ausgabesteuerung.outputSettings"></OutputSettingsRef>
+  <Style parentName="AGB"></Style>
+  <StaticContainer>
+   <Style>
+    <RegionRef>heading</RegionRef>
+   </Style>
+   <Par>
+    <Style parentName="FW_Default"></Style>
+    <Span>
+     <Data>$Titel</Data>
+    </Span>
+   </Par>
+  </StaticContainer>
+  <StaticContainer>
+   <Style>
+    <RegionRef>logo</RegionRef>
+   </Style>
+   <Par>
+    <Style>
+     <Align>right</Align>
+    </Style>
+    <Span>
+     <InlineImage uri="mtx://Framework_DE/Grafiken/SAM.jpg">
+      <Alt><![CDATA["Logo"]]></Alt>
+      <Style>
+       <Role>Artifact</Role>
+       <FillContainerWidth>false</FillContainerWidth>
+       <FillContainerHeight>false</FillContainerHeight>
+       <Stretch>keep_aspect_ratio</Stretch>
+      </Style>
+     </InlineImage>
+     <Text></Text>
+    </Span>
+   </Par>
+  </StaticContainer>
+  <Container>
+   <ContainerExtensionDef id="AGB Inhalt"></ContainerExtensionDef>
+  </Container>
+ </Section>
+</DocumentPart>

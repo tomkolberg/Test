@@ -1,0 +1,48 @@
+<ContainerPart xmlns="urn:kwsoft:mtext:tonic:dom">
+ <DataDefinition></DataDefinition>
+ <Container>
+  <Style parentName="FW_CompanyInfo"></Style>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>Trade register: Amtsgericht Freiburg HRB 5674321</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="FW_CompanyInfo"></Style>
+   <Span>
+    <Text>Handelsregister: Amtsgericht Freiburg HRB 5674321</Text>
+   </Span>
+  </Par>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>Headquarter: Freiburg</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="FW_CompanyInfo"></Style>
+   <Span>
+    <Text>Sitz der Gesellschaft: Freiburg</Text>
+   </Span>
+  </Par>
+  <Par>
+   <Translations>
+    <Translation>
+     <Language language="en" country="US" variant=""></Language>
+     <Span>
+      <Text>TIN DE 567894321</Text>
+     </Span>
+    </Translation>
+   </Translations>
+   <Style parentName="FW_CompanyInfo"></Style>
+   <Span>
+    <Text>Umsatzsteuer-Identifikationsnummer DE 567894321</Text>
+   </Span>
+  </Par>
+ </Container>
+</ContainerPart>
